@@ -1,4 +1,4 @@
-function y_up = float_minAJ2(x, L)
+function y_up = minAJ2_float(x, L)
 % MinAJ2 cubic Hermite interpolation
 % x : input samples (real or complex)
 % L : upsampling factor
