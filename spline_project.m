@@ -115,8 +115,8 @@ fprintf('Estimated noise floor ≈ %.2f dB\n', noise_floor_dB);
 max_val = max(abs(iq60_spline));
 IL = ceil(log2(max_val));
 fprintf('max val = %.4f, so integer length = %.4f\n',max_val, IL);
-fl= 12 ;                                                                 %fraction length, we got -80.94/6 = approx. 13.5 so we take 14 for fraction length
-wl = 16 ;                                                              % word length = 1(sign bit) + 1(integer bit) + fraction length
+fl= 12 ;                                                                 % fraction length
+wl = 16 ;                                                              % word length = 1(sign bit) + 3(integer bit) + fraction length
 
 %% Spline Interpolation on 60Msa/s I/Q signals (Fixed point)
 iq60_splineFixed =  minAJ2_fixed(iq60(1:2400), L,wl, fl);
@@ -188,90 +188,6 @@ fprintf(' RMSE-Flaoting Point :RMSE_linear = %.6f, RMSE_dB= %.2f dB\n',rmse_floa
 fprintf(' RMSE-Fixed Point :RMSE_linear = %.6f, RMSE_dB= %.2f dB\n', rmse_fixed, rmse_fixed_dB);
 fprintf('===============================================================\n');
 
-
-%% create an input txt file to fed RTL: fixed iq60 in hexa format
-% L_val = 2;  % <---  L FACTOR  (2, 3, 4, or 5)
-% 
-% % Logic: If L is Odd (3,5) -> 15-bit. If Even (2,4) -> 16-bit.
-% if mod(L_val, 2) ~= 0
-%     % Odd -> 15-bit Mode
-%     wl = 15;
-%     fl = 13; 
-%     disp(['Configuring for Odd L=', num2str(L_val), ' (15-bit Mode)']);
-% else
-%     % Even -> 16-bit Mode
-%     wl = 16;
-%     fl = 14;
-%     disp(['Configuring for Even L=', num2str(L_val), ' (16-bit Mode)']);
-% end
-% 
-% %Create Fixed-Point Object
-% T_sig = numerictype(1, wl, fl);
-% F_sig = fimath('RoundingMethod','floor', 'OverflowAction','Wrap');
-% 
-% % Convert data to fixed-point
-% iq60_fixed = fi(iq60(:), T_sig, F_sig);
-% 
-% % Generate Bit Streams
-% % 'bin' function returns exact number of bits defined by wl (15 or 16)
-% % Generate Bit Streams
-% % 'bin' returns 15 chars for wl=15, and 16 chars for wl=16
-% I_bin_mat = bin(real(iq60_fixed));
-% Q_bin_mat = bin(imag(iq60_fixed));
-% 
-% % Flatten into one long continuous stream of bits
-% I_stream = reshape(I_bin_mat', 1, []);
-% Q_stream = reshape(Q_bin_mat', 1, []);
-% 
-% % Create & Prepend Header
-% % Header Format: [L2, L1, L0, Sync(1)]
-% L_bits = dec2bin(L_val, 3); 
-% Sync_bit = '1';
-% Header_Seq = [Sync_bit,L_bits]; 
-% 
-% % I-Channel gets the Header
-% I_stream_final = [Header_Seq, I_stream];
-% 
-% % Q-Channel gets 4 zeros (padding) to align with I
-% Q_stream_final = ['0000', Q_stream];
-% 
-% % Pad Stream to 16-bit Boundaries for File Writing
-% % The .txt file must contain 16-bit Hex chunks for the TB to read,
-% % even if the internal data is 15-bit packed.
-% current_len = length(I_stream_final);
-% remainder = mod(current_len, 16);
-% 
-% if remainder > 0
-%     pad_len = 16 - remainder;
-%     padding = repmat('0', 1, pad_len);
-% 
-%     I_stream_final = [I_stream_final, padding];
-%     Q_stream_final = [Q_stream_final, padding];
-% end
-% 
-% % Save to Text File
-% filename = sprintf('input_L=%d.txt', L_val);
-% fid = fopen(filename, 'w');
-% 
-% num_words = length(I_stream_final) / 16;
-% 
-% for k = 1:num_words
-%     % Extract 16-bit chunk
-%     idx_start = (k-1)*16 + 1;
-%     idx_end   = k*16;
-% 
-%     chunk_I = I_stream_final(idx_start : idx_end);
-%     chunk_Q = Q_stream_final(idx_start : idx_end);
-% 
-%     % Convert Binary String to Hex
-%     hex_I = dec2hex(bin2dec(chunk_I), 4); 
-%     hex_Q = dec2hex(bin2dec(chunk_Q), 4);
-% 
-%     fprintf(fid, '%s %s\n', hex_I, hex_Q);
-% end
-% 
-% fclose(fid);
-% disp(['Success! Generated ', filename]);
 
 %% Local functions definition
 %======================================
