@@ -196,7 +196,7 @@ where the frequency vector is normalized to the Nyquist frequency of the selecte
 The coefficients are converted to signed Q12 integers according to
 
 $$
-h_{int}=\operatorname{sat}_{16}\left(\operatorname{round}(h_{float}2^{12})\right).
+h_{\mathrm{int}}=\mathrm{sat}_{16}\left(\mathrm{round}\left(h_{\mathrm{float}}\cdot 2^{12}\right)\right)
 $$
 
 For each tap, the script stores:
@@ -368,7 +368,7 @@ $$
 The output is
 
 $$
-y=\operatorname{sat}_{16}\left((acc+RND)\gg12\right).
+y=\mathrm{sat}_{16}\left((\mathrm{acc}+\mathrm{RND})\gg 12\right)
 $$
 
 The regression currently uses
