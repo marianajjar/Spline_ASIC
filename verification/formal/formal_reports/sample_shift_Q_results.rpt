@@ -1,0 +1,72 @@
+
+  Summary Results
+   Property Summary: FPV
+   -----------------
+   > Assertion
+     - # found        : 31
+     - # proven       : 31
+
+   > Vacuity
+     - # found        : 22
+     - # non_vacuous  : 22
+
+   > Cover
+     - # found        : 4
+     - # covered      : 4
+
+   > Constraint
+     - # found        : 3
+
+
+  List Results
+   Property List:
+   --------------
+   > Assertion
+     # Assertion: 31
+     [   0] proven                                  -  sample_shift_ntaps_Q.u_shift_Q_fchk.a_no_x_phase_in
+     [   1] proven                   (non_vacuous)  -  sample_shift_ntaps_Q.u_shift_Q_fchk.a_x0_shift
+     [   8] proven                                  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_x_nox[0].unnamed$$_0
+     [   9] proven                                  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_x_nox[1].unnamed$$_0
+     [  10] proven                                  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_x_nox[2].unnamed$$_0
+     [  11] proven                                  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_x_nox[3].unnamed$$_0
+     [  12] proven                                  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_x_nox[4].unnamed$$_0
+     [  13] proven                                  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_x_nox[5].unnamed$$_0
+     [  14] proven                                  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_x_nox[6].unnamed$$_0
+     [  15] proven                                  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_x_nox[7].unnamed$$_0
+     [  16] proven                                  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_x_nox[8].unnamed$$_0
+     [  17] proven                                  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_x_nox[9].unnamed$$_0
+     [  18] proven                   (non_vacuous)  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_xhold[0].unnamed$$_0
+     [  19] proven                   (non_vacuous)  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_xhold[1].unnamed$$_0
+     [  20] proven                   (non_vacuous)  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_xhold[2].unnamed$$_0
+     [  21] proven                   (non_vacuous)  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_xhold[3].unnamed$$_0
+     [  22] proven                   (non_vacuous)  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_xhold[4].unnamed$$_0
+     [  23] proven                   (non_vacuous)  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_xhold[5].unnamed$$_0
+     [  24] proven                   (non_vacuous)  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_xhold[6].unnamed$$_0
+     [  25] proven                   (non_vacuous)  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_xhold[7].unnamed$$_0
+     [  26] proven                   (non_vacuous)  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_xhold[8].unnamed$$_0
+     [  27] proven                   (non_vacuous)  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_xhold[9].unnamed$$_0
+     [  28] proven                   (non_vacuous)  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_xshift[1].unnamed$$_0
+     [  29] proven                   (non_vacuous)  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_xshift[2].unnamed$$_0
+     [  30] proven                   (non_vacuous)  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_xshift[3].unnamed$$_0
+     [  31] proven                   (non_vacuous)  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_xshift[4].unnamed$$_0
+     [  32] proven                   (non_vacuous)  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_xshift[5].unnamed$$_0
+     [  33] proven                   (non_vacuous)  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_xshift[6].unnamed$$_0
+     [  34] proven                   (non_vacuous)  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_xshift[7].unnamed$$_0
+     [  35] proven                   (non_vacuous)  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_xshift[8].unnamed$$_0
+     [  36] proven                   (non_vacuous)  -  sample_shift_ntaps_Q.u_shift_Q_fchk.g_xshift[9].unnamed$$_0
+
+   > Cover
+     # Cover: 4
+     [   4] covered     (depth=1)                   -  sample_shift_ntaps_Q.u_shift_Q_fchk.c_L2
+     [   5] covered     (depth=1)                   -  sample_shift_ntaps_Q.u_shift_Q_fchk.c_L3
+     [   6] covered     (depth=1)                   -  sample_shift_ntaps_Q.u_shift_Q_fchk.c_L4
+     [   7] covered     (depth=1)                   -  sample_shift_ntaps_Q.u_shift_Q_fchk.c_L5
+
+   > Constraint
+     # Constraint: 3
+     [   2] constrained              (non_vacuous)  -  sample_shift_ntaps_Q.u_shift_Q_fchk.am_legal_L_when_enabled
+     [   3] constrained              (non_vacuous)  -  sample_shift_ntaps_Q.u_shift_Q_fchk.am_phase_from_I_range
+     [  37] constrained                             -  constant_37 - reset==0
+
+
+

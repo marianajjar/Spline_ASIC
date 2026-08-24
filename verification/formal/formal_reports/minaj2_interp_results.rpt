@@ -1,0 +1,54 @@
+
+  Summary Results
+   Property Summary: FPV
+   -----------------
+   > Assertion
+     - # found        : 10
+     - # proven       : 9
+     - # vacuous      : 1
+
+   > Vacuity
+     - # found        : 9
+     - # non_vacuous  : 8
+     - # vacuous      : 1
+
+   > Cover
+     - # found        : 6
+     - # covered      : 6
+
+   > Constraint
+     - # found        : 2
+
+
+  List Results
+   Property List:
+   --------------
+   > Assertion
+     # Assertion: 10
+     [   0] proven                   (non_vacuous)  -  minaj2_interp_3samp_internalSlope.u_minaj2_fchk.a_mnew_sat_hi
+     [   1] proven                   (non_vacuous)  -  minaj2_interp_3samp_internalSlope.u_minaj2_fchk.a_mnew_sat_lo
+     [   2] proven                   (non_vacuous)  -  minaj2_interp_3samp_internalSlope.u_minaj2_fchk.a_mp_hold
+     [   3] proven                   (non_vacuous)  -  minaj2_interp_3samp_internalSlope.u_minaj2_fchk.a_mp_update
+     [   4] proven                                  -  minaj2_interp_3samp_internalSlope.u_minaj2_fchk.a_no_x_used_outputs
+     [   5] vacuous                  (vacuous)      -  minaj2_interp_3samp_internalSlope.u_minaj2_fchk.a_reset_mp
+     [   6] proven                   (non_vacuous)  -  minaj2_interp_3samp_internalSlope.u_minaj2_fchk.a_unused_zero_L2
+     [   7] proven                   (non_vacuous)  -  minaj2_interp_3samp_internalSlope.u_minaj2_fchk.a_unused_zero_L3
+     [   8] proven                   (non_vacuous)  -  minaj2_interp_3samp_internalSlope.u_minaj2_fchk.a_unused_zero_L4
+     [   9] proven                                  -  minaj2_interp_3samp_internalSlope.u_minaj2_fchk.a_y0_eq_xprev
+
+   > Cover
+     # Cover: 6
+     [  11] covered     (depth=2)                   -  minaj2_interp_3samp_internalSlope.u_minaj2_fchk.c_L2
+     [  12] covered     (depth=1)                   -  minaj2_interp_3samp_internalSlope.u_minaj2_fchk.c_L3
+     [  13] covered     (depth=3)                   -  minaj2_interp_3samp_internalSlope.u_minaj2_fchk.c_L4
+     [  14] covered     (depth=1)                   -  minaj2_interp_3samp_internalSlope.u_minaj2_fchk.c_L5
+     [  15] covered     (depth=1)                   -  minaj2_interp_3samp_internalSlope.u_minaj2_fchk.c_mnew_hi_sat
+     [  16] covered     (depth=1)                   -  minaj2_interp_3samp_internalSlope.u_minaj2_fchk.c_mnew_lo_sat
+
+   > Constraint
+     # Constraint: 2
+     [  10] constrained              (non_vacuous)  -  minaj2_interp_3samp_internalSlope.u_minaj2_fchk.am_legal_L_when_enabled
+     [  17] constrained                             -  constant_17 - reset==0
+
+
+

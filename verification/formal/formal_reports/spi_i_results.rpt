@@ -1,0 +1,54 @@
+
+  Summary Results
+   Property Summary: FPV
+   -----------------
+   > Assertion
+     - # found        : 13
+     - # proven       : 13
+
+   > Vacuity
+     - # found        : 13
+     - # non_vacuous  : 13
+
+   > Cover
+     - # found        : 5
+     - # covered      : 5
+
+   > Constraint
+     - # found        : 2
+
+
+  List Results
+   Property List:
+   --------------
+   > Assertion
+     # Assertion: 13
+     [   0] proven                   (non_vacuous)  -  spi_i_master.u_spi_i_fchk.a_count_range
+     [   1] proven                   (non_vacuous)  -  spi_i_master.u_spi_i_fchk.a_en_rise_clears_count
+     [   2] proven                   (non_vacuous)  -  spi_i_master.u_spi_i_fchk.a_mode15_change_only_at_boundary
+     [   3] proven                   (non_vacuous)  -  spi_i_master.u_spi_i_fchk.a_mode15_loads_on_en_rise
+     [   4] proven                   (non_vacuous)  -  spi_i_master.u_spi_i_fchk.a_no_strobe_when_disabled
+     [   5] proven                   (non_vacuous)  -  spi_i_master.u_spi_i_fchk.a_shift_strobe_clears_when_disabled
+     [   6] proven                   (non_vacuous)  -  spi_i_master.u_spi_i_fchk.a_shift_strobe_one_cycle
+     [   7] proven                   (non_vacuous)  -  spi_i_master.u_spi_i_fchk.a_shreg_holds_when_disabled
+     [   8] proven                   (non_vacuous)  -  spi_i_master.u_spi_i_fchk.a_shreg_loads_when_enabled
+     [   9] proven                   (non_vacuous)  -  spi_i_master.u_spi_i_fchk.a_stepcnt_range
+     [  10] proven                                  -  spi_i_master.u_spi_i_fchk.a_strobe_equation
+     [  11] proven                   (non_vacuous)  -  spi_i_master.u_spi_i_fchk.a_strobe_one_cycle
+     [  12] proven                   (non_vacuous)  -  spi_i_master.u_spi_i_fchk.a_word15_signext
+
+   > Cover
+     # Cover: 5
+     [  14] covered     (depth=1)                   -  spi_i_master.u_spi_i_fchk.c_force16_L5
+     [  15] covered     (depth=2)                   -  spi_i_master.u_spi_i_fchk.c_mode15
+     [  16] covered     (depth=1)                   -  spi_i_master.u_spi_i_fchk.c_mode16
+     [  17] covered     (depth=5)                   -  spi_i_master.u_spi_i_fchk.c_shift_strobe
+     [  18] covered     (depth=16)                  -  spi_i_master.u_spi_i_fchk.c_strobe
+
+   > Constraint
+     # Constraint: 2
+     [  13] constrained              (non_vacuous)  -  spi_i_master.u_spi_i_fchk.am_mode_inputs_stable_while_enabled
+     [  19] constrained                             -  constant_19 - reset==0
+
+
+

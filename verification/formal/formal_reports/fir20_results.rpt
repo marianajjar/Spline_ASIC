@@ -1,0 +1,47 @@
+
+  Summary Results
+   Property Summary: FPV
+   -----------------
+   > Assertion
+     - # found        : 8
+     - # proven       : 7
+     - # vacuous      : 1
+
+   > Vacuity
+     - # found        : 7
+     - # non_vacuous  : 6
+     - # vacuous      : 1
+
+   > Cover
+     - # found        : 2
+     - # covered      : 2
+
+   > Constraint
+     - # found        : 1
+
+
+  List Results
+   Property List:
+   --------------
+   > Assertion
+     # Assertion: 8
+     [   0] proven                   (non_vacuous)  -  fir20_formal_harness.DUT.u_fir_fchk.a_check_holds_when_not_loading
+     [   1] proven                   (non_vacuous)  -  fir20_formal_harness.DUT.u_fir_fchk.a_check_loads
+     [   2] proven                   (non_vacuous)  -  fir20_formal_harness.DUT.u_fir_fchk.a_loadidx_inc
+     [   3] proven                   (non_vacuous)  -  fir20_formal_harness.DUT.u_fir_fchk.a_loadidx_sat
+     [   4] proven                                  -  fir20_formal_harness.DUT.u_fir_fchk.a_no_x_outputs
+     [   5] vacuous                  (vacuous)      -  fir20_formal_harness.DUT.u_fir_fchk.a_reset
+     [   6] proven                   (non_vacuous)  -  fir20_formal_harness.DUT.u_fir_fchk.a_y_holds_when_disabled
+     [   7] proven                   (non_vacuous)  -  fir20_formal_harness.DUT.u_fir_fchk.a_y_updates_when_enabled
+
+   > Cover
+     # Cover: 2
+     [   8] covered     (depth=1)                   -  fir20_formal_harness.DUT.u_fir_fchk.c_compute
+     [   9] covered     (depth=23)                  -  fir20_formal_harness.DUT.u_fir_fchk.c_load_last_coeff
+
+   > Constraint
+     # Constraint: 1
+     [  10] constrained                             -  constant_10 - reset==0
+
+
+

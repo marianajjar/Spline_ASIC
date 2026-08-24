@@ -1,0 +1,41 @@
+
+  Summary Results
+   Property Summary: FPV
+   -----------------
+   > Assertion
+     - # found        : 4
+     - # proven       : 4
+
+   > Vacuity
+     - # found        : 3
+     - # non_vacuous  : 3
+
+   > Cover
+     - # found        : 2
+     - # covered      : 2
+
+   > Constraint
+     - # found        : 1
+
+
+  List Results
+   Property List:
+   --------------
+   > Assertion
+     # Assertion: 4
+     [  0] proven                                  -  spi_q_slave.u_spi_q_fchk.a_no_x_word
+     [  1] proven                   (non_vacuous)  -  spi_q_slave.u_spi_q_fchk.a_shreg_holds_when_disabled
+     [  2] proven                   (non_vacuous)  -  spi_q_slave.u_spi_q_fchk.a_shreg_loads_when_enabled
+     [  3] proven                   (non_vacuous)  -  spi_q_slave.u_spi_q_fchk.a_word15_signext
+
+   > Cover
+     # Cover: 2
+     [  4] covered     (depth=1)                   -  spi_q_slave.u_spi_q_fchk.c_mode15
+     [  5] covered     (depth=1)                   -  spi_q_slave.u_spi_q_fchk.c_mode16
+
+   > Constraint
+     # Constraint: 1
+     [  6] constrained                             -  constant_6 - reset==0
+
+
+

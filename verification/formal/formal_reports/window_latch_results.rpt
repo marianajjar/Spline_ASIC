@@ -1,0 +1,44 @@
+
+  Summary Results
+   Property Summary: FPV
+   -----------------
+   > Assertion
+     - # found        : 5
+     - # proven       : 4
+     - # vacuous      : 1
+
+   > Vacuity
+     - # found        : 4
+     - # non_vacuous  : 3
+     - # vacuous      : 1
+
+   > Cover
+     - # found        : 2
+     - # covered      : 2
+
+   > Constraint
+     - # found        : 1
+
+
+  List Results
+   Property List:
+   --------------
+   > Assertion
+     # Assertion: 5
+     [  0] proven                   (non_vacuous)  -  minaj2_window_latch.u_window_fchk.a_capture
+     [  1] proven                   (non_vacuous)  -  minaj2_window_latch.u_window_fchk.a_hold_no_en
+     [  2] proven                   (non_vacuous)  -  minaj2_window_latch.u_window_fchk.a_hold_no_strobe
+     [  3] proven                                  -  minaj2_window_latch.u_window_fchk.a_no_x_outputs
+     [  4] vacuous                  (vacuous)      -  minaj2_window_latch.u_window_fchk.a_reset
+
+   > Cover
+     # Cover: 2
+     [  5] covered     (depth=1)                   -  minaj2_window_latch.u_window_fchk.c_capture
+     [  6] covered     (depth=1)                   -  minaj2_window_latch.u_window_fchk.c_gated_strobe
+
+   > Constraint
+     # Constraint: 1
+     [  7] constrained                             -  constant_7 - reset==0
+
+
+

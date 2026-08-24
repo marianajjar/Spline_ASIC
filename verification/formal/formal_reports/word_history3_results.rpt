@@ -1,0 +1,46 @@
+
+  Summary Results
+   Property Summary: FPV
+   -----------------
+   > Assertion
+     - # found        : 6
+     - # proven       : 5
+     - # vacuous      : 1
+
+   > Vacuity
+     - # found        : 5
+     - # non_vacuous  : 4
+     - # vacuous      : 1
+
+   > Cover
+     - # found        : 3
+     - # covered      : 3
+
+   > Constraint
+     - # found        : 1
+
+
+  List Results
+   Property List:
+   --------------
+   > Assertion
+     # Assertion: 6
+     [  0] proven                   (non_vacuous)  -  word_history3.u_hist_fchk.a_hold_without_push
+     [  1] proven                                  -  word_history3.u_hist_fchk.a_no_x_outputs
+     [  2] proven                   (non_vacuous)  -  word_history3.u_hist_fchk.a_push_w0
+     [  3] proven                   (non_vacuous)  -  word_history3.u_hist_fchk.a_push_w1
+     [  4] proven                   (non_vacuous)  -  word_history3.u_hist_fchk.a_push_w2
+     [  5] vacuous                  (vacuous)      -  word_history3.u_hist_fchk.a_reset
+
+   > Cover
+     # Cover: 3
+     [  6] covered     (depth=1)                   -  word_history3.u_hist_fchk.c_hold_shift_only
+     [  7] covered     (depth=1)                   -  word_history3.u_hist_fchk.c_hold_strobe_only
+     [  8] covered     (depth=1)                   -  word_history3.u_hist_fchk.c_push
+
+   > Constraint
+     # Constraint: 1
+     [  9] constrained                             -  constant_9 - reset==0
+
+
+

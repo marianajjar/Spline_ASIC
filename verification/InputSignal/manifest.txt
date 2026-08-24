@@ -1,0 +1,39 @@
+seg01_L2.txt
+seg02_L3.txt
+seg03_L2.txt
+seg04_L4.txt
+seg05_L2.txt
+seg06_L5.txt
+seg07_L3.txt
+seg08_L2.txt
+seg09_L3.txt
+seg10_L4.txt
+seg11_L3.txt
+seg12_L5.txt
+seg13_L4.txt
+seg14_L2.txt
+seg15_L4.txt
+seg16_L3.txt
+seg17_L4.txt
+seg18_L5.txt
+seg19_L5.txt
+seg20_L2.txt
+seg21_L5.txt
+seg22_L3.txt
+seg23_L5.txt
+seg24_L4.txt
+seg25_zero_L2.txt
+seg26_dc_L4.txt
+seg27_impulse_L5.txt
+seg28_fullscale_L3.txt
+seg29_fullscale_L2.txt
+seg30_maxsat_L4.txt
+rec_L2.txt abort_coeff 5
+rec_L2.txt full
+rec_L5.txt abort_iq 7
+rec_L5.txt full
+rec_L4.txt abort_iq 0
+rec_L4.txt full
+badhdr.txt badhdr
+rec_L3.txt full
+rec_L3b.txt rst2_full

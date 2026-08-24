@@ -1,0 +1,55 @@
+
+  Summary Results
+   Property Summary: FPV
+   -----------------
+   > Assertion
+     - # found        : 9
+     - # proven       : 8
+     - # vacuous      : 1
+
+   > Vacuity
+     - # found        : 7
+     - # non_vacuous  : 6
+     - # vacuous      : 1
+
+   > Cover
+     - # found        : 9
+     - # covered      : 9
+
+   > Constraint
+     - # found        : 1
+
+
+  List Results
+   Property List:
+   --------------
+   > Assertion
+     # Assertion: 9
+     [   0] proven                   (non_vacuous)  -  spi_cfg4_nomode.u_spi_cfg4_fchk.a_cnt_range
+     [   1] proven                   (non_vacuous)  -  spi_cfg4_nomode.u_spi_cfg4_fchk.a_done_rise_cause
+     [   2] proven                   (non_vacuous)  -  spi_cfg4_nomode.u_spi_cfg4_fchk.a_done_sticky
+     [   3] proven                   (non_vacuous)  -  spi_cfg4_nomode.u_spi_cfg4_fchk.a_lctrl_load_value
+     [   4] proven                   (non_vacuous)  -  spi_cfg4_nomode.u_spi_cfg4_fchk.a_lctrl_stable_after_done
+     [   5] proven                   (non_vacuous)  -  spi_cfg4_nomode.u_spi_cfg4_fchk.a_marker_set_cause
+     [   6] proven                                  -  spi_cfg4_nomode.u_spi_cfg4_fchk.a_no_x_outputs
+     [   7] proven                                  -  spi_cfg4_nomode.u_spi_cfg4_fchk.a_ready_equation
+     [   8] vacuous                  (vacuous)      -  spi_cfg4_nomode.u_spi_cfg4_fchk.a_reset_values
+
+   > Cover
+     # Cover: 9
+     [   9] covered     (depth=5)                   -  spi_cfg4_nomode.u_spi_cfg4_fchk.c_L0
+     [  10] covered     (depth=5)                   -  spi_cfg4_nomode.u_spi_cfg4_fchk.c_L1
+     [  11] covered     (depth=5)                   -  spi_cfg4_nomode.u_spi_cfg4_fchk.c_L2
+     [  12] covered     (depth=5)                   -  spi_cfg4_nomode.u_spi_cfg4_fchk.c_L3
+     [  13] covered     (depth=5)                   -  spi_cfg4_nomode.u_spi_cfg4_fchk.c_L4
+     [  14] covered     (depth=5)                   -  spi_cfg4_nomode.u_spi_cfg4_fchk.c_L5
+     [  15] covered     (depth=5)                   -  spi_cfg4_nomode.u_spi_cfg4_fchk.c_L6
+     [  16] covered     (depth=5)                   -  spi_cfg4_nomode.u_spi_cfg4_fchk.c_L7
+     [  17] covered     (depth=6)                   -  spi_cfg4_nomode.u_spi_cfg4_fchk.c_leading_zero_then_marker
+
+   > Constraint
+     # Constraint: 1
+     [  18] constrained                             -  constant_18 - reset==0
+
+
+
