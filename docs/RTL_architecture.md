@@ -6,9 +6,9 @@ The RTL implements the synthesizable digital core of the spline-interpolation AS
 
 The supported interpolation factors are
 
-\[
+$$
 L \in \{2,3,4,5\}.
-\]
+$$
 
 The design contains two parallel signal-processing paths, one for I and one for Q, together with shared configuration and timing control. The I path is the timing master: it determines the serial word mode, generates the raw processing strobes, and owns the interpolation-phase counter. The Q path follows the I timing so that both components of the complex signal remain aligned.
 
@@ -82,7 +82,7 @@ All sequential logic remains in the external `clk` domain. The required lower pr
 
 The external clock and normal serial input-word length depend on the selected interpolation factor.
 
-| \(L\) | External Clock | Normal Input Word | Input Rate | Output Rate |
+| $L$ | External Clock | Normal Input Word | Input Rate | Output Rate |
 |---:|---:|---:|---:|---:|
 | 2 | 960 MHz | 16 bits | 60 MSa/s | 120 MSa/s |
 | 3 | 900 MHz | 15 bits | 60 MSa/s | 180 MSa/s |
@@ -91,17 +91,17 @@ The external clock and normal serial input-word length depend on the selected in
 
 The two clock/word-length combinations preserve the same input sample rate:
 
-\[
+$$
 960\text{ MHz}/16 = 60\text{ MSa/s}
-\]
+$$
 
 and
 
-\[
+$$
 900\text{ MHz}/15 = 60\text{ MSa/s}.
-\]
+$$
 
-For \(L=3\) and \(L=5\), the received 15-bit samples are sign-extended internally to the common signed 16-bit representation.
+For $L=3$ and $L=5$, the received 15-bit samples are sign-extended internally to the common signed 16-bit representation.
 
 ---
 
@@ -159,7 +159,7 @@ en_stream = cfg_ready_now
 
 to activate the serial-word and timing logic.
 
-The intended normal operating set is \(L=2,3,4,5\). System-level verification and the block-level formal environment constrain normal processing to these supported values.
+The intended normal operating set is $L=2,3,4,5$. System-level verification and the block-level formal environment constrain normal processing to these supported values.
 
 ---
 
@@ -200,7 +200,7 @@ is connected to both FIR instances. Therefore the I and Q channels always use th
 
 ### 7.2 Forced 16-Bit Coefficient Words
 
-Normal samples use 16-bit words for \(L=2,4\) and 15-bit words for \(L=3,5\). FIR coefficients, however, are always signed 16-bit words.
+Normal samples use 16-bit words for $L=2,4$ and 15-bit words for $L=3,5$. FIR coefficients, however, are always signed 16-bit words.
 
 The I master therefore receives
 
@@ -210,7 +210,7 @@ force16_word = coeff_load_mode
 
 which disables 15-bit mode while coefficients are being loaded.
 
-This is particularly important for \(L=3\) and \(L=5\): their normal input samples are 15 bits, but their configuration coefficients are still received as 16-bit words.
+This is particularly important for $L=3$ and $L=5$: their normal input samples are 15 bits, but their configuration coefficients are still received as 16-bit words.
 
 ### 7.3 Coefficient Completion and Storage
 
@@ -246,7 +246,7 @@ Because coefficient words are always 16 bits, the coefficient-word rate depends 
 | 960 MHz | 16 bits | 60 Mword/s |
 | 900 MHz | 16 bits | 56.25 Mword/s |
 
-This difference exists only during coefficient loading. Normal I/Q operation remains 60 MSa/s for every supported \(L\).
+This difference exists only during coefficient loading. Normal I/Q operation remains 60 MSa/s for every supported $L$.
 
 ---
 
@@ -383,7 +383,7 @@ Because it is gated by `coeff_done`, coefficient words cannot accidentally enter
 
 A second counter in `spi_i_master` generates the output-rate timing.
 
-| \(L\) | External Clock | Divider | `shift_strobe_common` Rate |
+| $L$ | External Clock | Divider | `shift_strobe_common` Rate |
 |---:|---:|---:|---:|
 | 2 | 960 MHz | 8 | 120 MHz |
 | 3 | 900 MHz | 5 | 180 MHz |
@@ -401,9 +401,9 @@ L=5 -> 3
 
 which implements
 
-\[
+$$
 f_{shift}=60L\text{ MHz}.
-\]
+$$
 
 `shift_strobe_common` becomes active once `en_stream` is active, including during the coefficient-loading interval. It is therefore only a raw timing reference until configuration is complete.
 
@@ -427,7 +427,7 @@ Each pulse:
 4. advances the interpolation phase where appropriate;
 5. updates the registered FIR outputs.
 
-Its effective rate is \(60L\) MSa/s.
+Its effective rate is $60L$ MSa/s.
 
 ---
 
@@ -442,8 +442,8 @@ Its effective rate is \(60L\) MSa/s.
 | `coeff_done` | Top level | After ten coefficients | Marks coefficient-loading completion |
 | `en_iq` | Top level | `en_stream && coeff_done` | Enables normal datapath |
 | `strobe_iq` | Top level | 60 MHz in normal mode | Commits one new I/Q input sample |
-| `shift_strobe_common` | I master | \(60L\) MHz | Raw interpolation-rate event |
-| `shift_strobe_iq` | Top level | \(60L\) MHz after config | Processes one output sample |
+| `shift_strobe_common` | I master | $60L$ MHz | Raw interpolation-rate event |
+| `shift_strobe_iq` | Top level | $60L$ MHz after config | Processes one output sample |
 | `mode15_word` | I master | Per input word | Shared 15/16-bit mode |
 | `phase_shared` | I Sample Shift | Per output phase | Synchronizes Q phase to I |
 
@@ -477,7 +477,7 @@ The relationship can be summarized as
 
 ## 16. Timing Examples
 
-### 16.1 \(L=4\)
+### 16.1 $L=4$
 
 ```text
 external clock       = 960 MHz
@@ -488,7 +488,7 @@ shift_strobe_iq rate = 960 / 4  = 240 MHz
 
 Four output-sample events are generated for each new 60 MSa/s input interval.
 
-### 16.2 \(L=5\)
+### 16.2 $L=5$
 
 ```text
 external clock       = 900 MHz
@@ -529,16 +529,16 @@ The history updates only when `en_iq` and `strobe_iq` are active. I and Q histor
 
 Each channel contains one `minaj2_interp_3samp_internalSlope` instance.
 
-The core uses the current three-sample window and stores the previous slope \(m_p\) internally.
+The core uses the current three-sample window and stores the previous slope $m_p$ internally.
 
 ### 18.1 Slope Recursion
 
 The implemented relation is
 
-\[
+$$
 m_{new}=
 \frac{-11x_{prev}-4m_p+8x_c+3x_n}{10}.
-\]
+$$
 
 The numerator is formed using shifts and additions. Division by 10 is approximated with
 
@@ -554,47 +554,47 @@ with a half-LSB bias before the arithmetic shift. The result is saturated to the
 
 The Hermite polynomial is represented as
 
-\[
+$$
 y(u)=c_0+c_1u+c_2u^2+c_3u^3
-\]
+$$
 
 with
 
-\[
+$$
 c_0=x_{prev},
-\]
+$$
 
-\[
+$$
 c_1=m_p,
-\]
+$$
 
-\[
+$$
 c_2=3(x_c-x_{prev})-2m_p-m_{new},
-\]
+$$
 
-\[
+$$
 c_3=m_p+m_{new}-2(x_c-x_{prev}).
-\]
+$$
 
 ### 18.3 Interpolation Phase Values
 
-The normalized phase \(u\) is represented in Q1.15.
+The normalized phase $u$ is represented in Q1.15.
 
 | Position | RTL Integer | Approximate Value |
 |---|---:|---:|
-| \(1/5\) | 6554 | 0.2000 |
-| \(1/4\) | 8192 | 0.2500 |
-| \(1/3\) | 10923 | 0.3333 |
-| \(2/5\) | 13107 | 0.4000 |
-| \(1/2\) | 16384 | 0.5000 |
-| \(3/5\) | 19661 | 0.6000 |
-| \(2/3\) | 21845 | 0.6667 |
-| \(3/4\) | 24576 | 0.7500 |
-| \(4/5\) | 26214 | 0.8000 |
+| $1/5$ | 6554 | 0.2000 |
+| $1/4$ | 8192 | 0.2500 |
+| $1/3$ | 10923 | 0.3333 |
+| $2/5$ | 13107 | 0.4000 |
+| $1/2$ | 16384 | 0.5000 |
+| $3/5$ | 19661 | 0.6000 |
+| $2/3$ | 21845 | 0.6667 |
+| $3/4$ | 24576 | 0.7500 |
+| $4/5$ | 26214 | 0.8000 |
 
 The active interpolation groups are:
 
-| \(L\) | Valid Group |
+| $L$ | Valid Group |
 |---:|---|
 | 2 | `y0`, `y1(1/2)` |
 | 3 | `y0`, `y1(1/3)`, `y2(2/3)` |
@@ -605,7 +605,7 @@ The active interpolation groups are:
 
 ### 18.4 Horner Evaluation
 
-The cubic is evaluated in Horner form to avoid explicit calculation of \(u^2\) and \(u^3\). A half-LSB bias is inserted before the Q1.15 rescaling shifts to reduce fixed-point bias.
+The cubic is evaluated in Horner form to avoid explicit calculation of $u^2$ and $u^3$. A half-LSB bias is inserted before the Q1.15 rescaling shifts to reduce fixed-point bias.
 
 ---
 
@@ -643,7 +643,7 @@ phase 3 -> y3
 phase 4 -> y4
 ```
 
-Only the first \(L\) phases are used.
+Only the first $L$ phases are used.
 
 The selected sample is inserted into the 10-element FIR input delay line.
 
@@ -713,15 +713,15 @@ A new selected interpolation sample enters each array on `shift_strobe_iq`.
 
 The FIR computes
 
-\[
+$$
 y[n]=\sum_{k=0}^{9}x_kh_k.
-\]
+$$
 
 Products are accumulated in a 48-bit signed accumulator. The result is rescaled by the main fractional length `FL=12` and saturated to the signed 16-bit output range
 
-\[
+$$
 -32768 \le y \le 32767.
-\]
+$$
 
 The registered FIR outputs are connected directly to `dac_I` and `dac_Q`.
 
@@ -815,8 +815,8 @@ The complete hardware sequence is:
 
 The RTL implements the complete multi-rate interpolation chain in a single external clock domain.
 
-Configuration first captures the interpolation factor and loads a common ten-coefficient FIR response. During normal operation, the I serial receiver becomes the timing master: it reconstructs sample words and generates both the 60 MHz input-sample event and the \(60L\) MHz output-sample event.
+Configuration first captures the interpolation factor and loads a common ten-coefficient FIR response. During normal operation, the I serial receiver becomes the timing master: it reconstructs sample words and generates both the 60 MHz input-sample event and the $60L$ MHz output-sample event.
 
-Aligned I/Q samples are stored in three-sample histories and processed by two identical MINAJ2 cores. Each input interval produces a group of \(L\) samples. The group is held in registers and serialized by the Sample Shift stage. The I interpolation phase is shared with Q so the complex signal remains synchronized. Finally, the selected samples are filtered by matched programmable 10-tap FIR filters and delivered as signed 16-bit DAC outputs.
+Aligned I/Q samples are stored in three-sample histories and processed by two identical MINAJ2 cores. Each input interval produces a group of $L$ samples. The group is held in registers and serialized by the Sample Shift stage. The I interpolation phase is shared with Q so the complex signal remains synchronized. Finally, the selected samples are filtered by matched programmable 10-tap FIR filters and delivered as signed 16-bit DAC outputs.
 
 The combination of raw and gated strobes allows configuration and normal processing to reuse the same serial/timing logic without creating additional internal clock domains.

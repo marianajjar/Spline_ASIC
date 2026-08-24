@@ -51,21 +51,21 @@ The primary communication waveform is a complex 64-QAM baseband signal.
 | Pulse shaping | Root Raised Cosine |
 | RRC roll-off | 0.15 |
 | RRC span | 80 symbols |
-| Supported interpolation factors | \(L=2,3,4,5\) |
+| Supported interpolation factors | $L=2,3,4,5$ |
 
 The signal is generated with IQTools `iqmod` and normalized before interpolation. The complex input is
 
-\[
+$$
 s[n]=I[n]+jQ[n].
-\]
+$$
 
-For interpolation factor \(L\),
+For interpolation factor $L$,
 
-\[
+$$
 f_{s,out}=L f_{s,in}.
-\]
+$$
 
-Therefore the supported output sample rates are 120, 180, 240, and 300 MSa/s for \(L=2,3,4,5\), respectively.
+Therefore the supported output sample rates are 120, 180, 240, and 300 MSa/s for $L=2,3,4,5$, respectively.
 
 ## 4. `spline_project.m` — Algorithm Evaluation
 
@@ -79,23 +79,23 @@ The floating-point result is aligned to the high-rate reference using cross-corr
 
 After removing the startup region used to initialize the interpolation state, the script evaluates
 
-\[
+$$
 \mathrm{RMSE}=\sqrt{\frac{1}{N}\sum_{n=0}^{N-1}|x_{ref}[n]-x_{test}[n]|^2}
-\]
+$$
 
 and
 
-\[
+$$
 \mathrm{RMSE}_{dB}=20\log_{10}(\mathrm{RMSE}).
-\]
+$$
 
 ### EVM
 
 The included EVM helper uses
 
-\[
+$$
 \mathrm{EVM}_{rms}=\sqrt{\frac{\sum |x_{test}-x_{ref}|^2}{\sum |x_{ref}|^2}}.
-\]
+$$
 
 This script is intended for algorithm and signal-quality analysis rather than exact RTL matching.
 
@@ -105,51 +105,51 @@ This script is intended for algorithm and signal-quality analysis rather than ex
 
 For each interval, the interpolation positions are
 
-\[
+$$
 u_k=\frac{k}{L}, \qquad k=0,\ldots,L-1.
-\]
+$$
 
 The Hermite basis functions are
 
-\[
+$$
 H_{00}=2u^3-3u^2+1,
-\]
+$$
 
-\[
+$$
 H_{01}=-2u^3+3u^2,
-\]
+$$
 
-\[
+$$
 H_{10}=u^3-2u^2+u,
-\]
+$$
 
-\[
+$$
 H_{11}=u^3-u^2.
-\]
+$$
 
 The interpolated value is
 
-\[
+$$
 y(u)=H_{00}x_0+H_{01}x_1+H_{10}m_0+H_{11}m_1.
-\]
+$$
 
 The startup slopes are initialized as
 
-\[
+$$
 s_0=x(2)-x(1)
-\]
+$$
 
 and
 
-\[
+$$
 s_1=\frac{x(3)-x(1)}{2}.
-\]
+$$
 
 In steady-state operation, the next MINAJ2 slope is
 
-\[
+$$
 s_i=\frac{-11x_{i-1}-4s_{i-1}+8x_i+3x_{i+1}}{10}.
-\]
+$$
 
 The final segment uses a terminal first-difference slope. This floating-point implementation is the algorithm-level reference; the RTL golden model described later reproduces the actual streaming startup and finite-width arithmetic.
 
@@ -165,11 +165,11 @@ The FIR design script evaluates all four interpolation factors:
 Ls = 2:5;
 ```
 
-For each \(L\), the output rate is
+For each $L$, the output rate is
 
-\[
+$$
 f_{s,out}=L\cdot60\text{ MHz}.
-\]
+$$
 
 The filter configuration is:
 
@@ -195,9 +195,9 @@ where the frequency vector is normalized to the Nyquist frequency of the selecte
 
 The coefficients are converted to signed Q12 integers according to
 
-\[
+$$
 h_{int}=\operatorname{sat}_{16}\left(\operatorname{round}(h_{float}2^{12})\right).
-\]
+$$
 
 For each tap, the script stores:
 
@@ -234,9 +234,9 @@ XStart
 
 with
 
-\[
+$$
 XDelta=\frac{1}{f_s}.
-\]
+$$
 
 ---
 
@@ -302,15 +302,15 @@ matches the RTL history registers.
 
 The integer slope numerator is
 
-\[
+$$
 Sum=8x_c+3x_n-11x_{prev}-4m_p.
-\]
+$$
 
 The RTL-compatible divide-by-ten approximation is
 
-\[
+$$
 m_{raw}=\left(Sum\cdot1638+8192\right)\gg14.
-\]
+$$
 
 The 8192 term is the half-LSB rounding bias. The result is saturated to the signed 16-bit range.
 
@@ -318,21 +318,21 @@ The 8192 term is the half-LSB rounding bias. The result is saturated to the sign
 
 The 18-bit polynomial coefficients are
 
-\[
+$$
 c_0=x_{prev},
-\]
+$$
 
-\[
+$$
 c_1=m_p,
-\]
+$$
 
-\[
+$$
 c_2=3(x_c-x_{prev})-2m_p-m_{new},
-\]
+$$
 
-\[
+$$
 c_3=m_p+m_{new}-2(x_c-x_{prev}).
-\]
+$$
 
 Finite-width two's-complement behavior is reproduced with helper wrapping functions.
 
@@ -340,14 +340,14 @@ Finite-width two's-complement behavior is reproduced with helper wrapping functi
 
 The golden model uses the same integer constants as the RTL:
 
-| \(L\) | Q1.15 Values |
+| $L$ | Q1.15 Values |
 |---:|---|
 | 2 | 16384 |
 | 3 | 10923, 21845 |
 | 4 | 8192, 16384, 24576 |
 | 5 | 6554, 13107, 19661, 26214 |
 
-These correspond approximately to \(1/2\), \(1/3,2/3\), \(1/4,1/2,3/4\), and \(1/5,2/5,3/5,4/5\).
+These correspond approximately to $1/2$, $1/3,2/3$, $1/4,1/2,3/4$, and $1/5,2/5,3/5,4/5$.
 
 The cubic is evaluated in Horner form, with the same half-LSB addition and arithmetic right-shift behavior used in the RTL.
 
@@ -361,15 +361,15 @@ dl <- [new_sample ; previous delay-line samples]
 
 and then computes
 
-\[
+$$
 acc=\sum_{k=0}^{9}x_kh_k.
-\]
+$$
 
 The output is
 
-\[
+$$
 y=\operatorname{sat}_{16}\left((acc+RND)\gg12\right).
-\]
+$$
 
 The regression currently uses
 
@@ -418,7 +418,7 @@ The normal segments use long seeded 64-QAM sequences so they are also suitable f
 
 The regression additionally creates:
 
-| Test | \(L\) | Purpose |
+| Test | $L$ | Purpose |
 |---|---:|---|
 | Zero | 2 | All-zero datapath behavior |
 | DC | 4 | Constant input behavior |
@@ -427,7 +427,7 @@ The regression additionally creates:
 | Full-scale | 2 | Large signed values |
 | Maximum saturation | 4 | FIR/arithmetic saturation stress |
 
-Each corner segment contains 1024 source samples. For \(L=3\) and \(L=5\), the generated samples are converted through the same signed 15-bit representation expected by the serial interface.
+Each corner segment contains 1024 source samples. For $L=3$ and $L=5$, the generated samples are converted through the same signed 15-bit representation expected by the serial interface.
 
 ## 14. Regression FIR Coefficients
 
