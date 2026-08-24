@@ -3,7 +3,7 @@ set_fml_appmode FPV
 file mkdir formal_blocks/formal_reports
 
 read_file -format sverilog -sva -top minaj2_interp_3samp_internalSlope {
-  ./spline.v
+  ./minaj2_interp_3samp_internalSlope.v
   ./formal_blocks/sva/minaj2_interp_formal.sv
 }
 

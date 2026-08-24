@@ -4,7 +4,7 @@ set_fml_appmode FPV
 file mkdir formal_reports
 
 read_file -format sverilog -sva -top fir20_formal_harness {
-  ./filter4tweny.v
+  ./fir20_q16_fromx.v
   ./formal_blocks/harness/fir20_formal_harness.sv
   ./formal_blocks/sva/fir20_formal.sv
 }

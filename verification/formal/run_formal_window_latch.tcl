@@ -3,7 +3,7 @@ set_fml_appmode FPV
 file mkdir formal_blocks/formal_reports
 
 read_file -format sverilog -sva -top minaj2_window_latch {
-  ./spline_reg_out.v
+  ./minaj2_window_latch.v
   ./formal_blocks/sva/window_latch_formal.sv
 }
 

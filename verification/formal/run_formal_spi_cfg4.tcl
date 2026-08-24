@@ -3,7 +3,7 @@ set_fml_appmode FPV
 file mkdir formal_blocks/formal_reports
 
 read_file -format sverilog -sva -top spi_cfg4_nomode {
-  ./spi_L.v
+  ./spi_cfg4_nomode.v
   ./formal_blocks/sva/spi_cfg4_formal.sv
 }
 

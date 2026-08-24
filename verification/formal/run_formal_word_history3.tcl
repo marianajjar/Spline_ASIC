@@ -3,7 +3,7 @@ set_fml_appmode FPV
 file mkdir formal_blocks/formal_reports
 
 read_file -format sverilog -sva -top word_history3 {
-  ./spi_register.v
+  ./word_history3.v
   ./formal_blocks/sva/word_history3_formal.sv
 }
 

@@ -3,7 +3,7 @@ set_fml_appmode FPV
 file mkdir formal_blocks/formal_reports
 
 read_file -format sverilog -sva -top spi_i_master {
-  ./spi_i.v
+  ./spi_i_master.v
   ./formal_blocks/sva/spi_i_master_formal.sv
 }
 

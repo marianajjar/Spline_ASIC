@@ -3,7 +3,7 @@ set_fml_appmode FPV
 file mkdir formal_blocks/formal_reports
 
 read_file -format sverilog -sva -top sample_shift_ntaps_I {
-  ./shift_30_I.v
+  ./sample_shift_ntaps_I.v
   ./formal_blocks/sva/sample_shift_I_formal.sv
 }
 

@@ -3,7 +3,7 @@ set_fml_appmode FPV
 file mkdir formal_blocks/formal_reports
 
 read_file -format sverilog -sva -top spi_q_slave {
-  ./spi_q.v
+  ./spi_q_slave.v
   ./formal_blocks/sva/spi_q_slave_formal.sv
 }
 
