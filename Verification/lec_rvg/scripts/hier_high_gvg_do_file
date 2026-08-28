@@ -1,0 +1,110 @@
+// ================================================================
+//  Conformal LEC dofile  -  RTL (Golden) vs synthesized netlist (Revised)
+//  Design : top_interpolator_dac
+//  Goal   : clean equivalence  ->  target 0 NEQ, 0 ABORT, PASS
+//
+//  ABOUT GUIDANCE (read this):
+//    Conformal does NOT use the Synopsys SVF. The SVF is a Formality file.
+//    Conformal's equivalent guidance is the VSDC, read below with
+//    "read setup information ... -type vsdc". That file (written by DC via
+//    set_vsdc) is what tells Conformal how synthesis restructured the
+//    datapath - it is the SVF-analog for this tool. Nothing else to add.
+//
+//  Fixes vs the last run:
+//    1. removed the invalid "save session" command (it errored).
+//    2. reminder to use a FRESH vsdc from the SAME synthesis run.
+//  (compare effort high/super, datapath analysis and the abort pass are
+//   unchanged - that is already as far as Conformal gets on a flat netlist.)
+// ================================================================
+
+// ---------- logging ----------
+set log file ../logfile/lec_clean.log -replace
+
+// ---------- do not stop the whole script on a non-fatal error ----------
+set dofile abort off
+
+// ---------- global options (set BEFORE entering LEC mode) ----------
+set compare effort high              // main effort lever (was: low originally)
+set flatten model -gated_clock       // model the clock-gating (ICG) cells
+set flatten model -seq_constant      // propagate constants through registers
+set mapping method -name             // name-based mapping (RTL<->netlist)
+// set undriven signal 0 -Both       // (optional) tie undriven nets to 0 if
+                                      //  any X-related false diffs appear
+
+// ---------- standard-cell libraries ----------
+read library -Both -Replace -sensitive -Statetable -Liberty \
+  /data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lplvt_220a/tcbn65lplvttc.lib
+read library -Both -Append  -sensitive -Statetable -Liberty \
+  /data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lphvt_220a/tcbn65lphvttc.lib
+read library -Both -Append  -sensitive -Statetable -Liberty \
+  /data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lp_220a/tcbn65lptc.lib
+read library -Both -Append  -sensitive -Statetable -Liberty \
+  /data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tpdn65lpnv2od3_200a/tpdn65lpnv2od3tc.lib
+
+// ---------- GOLDEN : RTL ----------
+read design \
+  ../datain/RTL/spi_L.v \
+  ../datain/RTL/spi_i.v \
+  ../datain/RTL/spi_q.v \
+  ../datain/RTL/spline.v \
+  ../datain/RTL/shift_30_I.v \
+  ../datain/RTL/shift_30_Q.v \
+  ../datain/RTL/top_spline.v \
+  ../datain/RTL/spi_register.v \
+  ../datain/RTL/spline_reg_out.v \
+  ../datain/RTL/filter4tweny.v \
+  -Verilog -sv09 -Golden -continuousassignment Bidirectional -nokeep_unreach -norangeconstraint
+
+// ---------- REVISED : synthesized gate-level netlist ----------
+read design \
+  ../datain/netlist/top_interpolator_dac.v \
+  -Verilog -Revised -sensitive -continuousassignment Bidirectional -nokeep_unreach -nosupply
+
+// ---------- Conformal guidance (the SVF-analog for THIS tool) ----------
+// MUST be the vsdc written by the SAME synthesis run that produced the
+// netlist above. A stale vsdc hurts datapath mapping and causes aborts
+// (that is what the "Cannot find module ... RSOP_183/184" warnings meant).
+read setup information ../datain/compile.vsdc -type vsdc
+uniquify -all
+
+// ---------- enter comparison mode ----------
+set system mode lec
+
+// ---------- mapping reports ----------
+report unmapped points  > ../reports/unmapped.rpt
+report black box -nohidden > ../reports/blackbox.rpt
+
+// ---------- datapath analysis (the hard part: mult / eval_poly / FIR) ----------
+analyze datapath -module    -threads 4
+analyze datapath -wordlevel -verbose
+
+// ---------- first compare ----------
+add compared points -all
+compare
+
+// ---------- abort-resolution pass ----------
+analyze abort
+set compare effort super             // if 'super' is rejected, use 'high'
+analyze datapath -wordlevel -verbose
+compare
+
+// ---------- final reports ----------
+report verification  > ../reports/verification.rpt
+report compare data  > ../reports/compare_data.rpt
+report statistics    > ../reports/stats.rpt
+
+// NOTE: 'save session' is NOT a valid command in your Conformal version
+//       (it errored last time). The results above (verification.rpt /
+//       compare_data.rpt / stats.rpt) are the saved record. If you want a
+//       binary session in your version, check 'help save' for the exact form.
+
+// ================================================================
+//  Clean result = all points Equivalent, 0 NEQ, 0 Abort, PASS.
+//  If datapath points still ABORT (you got 94 last time), Conformal has
+//  gone as far as it can on a FLAT netlist. To actually close them:
+//    * preserve hierarchy in synthesis (don't ungroup minaj2 / fir /
+//      eval_poly) so the arithmetic compares block-by-block, OR
+//    * run Formality with the SVF (formality.tcl) - SVF datapath handling
+//      is usually stronger than the vsdc for this exact case.
+// ================================================================
+

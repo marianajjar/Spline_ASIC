@@ -1,0 +1,59 @@
+****************************************
+Report : timing
+	-path_type full_clock_expanded
+	-delay_type min
+	-nosplit
+	-input_pins
+	-max_paths 1
+	-sort_by slack
+Design : top
+Version: X-2025.06-SP2-1
+Date   : Wed Aug 26 21:59:19 2026
+****************************************
+
+
+  Startpoint: I0/shift_I/clk_gate_x_reg[0]/latch (negative level-sensitive latch clocked by clk)
+  Endpoint: I0/shift_I/clk_gate_x_reg[0]/main_gate (rising clock gating-check end-point clocked by clk)
+  Last common pin: I5/I1/C
+  Path Group: **clock_gating_default**
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.85
+  Min Clock Paths Derating Factor : 0.85
+  Max Clock Paths Derating Factor : 1.15
+
+  Point                                                                Incr       Path
+  -------------------------------------------------------------------------------------------
+  clock clk (fall edge)                                                0.52       0.52
+  clock source latency                                                 0.00       0.52
+  clk (in)                                                             0.00 &     0.52 f
+  I5/I1/PAD (PDDW0204CDG)                                              0.00 &     0.52 f
+  I5/I1/C (PDDW0204CDG)                                                0.32 &     0.84 f
+  I0/CTS_ccd_buf_00010/I (CKBD2LVT)                                    0.01 &     0.85 f
+  I0/CTS_ccd_buf_00010/Z (CKBD2LVT)                                    0.04 &     0.89 f
+  I0/shift_I/clk_gate_x_reg[0]/latch/EN (LNQD1LVT)                     0.00 &     0.89 f
+  I0/shift_I/clk_gate_x_reg[0]/latch/Q (LNQD1LVT)                      0.05 &     0.94 r
+  I0/shift_I/clk_gate_x_reg[0]/main_gate/A1 (AN2D4LVT)                 0.00 &     0.94 r
+  data arrival time                                                               0.94
+
+  clock clk (fall edge)                                                0.52       0.52
+  clock source latency                                                -1.03      -0.51
+  clk (in)                                                             0.00 &    -0.51 f
+  I5/I1/PAD (PDDW0204CDG)                                              0.00 &    -0.51 f
+  I5/I1/C (PDDW0204CDG)                                                0.43 &    -0.08 f
+  I0/CTS_ccd_buf_00010/I (CKBD2LVT)                                    0.02 &    -0.06 f
+  I0/CTS_ccd_buf_00010/Z (CKBD2LVT)                                    0.05 &    -0.01 f
+  I0/CTS_ccl_a_buf_00009/I (CKBD12LVT)                                 0.00 &    -0.01 f
+  I0/CTS_ccl_a_buf_00009/Z (CKBD12LVT)                                 0.05 &     0.03 f
+  I0/shift_I/clk_gate_x_reg[0]/main_gate/A2 (AN2D4LVT)                 0.00 &     0.03 f
+  clock reconvergence pessimism                                        0.00       0.03
+  clock uncertainty                                                    0.05       0.08
+  clock gating hold time                                               0.00       0.08
+  data required time                                                              0.08
+  -------------------------------------------------------------------------------------------
+  data required time                                                              0.08
+  data arrival time                                                              -0.94
+  -------------------------------------------------------------------------------------------
+  slack (MET)                                                                     0.86
+
+
+1

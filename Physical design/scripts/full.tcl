@@ -1,0 +1,12 @@
+source ../scripts/init.tcl
+source ../scripts/fp.tcl
+source ../scripts/glnets.tcl
+source ../scripts/power87_1.tcl
+source ../scripts/place.tcl
+source ../scripts/tiecell.tcl
+source ../scripts/ccopt_IO.tcl
+source ../scripts/route.tcl
+source ../scripts/xt.tcl
+source ../scripts/power_analysis.tcl
+source ../scripts/fill.tcl
+source ../scripts/write_data_1.tcl

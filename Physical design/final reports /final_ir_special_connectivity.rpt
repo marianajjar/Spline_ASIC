@@ -1,0 +1,29 @@
+VERIFY_CONNECTIVITY use new engine.
+
+******** Start: VERIFY CONNECTIVITY ********
+Start Time: Wed Aug 26 17:58:06 2026
+
+Design Name: top
+Database Units: 2000
+Design Boundary: (0.0000, 0.0000) (1000.0000, 950.0000)
+Error Limit = 1000; Warning Limit = 50
+Check specified nets
+**** 17:58:07 **** Processed 5000 nets.
+**** 17:58:07 **** Processed 10000 nets.
+**** 17:58:07 **** Processed 15000 nets.
+**** 17:58:07 **** Processed 20000 nets.
+**** 17:58:07 **** Processed 25000 nets.
+**** 17:58:07 **** Processed 30000 nets.
+**** 17:58:08 **** Processed 35000 nets.
+
+Begin Summary 
+  Found no problems or warnings.
+End Summary
+
+End Time: Wed Aug 26 17:58:08 2026
+Time Elapsed: 0:00:02.0
+
+******** End: VERIFY CONNECTIVITY ********
+  Verification Complete : 0 Viols.  0 Wrngs.
+  (CPU Time: 0:00:01.7  MEM: -0.984M)
+

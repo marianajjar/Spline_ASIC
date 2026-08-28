@@ -1,0 +1,269 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : top_interpolator_dac
+Version: W-2024.09-SP3
+Date   : Sat Jul  4 15:31:42 2026
+****************************************
+
+Operating Conditions: NC1D0COM   Library: tcbn65lptc1d0
+Wire Load Model Mode: segmented
+
+  Startpoint: spi_I/count_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: fir_I_u/clk_gate_coeffs_reg[3]/latch
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SNPS_CLOCK_GATE_HIGH_spi_i_master_W16
+                     ZeroWireload          tcbn65lptc1d0
+  top_interpolator_dac
+                     ZeroWireload          tcbn65lptc1d0
+  fir20_q16_fromx_WL16_FL12_NTAPS10_1
+                     ZeroWireload          tcbn65lptc1d0
+  fir20_q16_fromx_WL16_FL12_NTAPS10_0
+                     ZeroWireload          tcbn65lptc1d0
+  SNPS_CLOCK_GATE_HIGH_fir20_q16_fromx_WL16_FL12_NTAPS10_20
+                     ZeroWireload          tcbn65lptc1d0
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  spi_I/count_reg[0]/CP (DFCNQD1HVT)                      0.00       0.00 r
+  spi_I/count_reg[0]/Q (DFCNQD1HVT)                       0.51       0.51 f
+  U188/ZN (XNR2D1LVT)                                     0.10       0.61 f
+  U189/ZN (INR2D4LVT)                                     0.05       0.66 r
+  U192/ZN (ND2D2LVT)                                      0.03       0.68 f
+  U191/ZN (CKND2LVT)                                      0.03       0.71 r
+  fir_I_u/coeff_strobe (fir20_q16_fromx_WL16_FL12_NTAPS10_1)
+                                                          0.00       0.71 r
+  fir_I_u/U2538/ZN (ND2D2LVT)                             0.03       0.74 f
+  fir_I_u/U2315/ZN (NR2XD1LVT)                            0.04       0.78 r
+  fir_I_u/U2575/ZN (ND2D2LVT)                             0.03       0.81 f
+  fir_I_u/U5351/ZN (NR2D1HVT)                             0.08       0.89 r
+  fir_I_u/clk_gate_coeffs_reg[3]/EN (SNPS_CLOCK_GATE_HIGH_fir20_q16_fromx_WL16_FL12_NTAPS10_20)
+                                                          0.00       0.89 r
+  fir_I_u/clk_gate_coeffs_reg[3]/latch/D (LNQD1HVT)       0.00       0.89 r
+  data arrival time                                                  0.89
+
+  clock clk (fall edge)                                   0.52       0.52
+  clock network delay (ideal)                             0.00       0.52
+  clock uncertainty                                      -0.05       0.47
+  fir_I_u/clk_gate_coeffs_reg[3]/latch/EN (LNQD1HVT)      0.00       0.47 f
+  time borrowed from endpoint                             0.41       0.89
+  data required time                                                 0.89
+  --------------------------------------------------------------------------
+  data required time                                                 0.89
+  data arrival time                                                 -0.89
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                                 0.52   
+  library setup time                                     -0.09   
+  --------------------------------------------------------------
+  max time borrow                                         0.43   
+  --------------------------------------------------------------
+  actual time borrow                                      0.41   
+  clock uncertainty                                      -0.05   
+  --------------------------------------------------------------
+  time given to startpoint                                0.36   
+  --------------------------------------------------------------
+
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : top_interpolator_dac
+Version: W-2024.09-SP3
+Date   : Sat Jul  4 15:31:42 2026
+****************************************
+
+Operating Conditions: NC1D0COM   Library: tcbn65lptc1d0
+Wire Load Model Mode: segmented
+
+  Startpoint: serial_in_I
+              (input port clocked by clk)
+  Endpoint: fir_I_u/coeffs_reg[0][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fir20_q16_fromx_WL16_FL12_NTAPS10_1
+                     ZeroWireload          tcbn65lptc1d0
+  top_interpolator_dac
+                     ZeroWireload          tcbn65lptc1d0
+  fir20_q16_fromx_WL16_FL12_NTAPS10_0
+                     ZeroWireload          tcbn65lptc1d0
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 f
+  serial_in_I (in)                                        0.00       0.10 f
+  fir_I_u/coeff_word[0] (fir20_q16_fromx_WL16_FL12_NTAPS10_1)
+                                                          0.00       0.10 f
+  fir_I_u/coeffs_reg[0][0]/D (DFCNQD1HVT)                 0.00       0.10 f
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  fir_I_u/coeffs_reg[0][0]/CP (DFCNQD1HVT)                0.00       0.05 r
+  library hold time                                       0.08       0.13
+  data required time                                                 0.13
+  --------------------------------------------------------------------------
+  data required time                                                 0.13
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.03
+
+
+1
+ 
+****************************************
+Report : area
+Design : top_interpolator_dac
+Version: W-2024.09-SP3
+Date   : Sat Jul  4 15:31:42 2026
+****************************************
+
+Library(s) Used:
+
+    tcbn65lplvttc1d0 (File: /data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lplvt_220a/tcbn65lplvttc1d0.db)
+    tcbn65lptc1d0 (File: /data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lp_220a/tcbn65lptc1d0.db)
+    tcbn65lphvttc1d0 (File: /data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lphvt_220a/tcbn65lphvttc1d0.db)
+
+Number of ports:                         1312
+Number of nets:                         34102
+Number of cells:                        25916
+Number of combinational cells:          24810
+Number of sequential cells:              1063
+Number of macros/black boxes:               0
+Number of buf/inv:                       2476
+Number of references:                      76
+
+Combinational area:             104132.160054
+Buf/Inv area:                     2836.440109
+Noncombinational area:            8328.240075
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                112460.400129
+Total area:                 undefined
+1
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : top_interpolator_dac
+Version: W-2024.09-SP3
+Date   : Sat Jul  4 15:31:42 2026
+****************************************
+
+
+   min_delay/hold ('clk' group)
+
+                             Required        Actual
+   Endpoint                 Path Delay     Path Delay        Slack
+   -----------------------------------------------------------------
+   fir_I_u/coeffs_reg[0][0]/D
+                                0.13           0.10 f        -0.03  (VIOLATED)
+   fir_I_u/coeffs_reg[1][0]/D
+                                0.13           0.10 f        -0.03  (VIOLATED)
+   fir_I_u/coeffs_reg[2][0]/D
+                                0.13           0.10 f        -0.03  (VIOLATED)
+   fir_I_u/coeffs_reg[4][0]/D
+                                0.13           0.10 f        -0.03  (VIOLATED)
+   fir_I_u/coeffs_reg[6][0]/D
+                                0.13           0.10 f        -0.03  (VIOLATED)
+   fir_I_u/coeffs_reg[7][0]/D
+                                0.13           0.10 f        -0.03  (VIOLATED)
+   fir_Q_u/coeffs_reg[0][0]/D
+                                0.13           0.10 f        -0.03  (VIOLATED)
+   fir_Q_u/coeffs_reg[2][0]/D
+                                0.13           0.10 f        -0.03  (VIOLATED)
+   fir_Q_u/coeffs_reg[3][0]/D
+                                0.13           0.10 f        -0.03  (VIOLATED)
+   fir_Q_u/coeffs_reg[4][0]/D
+                                0.13           0.10 f        -0.03  (VIOLATED)
+   fir_Q_u/coeffs_reg[5][0]/D
+                                0.13           0.10 f        -0.03  (VIOLATED)
+   fir_Q_u/coeffs_reg[6][0]/D
+                                0.13           0.10 f        -0.03  (VIOLATED)
+   fir_Q_u/coeffs_reg[8][0]/D
+                                0.13           0.10 f        -0.03  (VIOLATED)
+   hist_I/w0_reg[0]/D           0.13           0.10 f        -0.03  (VIOLATED)
+   hist_Q/w0_reg[0]/D           0.13           0.10 f        -0.03  (VIOLATED)
+   spi_I/shreg_reg[0]/D         0.13           0.10 f        -0.03  (VIOLATED)
+   spi_Q/shreg_reg[0]/D         0.13           0.10 f        -0.03  (VIOLATED)
+
+
+   max_leakage_power
+
+                             Required        Actual
+   Design                   Leakage Power  Leakage Power     Slack
+   -----------------------------------------------------------------
+   top_interpolator_dac         0.00       15801.52       -15801.52 (VIOLATED)
+
+
+1
+ 
+****************************************
+check_design summary:
+Version:     W-2024.09-SP3
+Date:        Sat Jul  4 15:31:43 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     29
+    Feedthrough (LINT-29)                                          29
+--------------------------------------------------------------------------------
+
+Warning: In design 'minaj2_interp_3samp_internalSlope_1', input port 'x_prev[15]' is connected directly to output port 'y0[15]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_1', input port 'x_prev[14]' is connected directly to output port 'y0[14]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_1', input port 'x_prev[13]' is connected directly to output port 'y0[13]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_1', input port 'x_prev[12]' is connected directly to output port 'y0[12]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_1', input port 'x_prev[11]' is connected directly to output port 'y0[11]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_1', input port 'x_prev[10]' is connected directly to output port 'y0[10]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_1', input port 'x_prev[9]' is connected directly to output port 'y0[9]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_1', input port 'x_prev[8]' is connected directly to output port 'y0[8]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_1', input port 'x_prev[7]' is connected directly to output port 'y0[7]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_1', input port 'x_prev[6]' is connected directly to output port 'y0[6]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_1', input port 'x_prev[5]' is connected directly to output port 'y0[5]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_1', input port 'x_prev[3]' is connected directly to output port 'y0[3]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_1', input port 'x_prev[2]' is connected directly to output port 'y0[2]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_1', input port 'x_prev[0]' is connected directly to output port 'y0[0]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_0', input port 'x_prev[15]' is connected directly to output port 'y0[15]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_0', input port 'x_prev[14]' is connected directly to output port 'y0[14]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_0', input port 'x_prev[13]' is connected directly to output port 'y0[13]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_0', input port 'x_prev[12]' is connected directly to output port 'y0[12]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_0', input port 'x_prev[11]' is connected directly to output port 'y0[11]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_0', input port 'x_prev[10]' is connected directly to output port 'y0[10]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_0', input port 'x_prev[9]' is connected directly to output port 'y0[9]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_0', input port 'x_prev[8]' is connected directly to output port 'y0[8]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_0', input port 'x_prev[7]' is connected directly to output port 'y0[7]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_0', input port 'x_prev[6]' is connected directly to output port 'y0[6]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_0', input port 'x_prev[5]' is connected directly to output port 'y0[5]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_0', input port 'x_prev[3]' is connected directly to output port 'y0[3]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_0', input port 'x_prev[2]' is connected directly to output port 'y0[2]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_0', input port 'x_prev[1]' is connected directly to output port 'y0[1]'. (LINT-29)
+Warning: In design 'minaj2_interp_3samp_internalSlope_0', input port 'x_prev[0]' is connected directly to output port 'y0[0]'. (LINT-29)
+1

@@ -1,0 +1,44 @@
+# Version:1.0 MMMC View Definition File
+# Do Not Remove Above Line
+# Do Not Remove Above Line
+create_rc_corner -name SlowRC -T {125} \
+    -preRoute_res {1} -preRoute_cap {1} -preRoute_clkres {0} -preRoute_clkcap {0} \
+    -postRoute_res {1} -postRoute_cap {1} -postRoute_xcap {1} \
+    -postRoute_clkres {0} -postRoute_clkcap {0}
+
+create_rc_corner -name FastRC -T {-40} \
+    -preRoute_res {1} -preRoute_cap {1} -preRoute_clkres {0} -preRoute_clkcap {0} \
+    -postRoute_res {1} -postRoute_cap {1} -postRoute_xcap {1} \
+    -postRoute_clkres {0} -postRoute_clkcap {0}
+
+create_library_set -name Typ -timing {
+    /data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lplvt_220a/tcbn65lplvttc.lib
+	/data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lphvt_220a/tcbn65lphvttc.lib
+	/data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lp_220a/tcbn65lptc.lib
+    /data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tpdn65lpnv2od3_200a/tpdn65lpnv2od3tc.lib
+}
+
+create_library_set -name Min -timing {
+    /data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lplvt_220a/tcbn65lplvtbc.lib
+    /data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lphvt_220a/tcbn65lphvtbc.lib
+	/data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lp_220a/tcbn65lpbc.lib
+    /data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tpdn65lpnv2od3_200a/tpdn65lpnv2od3bc.lib
+}
+
+create_library_set -name Max -timing {
+    /data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lplvt_220a/tcbn65lplvtwc.lib
+    /data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lphvt_220a/tcbn65lphvtwc.lib
+    /data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lp_220a/tcbn65lpwc.lib
+    /data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tpdn65lpnv2od3_200a/tpdn65lpnv2od3wc.lib
+}
+
+create_constraint_mode -name TypCM -sdc_files {/project/verif/users/marianajjar/ws/spline_3_1_rerun/innovus/datain/top_interpolator_dac.sdc}
+
+create_delay_corner -name SlowDC -library_set {Max} -rc_corner {SlowRC}
+create_delay_corner -name FastDC -library_set {Min} -rc_corner {FastRC}
+
+create_analysis_view -name FastView -constraint_mode {TypCM} -delay_corner {FastDC}
+create_analysis_view -name SlowView -constraint_mode {TypCM} -delay_corner {SlowDC}
+
+set_analysis_view -setup {SlowView} -hold {FastView}
+

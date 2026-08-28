@@ -1,0 +1,50 @@
+//open a logfile and replace the existing logfile (if exists)
+set log file ../logfile/out.log -replace
+set compare effort low
+
+//standard cell libraries (paths from the other script)
+read library -Both -Replace -sensitive -Statetable -Liberty \
+  /data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lplvt_220a/tcbn65lplvttc.lib
+read library -Both -Append  -sensitive -Statetable -Liberty \
+  /data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lphvt_220a/tcbn65lphvttc.lib
+read library -Both -Append  -sensitive -Statetable -Liberty \
+  /data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lp_220a/tcbn65lptc.lib
+read library -Both -Append  -sensitive -Statetable -Liberty \
+  /data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tpdn65lpnv2od3_200a/tpdn65lpnv2od3tc.lib
+
+//GOLDEN RTL  (using ../datain/RTL/ paths)
+read design -SV -Golden -continuousassignment Bidirectional -nokeep_unreach -norangeconstraint \
+  ../datain/RTL/spline.v \
+  ../datain/RTL/filter4tweny.v \
+  ../datain/RTL/spi_i.v \
+  ../datain/RTL/spi_register.v \
+  ../datain/RTL/shift_30_I.v \
+  ../datain/RTL/spi_L.v \
+  ../datain/RTL/spline_reg_out.v \
+  ../datain/RTL/top_spline.v \
+  ../datain/RTL/shift_30_Q.v \
+  ../datain/RTL/spi_q.v
+
+//REVISED NETLIST
+read design ../datain/netlist/top_interpolator_dac.v -Verilog -Revised -sensitive -continuousassignment Bidirectional -nokeep_unreach -nosupply
+
+//CHANGE TO YOURE ADDED SCAN CHAINS
+//Neutralize  scan chains if required
+//ignore scan insertion - not in the RTL
+// add pin constraints 0 scan_in1 scan_in2 scan_in3 -Revised
+// add ignore outputs scan_out1 scan_out2 scan_out3 -Revised
+// add pin constraints 0 scan_en -Revised
+
+// Disregard gated clocks as a reason for non-equivalance
+set flatten model -gated_clock
+
+//Read vsdc file from synthesis
+read setup information ../datain/compile.vsdc -type vsdc
+uniquify -all
+
+// Write Hierarchical dofile with wordlevel (reverse engineering algorithm that takes longer)
+write hier_compare dofile hier.do -replace -prepend_string "analyze datapath -module -threads 16 ; analyze datapath -wordlevel -verbose" -usage
+set dofile abort OFF
+set compare effort low
+run hier_compare hier.do
+set log file

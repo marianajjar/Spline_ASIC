@@ -1,0 +1,60 @@
+// ============================================================
+// hier_do_file
+// LEC: RTL vs synthesized gate-level netlist
+// Design: top_interpolator_dac
+// No scan chains
+// ============================================================
+
+set log file ../logfile/out.log -replace
+
+set compare effort low
+
+read library -Both -Replace -sensitive -Statetable -Liberty \
+/data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lplvt_220a/tcbn65lplvttc.lib
+
+read library -Both -Append -sensitive -Statetable -Liberty \
+/data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lphvt_220a/tcbn65lphvttc.lib
+
+read library -Both -Append -sensitive -Statetable -Liberty \
+/data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lp_220a/tcbn65lptc.lib
+
+read library -Both -Append -sensitive -Statetable -Liberty \
+/data/tsmc/65LP/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tpdn65lpnv2od3_200a/tpdn65lpnv2od3tc.lib
+
+
+// GOLDEN RTL
+read design \
+../datain/RTL/spi_L.v \
+../datain/RTL/spi_i.v \
+../datain/RTL/spi_q.v \
+../datain/RTL/spline.v \
+../datain/RTL/shift_30_I.v \
+../datain/RTL/shift_30_Q.v \
+../datain/RTL/top_spline.v \
+../datain/RTL/spi_register.v \
+../datain/RTL/spline_reg_out.v \
+../datain/RTL/filter4tweny.v \
+-Verilog -sv09 -Golden -continuousassignment Bidirectional -nokeep_unreach -norangeconstraint
+
+
+// REVISED NETLIST
+read design \
+../datain/netlist/top_interpolator_dac.v \
+-Verilog -Revised -sensitive -continuousassignment Bidirectional -nokeep_unreach -nosupply
+
+
+set flatten model -gated_clock
+
+read setup information ../datain/compile.vsdc -type vsdc
+
+uniquify -all
+
+write hier_compare dofile hier.do -replace -prepend_string "analyze datapath -module -threads 4 ; analyze datapath -wordlevel -verbose" -usage
+
+set dofile abort OFF
+
+set compare effort low
+
+run hier_compare hier.do
+
+set log file

@@ -1,0 +1,98 @@
+****************************************
+Report : timing
+	-path_type full_clock_expanded
+	-delay_type max
+	-nosplit
+	-input_pins
+	-max_paths 1
+	-sort_by slack
+Design : top
+Version: X-2025.06-SP2-1
+Date   : Wed Aug 26 21:59:02 2026
+****************************************
+
+
+  Startpoint: I0/fir_Q_u/load_idx_reg[0] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: I0/fir_Q_u/clk_gate_coeffs_reg[0]/latch (negative level-sensitive latch clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: max
+
+  Point                                                                   Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                                   0.00       0.00
+  clock source latency                                                   -1.03      -1.03
+  clk (in)                                                                0.00 &    -1.03 r
+  I5/I1/PAD (PDDW0204CDG)                                                 0.00 &    -1.03 r
+  I5/I1/C (PDDW0204CDG)                                                   0.63 &    -0.40 r
+  I0/CTS_ccl_a_buf_00008/I (CKBD8LVT)                                     0.02 &    -0.39 r
+  I0/CTS_ccl_a_buf_00008/Z (CKBD8LVT)                                     0.14 &    -0.25 r
+  I0/fir_Q_u/clk_gate_load_idx_reg/main_gate/A2 (CKAN2D0)                 0.02 &    -0.23 r
+  I0/fir_Q_u/clk_gate_load_idx_reg/main_gate/Z (CKAN2D0)                  0.24 &     0.01 r
+  I0/fir_Q_u/load_idx_reg[0]/CP (DFCNQD4LVT)                              0.00 &     0.01 r
+  I0/fir_Q_u/load_idx_reg[0]/Q (DFCNQD4LVT)                               0.26 &     0.27 r
+  I0/fir_Q_u/FE_PHC14934_load_idx_0/I (CKBD1LVT)                          0.00 &     0.27 r
+  I0/fir_Q_u/FE_PHC14934_load_idx_0/Z (CKBD1LVT)                          0.06 &     0.32 r
+  I0/fir_Q_u/FE_PHC14405_load_idx_0/I (BUFFD2LVT)                         0.00 &     0.32 r
+  I0/fir_Q_u/FE_PHC14405_load_idx_0/Z (BUFFD2LVT)                         0.05 &     0.38 r
+  I0/fir_Q_u/FE_PHC8626_load_idx_0/I (CKBD1LVT)                           0.00 &     0.38 r
+  I0/fir_Q_u/FE_PHC8626_load_idx_0/Z (CKBD1LVT)                           0.06 &     0.44 r
+  I0/fir_Q_u/FE_PHC12032_load_idx_0/I (CKBD1LVT)                          0.00 &     0.44 r
+  I0/fir_Q_u/FE_PHC12032_load_idx_0/Z (CKBD1LVT)                          0.06 &     0.49 r
+  I0/fir_Q_u/FE_PHC10777_load_idx_0/I (BUFFD2LVT)                         0.00 &     0.49 r
+  I0/fir_Q_u/FE_PHC10777_load_idx_0/Z (BUFFD2LVT)                         0.06 &     0.55 r
+  I0/fir_Q_u/FE_PHC10152_load_idx_0/I (CKBD4)                             0.00 &     0.55 r
+  I0/fir_Q_u/FE_PHC10152_load_idx_0/Z (CKBD4)                             0.08 &     0.62 r
+  I0/fir_Q_u/FE_RC_2864_0/A1 (NR2XD2)                                     0.00 &     0.62 r
+  I0/fir_Q_u/FE_RC_2864_0/ZN (NR2XD2)                                     0.04 &     0.66 f
+  I0/fir_Q_u/FE_PHC14975_FE_RN_1113_0/I (BUFFD4)                          0.00 &     0.66 f
+  I0/fir_Q_u/FE_PHC14975_FE_RN_1113_0/Z (BUFFD4)                          0.07 &     0.74 f
+  I0/fir_Q_u/FE_RC_4994_0/I (INVD2LVT)                                    0.00 &     0.74 f
+  I0/fir_Q_u/FE_RC_4994_0/ZN (INVD2LVT)                                   0.02 &     0.76 r
+  I0/fir_Q_u/FE_PHC15346_FE_RN_2051_0/I (CKBD1LVT)                        0.00 &     0.76 r
+  I0/fir_Q_u/FE_PHC15346_FE_RN_2051_0/Z (CKBD1LVT)                        0.06 &     0.82 r
+  I0/fir_Q_u/FE_RC_5000_0/A1 (IND2D2)                                     0.00 &     0.82 r
+  I0/fir_Q_u/FE_RC_5000_0/ZN (IND2D2)                                     0.07 &     0.89 r
+  I0/fir_Q_u/FE_RC_4999_0/A2 (NR2XD1LVT)                                  0.00 &     0.89 r
+  I0/fir_Q_u/FE_RC_4999_0/ZN (NR2XD1LVT)                                  0.04 &     0.93 f
+  I0/fir_Q_u/FE_PHC14517_N45/I (CKBD1LVT)                                 0.00 &     0.93 f
+  I0/fir_Q_u/FE_PHC14517_N45/Z (CKBD1LVT)                                 0.05 &     0.98 f
+  I0/fir_Q_u/FE_PHC9623_N45/I (CKBD1LVT)                                  0.00 &     0.98 f
+  I0/fir_Q_u/FE_PHC9623_N45/Z (CKBD1LVT)                                  0.05 &     1.03 f
+  I0/fir_Q_u/FE_PHC9064_N45/I (CKBD2LVT)                                  0.00 &     1.03 f
+  I0/fir_Q_u/FE_PHC9064_N45/Z (CKBD2LVT)                                  0.07 &     1.10 f
+  I0/fir_Q_u/clk_gate_coeffs_reg[0]/latch/D (LNQD1LVT)                    0.00 &     1.10 f
+  data arrival time                                                                  1.10
+
+  clock clk (fall edge)                                                   0.52       0.52
+  clock source latency                                                    0.00       0.52
+  clk (in)                                                                0.00 &     0.52 f
+  I5/I1/PAD (PDDW0204CDG)                                                 0.00 &     0.52 f
+  I5/I1/C (PDDW0204CDG)                                                   0.62 &     1.14 f
+  I0/CTS_ccl_a_buf_00008/I (CKBD8LVT)                                     0.02 &     1.16 f
+  I0/CTS_ccl_a_buf_00008/Z (CKBD8LVT)                                     0.12 &     1.27 f
+  I0/CTS_ccl_a_buf_00007/I (CKBD8LVT)                                     0.00 &     1.28 f
+  I0/CTS_ccl_a_buf_00007/Z (CKBD8LVT)                                     0.15 &     1.42 f
+  I0/fir_Q_u/clk_gate_coeffs_reg[0]/latch/EN (LNQD1LVT)                   0.02 &     1.44 f
+  clock reconvergence pessimism                                           0.00       1.44
+  clock uncertainty                                                      -0.05       1.39
+  time borrowed from endpoint                                             0.00       1.39
+  data required time                                                                 1.39
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 1.39
+  data arrival time                                                                 -1.10
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.29
+
+  Time Borrowing Information
+  ----------------------------------------------------------------------------------
+  clk nominal pulse width                                                 0.52
+  clock latency difference                                                0.05
+  library setup time                                                     -0.02
+  ----------------------------------------------------------------------------------
+  max time borrow                                                         0.55
+  actual time borrow                                                      0.00
+  ----------------------------------------------------------------------------------
+
+
+1

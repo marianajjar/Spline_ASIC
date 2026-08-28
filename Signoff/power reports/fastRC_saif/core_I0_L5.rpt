@@ -1,0 +1,112 @@
+*----------------------------------------------------------------------------------------
+*	Innovus 22.15-s091_1 (64bit) 02/28/2024 12:21 (Linux 3.10.0-693.el7.x86_64)
+*	
+*
+* 	Date & Time:	2026-Aug-26 16:25:25 (2026-Aug-26 13:25:25 GMT)
+*
+*----------------------------------------------------------------------------------------
+*
+*	Design: top
+*
+*	Liberty Libraries used: 
+*	        FastView: /project/verif/users/marianajjar/ws/spline_3_1_rerun/innovus/dataout/design_saves/top_signoff.dat/libs/mmmc/tcbn65lplvtbc.lib
+*	        FastView: /project/verif/users/marianajjar/ws/spline_3_1_rerun/innovus/dataout/design_saves/top_signoff.dat/libs/mmmc/tcbn65lphvtbc.lib
+*	        FastView: /project/verif/users/marianajjar/ws/spline_3_1_rerun/innovus/dataout/design_saves/top_signoff.dat/libs/mmmc/tcbn65lpbc.lib
+*	        FastView: /project/verif/users/marianajjar/ws/spline_3_1_rerun/innovus/dataout/design_saves/top_signoff.dat/libs/mmmc/tpdn65lpnv2od3bc.lib
+*
+*	Power Domain used: 
+*              Rail:        VDD      Voltage:        1.2 
+*
+*       Power View : FastView
+*
+*       User-Defined Activity : N.A.
+*
+*	Switching Activity File used: 
+*	        /project/verif/users/marianajjar/ws/spline_3_1_rerun/power_sim/core_sf_L5.saif
+*
+*            Total Design annotation coverage: 32562/43203 = 75.369766% 
+
+*       Hierarchical Global Activity: N.A.
+*
+*       Global Activity: N.A.
+*
+*       Sequential Element Activity: 0.200000
+*
+*       Primary Input Activity: 0.200000
+*
+*       Default icg ratio: N.A.
+*
+*       Global Comb ClockGate Ratio: N.A.
+*
+*	Power Units = 1mW
+*
+*	Time Units = 1e-09 secs 
+*
+*       report_power -outfile /project/verif/users/marianajjar/ws/spline_3_1_rerun/innovus/work/power_signoff/fastRC_saif/core_I0_L5.rpt -instances {I0}
+*
+-----------------------------------------------------------------------------------------
+
+
+Total Power 
+-----------------------------------------------------------------------------------------
+Total Internal Power:       83.38747902 	   51.2776%
+Total Switching Power:      78.87289151 	   48.5014%
+Total Leakage Power:         0.35945885 	    0.2210%
+Total Power:               162.61982939 
+-----------------------------------------------------------------------------------------
+
+
+Group                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+Sequential                         4.439        0.65     0.02984       5.119       3.148 
+Macro                                  0           0      0.0136      0.0136    0.008365 
+IO                                 55.59       64.14   0.0005347       119.7       73.63 
+Combinational                      23.02       13.03      0.3127       36.37       22.36 
+Clock (Combinational)              0.336       1.046    0.002811       1.385      0.8517 
+Clock (Sequential)                     0           0           0           0           0 
+-----------------------------------------------------------------------------------------
+Total                              83.39       78.87      0.3595       162.6         100 
+-----------------------------------------------------------------------------------------
+
+
+Clock                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+clk                                5.801       32.68    0.002826       38.48       23.66 
+-----------------------------------------------------------------------------------------
+Total (excluding duplicates)       5.801       32.68    0.002826       38.48       23.66 
+-----------------------------------------------------------------------------------------
+Clock: clk
+Clock Period: 0.001042 usec 
+Clock Toggle Rate:  1919.9939 Mhz 
+Clock Static Probability:  0.5000
+
+
+
+Rail                  Voltage   Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+Default                  1.32      55.59       64.14      0.0141       119.7       73.64 
+VDD                       1.2       27.8       14.73      0.3454       42.87       26.36 
+
+
+Instance                      Max Toggles   Total Toggles   Internal   Switching     Leakage       Total  Percentage    Cell
+                              Input Pins    Output Pins     Power      Power         Power         Power  (%)           Name
+----------------------------------------------------------------------------------------------------------------------------
+I0                                      0               0      27.69        14.6      0.3403       42.63       26.22    
+----------------------------------------------------------------------------------------------------------------------------
+Total                                                          27.69        14.6      0.3403       42.63       26.22    
+
+
+-----------------------------------------------------------------------------------------
+*	Power Distribution Summary: 
+*                Highest Average Power:                     I5/I1 (PDDW0204CDG):             37.1 
+*                Highest Leakage Power:                PAD_POC/I1 (PVDD2POC):          0.01356 
+*          Total Cap:      3.42677e-10 F
+*          Total instances in design: 36484
+*          Total instances in design with no power:     6
+*          Total instances in design with no activity:     6
+*          Total Fillers and Decap:     4
+-----------------------------------------------------------------------------------------
+

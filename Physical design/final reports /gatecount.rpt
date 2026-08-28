@@ -1,0 +1,9 @@
+Gate area 1.0800 um^2
+[0] top Gates=138218 Cells=36435 Area=149275.4 um^2
+[1] I0 Gates=137561 Cells=36161 Area=148565.9 um^2
+[2] I0/minaj2_I Gates=27194 Cells=6956 Area=29369.5 um^2
+[2] I0/minaj2_Q Gates=27240 Cells=6991 Area=29419.9 um^2
+[2] I0/shift_I Gates=4864 Cells=2125 Area=5253.5 um^2
+[2] I0/shift_Q Gates=5083 Cells=2199 Area=5489.6 um^2
+[2] I0/fir_I_u Gates=32309 Cells=7115 Area=34893.7 um^2
+[2] I0/fir_Q_u Gates=33246 Cells=7449 Area=35906.4 um^2

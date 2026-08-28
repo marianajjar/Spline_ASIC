@@ -1,0 +1,50 @@
+Information: Derived library resistance unit is 1.000000 Kohm (Time unit is 1 ns, and Capacitance unit is 1.000000 pF). (DES-028)
+
+****************************************
+Report : read_parasitics /project/verif/users/marianajjar/ws/spline_3_1_rerun/primetime_fixed/setup/datain/top_fast.SPEF
+Design : top
+Version: X-2025.06-SP2-1
+Date   : Wed Aug 26 21:52:18 2026
+****************************************
+
+        0 error(s)
+        Format is SPEF
+        Annotated nets                   :        43203
+        Annotated capacitances           :       662305
+        Annotated resistances            :       619102
+        Reduced coupling capacitances    :        90238
+        Annotated PI models              :            0
+        Annotated Elmore delays          :            0
+
+Information: Invalidating logical update. (PTE-139)
+Information: Abandoning fast timing updates. Change limit exceeded. (PTE-018)
+
+Executing command 'report_annotated_parasitics':
+****************************************
+Report : annotated_parasitics
+	-internal_nets
+	-boundary_nets
+	-driverless_nets
+	-loadless_nets
+	-pin_to_pin_nets
+Design : top
+Version: X-2025.06-SP2-1
+Date   : Wed Aug 26 21:52:18 2026
+****************************************
+
+                    |         |         |         |   RC    | Coupled |   Not   |
+Net Type            |  Total  | Lumped  |  RC pi  | network | network |Annotated|
+--------------------+---------+---------+---------+---------+---------+---------+
+Internal nets       |         |         |         |         |         |         |
+  - Pin to pin nets |   43169 |       0 |       0 |   43167 |       0 |       2 |
+  - Driverless nets |     221 |       0 |       0 |       0 |       0 |     221 |
+  - Loadless nets   |       0 |       0 |       0 |       0 |       0 |       0 |
+--------------------+---------+---------+---------+---------+---------+---------+
+Boundary/port nets  |         |         |         |         |         |         |
+  - Pin to pin nets |      36 |       0 |       0 |      36 |       0 |       0 |
+  - Driverless nets |       0 |       0 |       0 |       0 |       0 |       0 |
+  - Loadless nets   |       0 |       0 |       0 |       0 |       0 |       0 |
+--------------------+---------+---------+---------+---------+---------+---------+
+                    |   43426 |       0 |       0 |   43203 |       0 |     223 |
+
+1

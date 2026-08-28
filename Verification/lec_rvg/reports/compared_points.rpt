@@ -1,0 +1,2016 @@
+1st compared points:
+  (G) + 5    PO   /dac_I[15]
+  (R) + 5    PO   /dac_I[15]
+2nd compared points:
+  (G) + 6    PO   /dac_I[14]
+  (R) + 6    PO   /dac_I[14]
+3rd compared points:
+  (G) + 7    PO   /dac_I[13]
+  (R) + 7    PO   /dac_I[13]
+4th compared points:
+  (G) + 8    PO   /dac_I[12]
+  (R) + 8    PO   /dac_I[12]
+5th compared points:
+  (G) + 9    PO   /dac_I[11]
+  (R) + 9    PO   /dac_I[11]
+6th compared points:
+  (G) + 10   PO   /dac_I[10]
+  (R) + 10   PO   /dac_I[10]
+7th compared points:
+  (G) + 11   PO   /dac_I[9]
+  (R) + 11   PO   /dac_I[9]
+8th compared points:
+  (G) + 12   PO   /dac_I[8]
+  (R) + 12   PO   /dac_I[8]
+9th compared points:
+  (G) + 13   PO   /dac_I[7]
+  (R) + 13   PO   /dac_I[7]
+10th compared points:
+  (G) + 14   PO   /dac_I[6]
+  (R) + 14   PO   /dac_I[6]
+11th compared points:
+  (G) + 15   PO   /dac_I[5]
+  (R) + 15   PO   /dac_I[5]
+12th compared points:
+  (G) + 16   PO   /dac_I[4]
+  (R) + 16   PO   /dac_I[4]
+13th compared points:
+  (G) + 17   PO   /dac_I[3]
+  (R) + 17   PO   /dac_I[3]
+14th compared points:
+  (G) + 18   PO   /dac_I[2]
+  (R) + 18   PO   /dac_I[2]
+15th compared points:
+  (G) + 19   PO   /dac_I[1]
+  (R) + 19   PO   /dac_I[1]
+16th compared points:
+  (G) + 20   PO   /dac_I[0]
+  (R) + 20   PO   /dac_I[0]
+17th compared points:
+  (G) + 21   PO   /dac_Q[15]
+  (R) + 21   PO   /dac_Q[15]
+18th compared points:
+  (G) + 22   PO   /dac_Q[14]
+  (R) + 22   PO   /dac_Q[14]
+19th compared points:
+  (G) + 23   PO   /dac_Q[13]
+  (R) + 23   PO   /dac_Q[13]
+20th compared points:
+  (G) + 24   PO   /dac_Q[12]
+  (R) + 24   PO   /dac_Q[12]
+21st compared points:
+  (G) + 25   PO   /dac_Q[11]
+  (R) + 25   PO   /dac_Q[11]
+22nd compared points:
+  (G) + 26   PO   /dac_Q[10]
+  (R) + 26   PO   /dac_Q[10]
+23rd compared points:
+  (G) + 27   PO   /dac_Q[9]
+  (R) + 27   PO   /dac_Q[9]
+24th compared points:
+  (G) + 28   PO   /dac_Q[8]
+  (R) + 28   PO   /dac_Q[8]
+25th compared points:
+  (G) + 29   PO   /dac_Q[7]
+  (R) + 29   PO   /dac_Q[7]
+26th compared points:
+  (G) + 30   PO   /dac_Q[6]
+  (R) + 30   PO   /dac_Q[6]
+27th compared points:
+  (G) + 31   PO   /dac_Q[5]
+  (R) + 31   PO   /dac_Q[5]
+28th compared points:
+  (G) + 32   PO   /dac_Q[4]
+  (R) + 32   PO   /dac_Q[4]
+29th compared points:
+  (G) + 33   PO   /dac_Q[3]
+  (R) + 33   PO   /dac_Q[3]
+30th compared points:
+  (G) + 34   PO   /dac_Q[2]
+  (R) + 34   PO   /dac_Q[2]
+31st compared points:
+  (G) + 35   PO   /dac_Q[1]
+  (R) + 35   PO   /dac_Q[1]
+32nd compared points:
+  (G) + 36   PO   /dac_Q[0]
+  (R) + 36   PO   /dac_Q[0]
+33rd compared points:
+  (G) + 37   DFF  /coeff_done_reg
+  (R) + 65   DFF  /coeff_done_reg/U$1
+34th compared points:
+  (G) + 38   DFF  /coeff_count_reg[3]
+  (R) + 64   DFF  /coeff_count_reg[3]/U$1
+35th compared points:
+  (G) + 39   DFF  /coeff_count_reg[2]
+  (R) + 69   DFF  /coeff_count_reg[2]/U$1
+36th compared points:
+  (G) + 40   DFF  /coeff_count_reg[1]
+  (R) + 68   DFF  /coeff_count_reg[1]/U$1
+37th compared points:
+  (G) + 41   DFF  /coeff_count_reg[0]
+  (R) + 67   DFF  /coeff_count_reg[0]/U$1
+38th compared points:
+  (G) + 42   DFF  /cfg_u/l_tmp_reg[1]
+  (R) + 44   DFF  /cfg_u/l_tmp_reg[1]/U$1
+39th compared points:
+  (G) + 43   DFF  /cfg_u/l_tmp_reg[0]
+  (R) + 42   DFF  /cfg_u/l_tmp_reg[0]/U$1
+40th compared points:
+  (G) + 44   DFF  /cfg_u/got_marker_reg
+  (R) + 38   DFF  /cfg_u/got_marker_reg/U$1
+41st compared points:
+  (G) + 45   DFF  /cfg_u/cnt_reg[1]
+  (R) + 40   DFF  /cfg_u/cnt_reg[1]/U$1
+42nd compared points:
+  (G) + 46   DFF  /cfg_u/cnt_reg[0]
+  (R) + 39   DFF  /cfg_u/cnt_reg[0]/U$1
+43rd compared points:
+  (G) + 47   DFF  /cfg_u/cfg_done_reg
+     (G) + 74   DFF  /spi_I/en_d_reg
+  (R) + 37   DFF  /cfg_u/cfg_done_reg/U$1
+44th compared points:
+  (G) + 48   DFF  /cfg_u/L_ctrl_reg[2]
+  (R) + 41   DFF  /cfg_u/L_ctrl_reg[2]/U$1
+45th compared points:
+  (G) + 49   DFF  /cfg_u/L_ctrl_reg[1]
+  (R) + 669  DFF  /cfg_u/L_ctrl_reg[1]/U$1
+46th compared points:
+  (G) + 50   DFF  /cfg_u/L_ctrl_reg[0]
+  (R) + 43   DFF  /cfg_u/L_ctrl_reg[0]/U$1
+47th compared points:
+  (G) + 51   DFF  /spi_I/step_cnt_reg[3]
+  (R) + 73   DFF  /spi_I/step_cnt_reg[3]/U$1
+48th compared points:
+  (G) + 52   DFF  /spi_I/step_cnt_reg[2]
+  (R) + 72   DFF  /spi_I/step_cnt_reg[2]/U$1
+49th compared points:
+  (G) + 53   DFF  /spi_I/step_cnt_reg[1]
+  (R) + 71   DFF  /spi_I/step_cnt_reg[1]/U$1
+50th compared points:
+  (G) + 54   DFF  /spi_I/step_cnt_reg[0]
+  (R) + 70   DFF  /spi_I/step_cnt_reg[0]/U$1
+51st compared points:
+  (G) + 55   DFF  /spi_I/count_reg[3]
+  (R) + 63   DFF  /spi_I/count_reg[3]/U$1
+52nd compared points:
+  (G) + 56   DFF  /spi_I/count_reg[2]
+  (R) + 62   DFF  /spi_I/count_reg[2]/U$1
+53rd compared points:
+  (G) + 57   DFF  /spi_I/count_reg[1]
+  (R) + 61   DFF  /spi_I/count_reg[1]/U$1
+54th compared points:
+  (G) + 58   DFF  /spi_I/count_reg[0]
+  (R) + 60   DFF  /spi_I/count_reg[0]/U$1
+55th compared points:
+  (G) + 59   DFF  /spi_I/shreg_reg[14]
+  (R) + 59   DFF  /spi_I/shreg_reg[14]/U$1
+56th compared points:
+  (G) + 60   DFF  /spi_I/shreg_reg[13]
+  (R) + 58   DFF  /spi_I/shreg_reg[13]/U$1
+57th compared points:
+  (G) + 61   DFF  /spi_I/shreg_reg[12]
+  (R) + 57   DFF  /spi_I/shreg_reg[12]/U$1
+58th compared points:
+  (G) + 62   DFF  /spi_I/shreg_reg[11]
+  (R) + 56   DFF  /spi_I/shreg_reg[11]/U$1
+59th compared points:
+  (G) + 63   DFF  /spi_I/shreg_reg[10]
+  (R) + 55   DFF  /spi_I/shreg_reg[10]/U$1
+60th compared points:
+  (G) + 64   DFF  /spi_I/shreg_reg[9]
+  (R) + 54   DFF  /spi_I/shreg_reg[9]/U$1
+61st compared points:
+  (G) + 65   DFF  /spi_I/shreg_reg[8]
+  (R) + 53   DFF  /spi_I/shreg_reg[8]/U$1
+62nd compared points:
+  (G) + 66   DFF  /spi_I/shreg_reg[7]
+  (R) + 52   DFF  /spi_I/shreg_reg[7]/U$1
+63rd compared points:
+  (G) + 67   DFF  /spi_I/shreg_reg[6]
+  (R) + 51   DFF  /spi_I/shreg_reg[6]/U$1
+64th compared points:
+  (G) + 68   DFF  /spi_I/shreg_reg[5]
+  (R) + 50   DFF  /spi_I/shreg_reg[5]/U$1
+65th compared points:
+  (G) + 69   DFF  /spi_I/shreg_reg[4]
+  (R) + 49   DFF  /spi_I/shreg_reg[4]/U$1
+66th compared points:
+  (G) + 70   DFF  /spi_I/shreg_reg[3]
+  (R) + 48   DFF  /spi_I/shreg_reg[3]/U$1
+67th compared points:
+  (G) + 71   DFF  /spi_I/shreg_reg[2]
+  (R) + 47   DFF  /spi_I/shreg_reg[2]/U$1
+68th compared points:
+  (G) + 72   DFF  /spi_I/shreg_reg[1]
+  (R) + 46   DFF  /spi_I/shreg_reg[1]/U$1
+69th compared points:
+  (G) + 73   DFF  /spi_I/shreg_reg[0]
+  (R) + 45   DFF  /spi_I/shreg_reg[0]/U$1
+70th compared points:
+  (G) + 75   DFF  /spi_I/mode15_word_reg
+  (R) + 66   DFF  /spi_I/mode15_word_reg/U$1
+71st compared points:
+  (G) + 76   DFF  /spi_I/shift_strobe_reg
+  (R) + 74   DFF  /spi_I/shift_strobe_reg/U$1
+72nd compared points:
+  (G) + 77   DFF  /spi_Q/shreg_reg[14]
+  (R) + 89   DFF  /spi_Q/shreg_reg[14]/U$1
+73rd compared points:
+  (G) + 78   DFF  /spi_Q/shreg_reg[13]
+  (R) + 88   DFF  /spi_Q/shreg_reg[13]/U$1
+74th compared points:
+  (G) + 79   DFF  /spi_Q/shreg_reg[12]
+  (R) + 87   DFF  /spi_Q/shreg_reg[12]/U$1
+75th compared points:
+  (G) + 80   DFF  /spi_Q/shreg_reg[11]
+  (R) + 86   DFF  /spi_Q/shreg_reg[11]/U$1
+76th compared points:
+  (G) + 81   DFF  /spi_Q/shreg_reg[10]
+  (R) + 85   DFF  /spi_Q/shreg_reg[10]/U$1
+77th compared points:
+  (G) + 82   DFF  /spi_Q/shreg_reg[9]
+  (R) + 84   DFF  /spi_Q/shreg_reg[9]/U$1
+78th compared points:
+  (G) + 83   DFF  /spi_Q/shreg_reg[8]
+  (R) + 83   DFF  /spi_Q/shreg_reg[8]/U$1
+79th compared points:
+  (G) + 84   DFF  /spi_Q/shreg_reg[7]
+  (R) + 82   DFF  /spi_Q/shreg_reg[7]/U$1
+80th compared points:
+  (G) + 85   DFF  /spi_Q/shreg_reg[6]
+  (R) + 81   DFF  /spi_Q/shreg_reg[6]/U$1
+81st compared points:
+  (G) + 86   DFF  /spi_Q/shreg_reg[5]
+  (R) + 80   DFF  /spi_Q/shreg_reg[5]/U$1
+82nd compared points:
+  (G) + 87   DFF  /spi_Q/shreg_reg[4]
+  (R) + 79   DFF  /spi_Q/shreg_reg[4]/U$1
+83rd compared points:
+  (G) + 88   DFF  /spi_Q/shreg_reg[3]
+  (R) + 78   DFF  /spi_Q/shreg_reg[3]/U$1
+84th compared points:
+  (G) + 89   DFF  /spi_Q/shreg_reg[2]
+  (R) + 77   DFF  /spi_Q/shreg_reg[2]/U$1
+85th compared points:
+  (G) + 90   DFF  /spi_Q/shreg_reg[1]
+  (R) + 76   DFF  /spi_Q/shreg_reg[1]/U$1
+86th compared points:
+  (G) + 91   DFF  /spi_Q/shreg_reg[0]
+  (R) + 75   DFF  /spi_Q/shreg_reg[0]/U$1
+87th compared points:
+  (G) + 92   DFF  /hist_I/w2_reg[15]
+  (R) + 137  DFF  /hist_I/w2_reg[15]/U$1
+88th compared points:
+  (G) + 93   DFF  /hist_I/w2_reg[14]
+  (R) + 136  DFF  /hist_I/w2_reg[14]/U$1
+89th compared points:
+  (G) + 94   DFF  /hist_I/w2_reg[13]
+  (R) + 135  DFF  /hist_I/w2_reg[13]/U$1
+90th compared points:
+  (G) + 95   DFF  /hist_I/w2_reg[12]
+  (R) + 134  DFF  /hist_I/w2_reg[12]/U$1
+91st compared points:
+  (G) + 96   DFF  /hist_I/w2_reg[11]
+  (R) + 133  DFF  /hist_I/w2_reg[11]/U$1
+92nd compared points:
+  (G) + 97   DFF  /hist_I/w2_reg[10]
+  (R) + 132  DFF  /hist_I/w2_reg[10]/U$1
+93rd compared points:
+  (G) + 98   DFF  /hist_I/w2_reg[9]
+  (R) + 131  DFF  /hist_I/w2_reg[9]/U$1
+94th compared points:
+  (G) + 99   DFF  /hist_I/w2_reg[8]
+  (R) + 130  DFF  /hist_I/w2_reg[8]/U$1
+95th compared points:
+  (G) + 100  DFF  /hist_I/w2_reg[7]
+  (R) + 129  DFF  /hist_I/w2_reg[7]/U$1
+96th compared points:
+  (G) + 101  DFF  /hist_I/w2_reg[6]
+  (R) + 128  DFF  /hist_I/w2_reg[6]/U$1
+97th compared points:
+  (G) + 102  DFF  /hist_I/w2_reg[5]
+  (R) + 127  DFF  /hist_I/w2_reg[5]/U$1
+98th compared points:
+  (G) + 103  DFF  /hist_I/w2_reg[4]
+  (R) + 126  DFF  /hist_I/w2_reg[4]/U$1
+99th compared points:
+  (G) + 104  DFF  /hist_I/w2_reg[3]
+  (R) + 125  DFF  /hist_I/w2_reg[3]/U$1
+100th compared points:
+  (G) + 105  DFF  /hist_I/w2_reg[2]
+  (R) + 124  DFF  /hist_I/w2_reg[2]/U$1
+101st compared points:
+  (G) + 106  DFF  /hist_I/w2_reg[1]
+  (R) + 123  DFF  /hist_I/w2_reg[1]/U$1
+102nd compared points:
+  (G) + 107  DFF  /hist_I/w2_reg[0]
+  (R) + 122  DFF  /hist_I/w2_reg[0]/U$1
+103rd compared points:
+  (G) + 108  DFF  /hist_I/w1_reg[15]
+  (R) + 121  DFF  /hist_I/w1_reg[15]/U$1
+104th compared points:
+  (G) + 109  DFF  /hist_I/w1_reg[14]
+  (R) + 119  DFF  /hist_I/w1_reg[14]/U$1
+105th compared points:
+  (G) + 110  DFF  /hist_I/w1_reg[13]
+  (R) + 117  DFF  /hist_I/w1_reg[13]/U$1
+106th compared points:
+  (G) + 111  DFF  /hist_I/w1_reg[12]
+  (R) + 115  DFF  /hist_I/w1_reg[12]/U$1
+107th compared points:
+  (G) + 112  DFF  /hist_I/w1_reg[11]
+  (R) + 113  DFF  /hist_I/w1_reg[11]/U$1
+108th compared points:
+  (G) + 113  DFF  /hist_I/w1_reg[10]
+  (R) + 111  DFF  /hist_I/w1_reg[10]/U$1
+109th compared points:
+  (G) + 114  DFF  /hist_I/w1_reg[9]
+  (R) + 109  DFF  /hist_I/w1_reg[9]/U$1
+110th compared points:
+  (G) + 115  DFF  /hist_I/w1_reg[8]
+  (R) + 107  DFF  /hist_I/w1_reg[8]/U$1
+111th compared points:
+  (G) + 116  DFF  /hist_I/w1_reg[7]
+  (R) + 105  DFF  /hist_I/w1_reg[7]/U$1
+112th compared points:
+  (G) + 117  DFF  /hist_I/w1_reg[6]
+  (R) + 103  DFF  /hist_I/w1_reg[6]/U$1
+113th compared points:
+  (G) + 118  DFF  /hist_I/w1_reg[5]
+  (R) + 101  DFF  /hist_I/w1_reg[5]/U$1
+114th compared points:
+  (G) + 119  DFF  /hist_I/w1_reg[4]
+  (R) + 99   DFF  /hist_I/w1_reg[4]/U$1
+115th compared points:
+  (G) + 120  DFF  /hist_I/w1_reg[3]
+  (R) + 97   DFF  /hist_I/w1_reg[3]/U$1
+116th compared points:
+  (G) + 121  DFF  /hist_I/w1_reg[2]
+  (R) + 95   DFF  /hist_I/w1_reg[2]/U$1
+117th compared points:
+  (G) + 122  DFF  /hist_I/w1_reg[1]
+  (R) + 93   DFF  /hist_I/w1_reg[1]/U$1
+118th compared points:
+  (G) + 123  DFF  /hist_I/w1_reg[0]
+  (R) + 91   DFF  /hist_I/w1_reg[0]/U$1
+119th compared points:
+  (G) + 124  DFF  /hist_I/w0_reg[15]
+  (R) + 120  DFF  /hist_I/w0_reg[15]/U$1
+120th compared points:
+  (G) + 125  DFF  /hist_I/w0_reg[14]
+  (R) + 118  DFF  /hist_I/w0_reg[14]/U$1
+121st compared points:
+  (G) + 126  DFF  /hist_I/w0_reg[13]
+  (R) + 116  DFF  /hist_I/w0_reg[13]/U$1
+122nd compared points:
+  (G) + 127  DFF  /hist_I/w0_reg[12]
+  (R) + 114  DFF  /hist_I/w0_reg[12]/U$1
+123rd compared points:
+  (G) + 128  DFF  /hist_I/w0_reg[11]
+  (R) + 112  DFF  /hist_I/w0_reg[11]/U$1
+124th compared points:
+  (G) + 129  DFF  /hist_I/w0_reg[10]
+  (R) + 110  DFF  /hist_I/w0_reg[10]/U$1
+125th compared points:
+  (G) + 130  DFF  /hist_I/w0_reg[9]
+  (R) + 108  DFF  /hist_I/w0_reg[9]/U$1
+126th compared points:
+  (G) + 131  DFF  /hist_I/w0_reg[8]
+  (R) + 106  DFF  /hist_I/w0_reg[8]/U$1
+127th compared points:
+  (G) + 132  DFF  /hist_I/w0_reg[7]
+  (R) + 104  DFF  /hist_I/w0_reg[7]/U$1
+128th compared points:
+  (G) + 133  DFF  /hist_I/w0_reg[6]
+  (R) + 102  DFF  /hist_I/w0_reg[6]/U$1
+129th compared points:
+  (G) + 134  DFF  /hist_I/w0_reg[5]
+  (R) + 100  DFF  /hist_I/w0_reg[5]/U$1
+130th compared points:
+  (G) + 135  DFF  /hist_I/w0_reg[4]
+  (R) + 98   DFF  /hist_I/w0_reg[4]/U$1
+131st compared points:
+  (G) + 136  DFF  /hist_I/w0_reg[3]
+  (R) + 96   DFF  /hist_I/w0_reg[3]/U$1
+132nd compared points:
+  (G) + 137  DFF  /hist_I/w0_reg[2]
+  (R) + 94   DFF  /hist_I/w0_reg[2]/U$1
+133rd compared points:
+  (G) + 138  DFF  /hist_I/w0_reg[1]
+  (R) + 92   DFF  /hist_I/w0_reg[1]/U$1
+134th compared points:
+  (G) + 139  DFF  /hist_I/w0_reg[0]
+  (R) + 90   DFF  /hist_I/w0_reg[0]/U$1
+135th compared points:
+  (G) + 140  DFF  /hist_Q/w2_reg[15]
+  (R) + 348  DFF  /hist_Q/w2_reg[15]/U$1
+136th compared points:
+  (G) + 141  DFF  /hist_Q/w2_reg[14]
+  (R) + 347  DFF  /hist_Q/w2_reg[14]/U$1
+137th compared points:
+  (G) + 142  DFF  /hist_Q/w2_reg[13]
+  (R) + 346  DFF  /hist_Q/w2_reg[13]/U$1
+138th compared points:
+  (G) + 143  DFF  /hist_Q/w2_reg[12]
+  (R) + 345  DFF  /hist_Q/w2_reg[12]/U$1
+139th compared points:
+  (G) + 144  DFF  /hist_Q/w2_reg[11]
+  (R) + 344  DFF  /hist_Q/w2_reg[11]/U$1
+140th compared points:
+  (G) + 145  DFF  /hist_Q/w2_reg[10]
+  (R) + 343  DFF  /hist_Q/w2_reg[10]/U$1
+141st compared points:
+  (G) + 146  DFF  /hist_Q/w2_reg[9]
+  (R) + 342  DFF  /hist_Q/w2_reg[9]/U$1
+142nd compared points:
+  (G) + 147  DFF  /hist_Q/w2_reg[8]
+  (R) + 341  DFF  /hist_Q/w2_reg[8]/U$1
+143rd compared points:
+  (G) + 148  DFF  /hist_Q/w2_reg[7]
+  (R) + 340  DFF  /hist_Q/w2_reg[7]/U$1
+144th compared points:
+  (G) + 149  DFF  /hist_Q/w2_reg[6]
+  (R) + 339  DFF  /hist_Q/w2_reg[6]/U$1
+145th compared points:
+  (G) + 150  DFF  /hist_Q/w2_reg[5]
+  (R) + 338  DFF  /hist_Q/w2_reg[5]/U$1
+146th compared points:
+  (G) + 151  DFF  /hist_Q/w2_reg[4]
+  (R) + 337  DFF  /hist_Q/w2_reg[4]/U$1
+147th compared points:
+  (G) + 152  DFF  /hist_Q/w2_reg[3]
+  (R) + 336  DFF  /hist_Q/w2_reg[3]/U$1
+148th compared points:
+  (G) + 153  DFF  /hist_Q/w2_reg[2]
+  (R) + 335  DFF  /hist_Q/w2_reg[2]/U$1
+149th compared points:
+  (G) + 154  DFF  /hist_Q/w2_reg[1]
+  (R) + 334  DFF  /hist_Q/w2_reg[1]/U$1
+150th compared points:
+  (G) + 155  DFF  /hist_Q/w2_reg[0]
+  (R) + 333  DFF  /hist_Q/w2_reg[0]/U$1
+151st compared points:
+  (G) + 156  DFF  /hist_Q/w1_reg[15]
+  (R) + 332  DFF  /hist_Q/w1_reg[15]/U$1
+152nd compared points:
+  (G) + 157  DFF  /hist_Q/w1_reg[14]
+  (R) + 330  DFF  /hist_Q/w1_reg[14]/U$1
+153rd compared points:
+  (G) + 158  DFF  /hist_Q/w1_reg[13]
+  (R) + 328  DFF  /hist_Q/w1_reg[13]/U$1
+154th compared points:
+  (G) + 159  DFF  /hist_Q/w1_reg[12]
+  (R) + 326  DFF  /hist_Q/w1_reg[12]/U$1
+155th compared points:
+  (G) + 160  DFF  /hist_Q/w1_reg[11]
+  (R) + 324  DFF  /hist_Q/w1_reg[11]/U$1
+156th compared points:
+  (G) + 161  DFF  /hist_Q/w1_reg[10]
+  (R) + 322  DFF  /hist_Q/w1_reg[10]/U$1
+157th compared points:
+  (G) + 162  DFF  /hist_Q/w1_reg[9]
+  (R) + 320  DFF  /hist_Q/w1_reg[9]/U$1
+158th compared points:
+  (G) + 163  DFF  /hist_Q/w1_reg[8]
+  (R) + 318  DFF  /hist_Q/w1_reg[8]/U$1
+159th compared points:
+  (G) + 164  DFF  /hist_Q/w1_reg[7]
+  (R) + 316  DFF  /hist_Q/w1_reg[7]/U$1
+160th compared points:
+  (G) + 165  DFF  /hist_Q/w1_reg[6]
+  (R) + 314  DFF  /hist_Q/w1_reg[6]/U$1
+161st compared points:
+  (G) + 166  DFF  /hist_Q/w1_reg[5]
+  (R) + 312  DFF  /hist_Q/w1_reg[5]/U$1
+162nd compared points:
+  (G) + 167  DFF  /hist_Q/w1_reg[4]
+  (R) + 310  DFF  /hist_Q/w1_reg[4]/U$1
+163rd compared points:
+  (G) + 168  DFF  /hist_Q/w1_reg[3]
+  (R) + 308  DFF  /hist_Q/w1_reg[3]/U$1
+164th compared points:
+  (G) + 169  DFF  /hist_Q/w1_reg[2]
+  (R) + 306  DFF  /hist_Q/w1_reg[2]/U$1
+165th compared points:
+  (G) + 170  DFF  /hist_Q/w1_reg[1]
+  (R) + 304  DFF  /hist_Q/w1_reg[1]/U$1
+166th compared points:
+  (G) + 171  DFF  /hist_Q/w1_reg[0]
+  (R) + 302  DFF  /hist_Q/w1_reg[0]/U$1
+167th compared points:
+  (G) + 172  DFF  /hist_Q/w0_reg[15]
+  (R) + 331  DFF  /hist_Q/w0_reg[15]/U$1
+168th compared points:
+  (G) + 173  DFF  /hist_Q/w0_reg[14]
+  (R) + 329  DFF  /hist_Q/w0_reg[14]/U$1
+169th compared points:
+  (G) + 174  DFF  /hist_Q/w0_reg[13]
+  (R) + 327  DFF  /hist_Q/w0_reg[13]/U$1
+170th compared points:
+  (G) + 175  DFF  /hist_Q/w0_reg[12]
+  (R) + 325  DFF  /hist_Q/w0_reg[12]/U$1
+171st compared points:
+  (G) + 176  DFF  /hist_Q/w0_reg[11]
+  (R) + 323  DFF  /hist_Q/w0_reg[11]/U$1
+172nd compared points:
+  (G) + 177  DFF  /hist_Q/w0_reg[10]
+  (R) + 321  DFF  /hist_Q/w0_reg[10]/U$1
+173rd compared points:
+  (G) + 178  DFF  /hist_Q/w0_reg[9]
+  (R) + 319  DFF  /hist_Q/w0_reg[9]/U$1
+174th compared points:
+  (G) + 179  DFF  /hist_Q/w0_reg[8]
+  (R) + 317  DFF  /hist_Q/w0_reg[8]/U$1
+175th compared points:
+  (G) + 180  DFF  /hist_Q/w0_reg[7]
+  (R) + 315  DFF  /hist_Q/w0_reg[7]/U$1
+176th compared points:
+  (G) + 181  DFF  /hist_Q/w0_reg[6]
+  (R) + 313  DFF  /hist_Q/w0_reg[6]/U$1
+177th compared points:
+  (G) + 182  DFF  /hist_Q/w0_reg[5]
+  (R) + 311  DFF  /hist_Q/w0_reg[5]/U$1
+178th compared points:
+  (G) + 183  DFF  /hist_Q/w0_reg[4]
+  (R) + 309  DFF  /hist_Q/w0_reg[4]/U$1
+179th compared points:
+  (G) + 184  DFF  /hist_Q/w0_reg[3]
+  (R) + 307  DFF  /hist_Q/w0_reg[3]/U$1
+180th compared points:
+  (G) + 185  DFF  /hist_Q/w0_reg[2]
+  (R) + 305  DFF  /hist_Q/w0_reg[2]/U$1
+181st compared points:
+  (G) + 186  DFF  /hist_Q/w0_reg[1]
+  (R) + 303  DFF  /hist_Q/w0_reg[1]/U$1
+182nd compared points:
+  (G) + 187  DFF  /hist_Q/w0_reg[0]
+  (R) + 301  DFF  /hist_Q/w0_reg[0]/U$1
+183rd compared points:
+  (G) + 188  DFF  /latch_I/y4_r_reg[15]
+  (R) + 588  DFF  /latch_I/y4_r_reg[15]/U$1
+184th compared points:
+  (G) + 189  DFF  /latch_I/y4_r_reg[14]
+  (R) + 587  DFF  /latch_I/y4_r_reg[14]/U$1
+185th compared points:
+  (G) + 190  DFF  /latch_I/y4_r_reg[13]
+  (R) + 586  DFF  /latch_I/y4_r_reg[13]/U$1
+186th compared points:
+  (G) + 191  DFF  /latch_I/y4_r_reg[12]
+  (R) + 585  DFF  /latch_I/y4_r_reg[12]/U$1
+187th compared points:
+  (G) + 192  DFF  /latch_I/y4_r_reg[11]
+  (R) + 584  DFF  /latch_I/y4_r_reg[11]/U$1
+188th compared points:
+  (G) + 193  DFF  /latch_I/y4_r_reg[10]
+  (R) + 583  DFF  /latch_I/y4_r_reg[10]/U$1
+189th compared points:
+  (G) + 194  DFF  /latch_I/y4_r_reg[9]
+  (R) + 582  DFF  /latch_I/y4_r_reg[9]/U$1
+190th compared points:
+  (G) + 195  DFF  /latch_I/y4_r_reg[8]
+  (R) + 581  DFF  /latch_I/y4_r_reg[8]/U$1
+191st compared points:
+  (G) + 196  DFF  /latch_I/y4_r_reg[7]
+  (R) + 580  DFF  /latch_I/y4_r_reg[7]/U$1
+192nd compared points:
+  (G) + 197  DFF  /latch_I/y4_r_reg[6]
+  (R) + 579  DFF  /latch_I/y4_r_reg[6]/U$1
+193rd compared points:
+  (G) + 198  DFF  /latch_I/y4_r_reg[5]
+  (R) + 578  DFF  /latch_I/y4_r_reg[5]/U$1
+194th compared points:
+  (G) + 199  DFF  /latch_I/y4_r_reg[4]
+  (R) + 577  DFF  /latch_I/y4_r_reg[4]/U$1
+195th compared points:
+  (G) + 200  DFF  /latch_I/y4_r_reg[3]
+  (R) + 576  DFF  /latch_I/y4_r_reg[3]/U$1
+196th compared points:
+  (G) + 201  DFF  /latch_I/y4_r_reg[2]
+  (R) + 575  DFF  /latch_I/y4_r_reg[2]/U$1
+197th compared points:
+  (G) + 202  DFF  /latch_I/y4_r_reg[1]
+  (R) + 574  DFF  /latch_I/y4_r_reg[1]/U$1
+198th compared points:
+  (G) + 203  DFF  /latch_I/y4_r_reg[0]
+  (R) + 573  DFF  /latch_I/y4_r_reg[0]/U$1
+199th compared points:
+  (G) + 204  DFF  /latch_I/y3_r_reg[15]
+  (R) + 524  DFF  /latch_I/y3_r_reg[15]/U$1
+200th compared points:
+  (G) + 205  DFF  /latch_I/y3_r_reg[14]
+  (R) + 523  DFF  /latch_I/y3_r_reg[14]/U$1
+201st compared points:
+  (G) + 206  DFF  /latch_I/y3_r_reg[13]
+  (R) + 522  DFF  /latch_I/y3_r_reg[13]/U$1
+202nd compared points:
+  (G) + 207  DFF  /latch_I/y3_r_reg[12]
+  (R) + 521  DFF  /latch_I/y3_r_reg[12]/U$1
+203rd compared points:
+  (G) + 208  DFF  /latch_I/y3_r_reg[11]
+  (R) + 520  DFF  /latch_I/y3_r_reg[11]/U$1
+204th compared points:
+  (G) + 209  DFF  /latch_I/y3_r_reg[10]
+  (R) + 519  DFF  /latch_I/y3_r_reg[10]/U$1
+205th compared points:
+  (G) + 210  DFF  /latch_I/y3_r_reg[9]
+  (R) + 518  DFF  /latch_I/y3_r_reg[9]/U$1
+206th compared points:
+  (G) + 211  DFF  /latch_I/y3_r_reg[8]
+  (R) + 517  DFF  /latch_I/y3_r_reg[8]/U$1
+207th compared points:
+  (G) + 212  DFF  /latch_I/y3_r_reg[7]
+  (R) + 516  DFF  /latch_I/y3_r_reg[7]/U$1
+208th compared points:
+  (G) + 213  DFF  /latch_I/y3_r_reg[6]
+  (R) + 515  DFF  /latch_I/y3_r_reg[6]/U$1
+209th compared points:
+  (G) + 214  DFF  /latch_I/y3_r_reg[5]
+  (R) + 514  DFF  /latch_I/y3_r_reg[5]/U$1
+210th compared points:
+  (G) + 215  DFF  /latch_I/y3_r_reg[4]
+  (R) + 513  DFF  /latch_I/y3_r_reg[4]/U$1
+211th compared points:
+  (G) + 216  DFF  /latch_I/y3_r_reg[3]
+  (R) + 512  DFF  /latch_I/y3_r_reg[3]/U$1
+212th compared points:
+  (G) + 217  DFF  /latch_I/y3_r_reg[2]
+  (R) + 511  DFF  /latch_I/y3_r_reg[2]/U$1
+213th compared points:
+  (G) + 218  DFF  /latch_I/y3_r_reg[1]
+  (R) + 510  DFF  /latch_I/y3_r_reg[1]/U$1
+214th compared points:
+  (G) + 219  DFF  /latch_I/y3_r_reg[0]
+  (R) + 509  DFF  /latch_I/y3_r_reg[0]/U$1
+215th compared points:
+  (G) + 220  DFF  /latch_I/y2_r_reg[15]
+  (R) + 540  DFF  /latch_I/y2_r_reg[15]/U$1
+216th compared points:
+  (G) + 221  DFF  /latch_I/y2_r_reg[14]
+  (R) + 539  DFF  /latch_I/y2_r_reg[14]/U$1
+217th compared points:
+  (G) + 222  DFF  /latch_I/y2_r_reg[13]
+  (R) + 538  DFF  /latch_I/y2_r_reg[13]/U$1
+218th compared points:
+  (G) + 223  DFF  /latch_I/y2_r_reg[12]
+  (R) + 537  DFF  /latch_I/y2_r_reg[12]/U$1
+219th compared points:
+  (G) + 224  DFF  /latch_I/y2_r_reg[11]
+  (R) + 536  DFF  /latch_I/y2_r_reg[11]/U$1
+220th compared points:
+  (G) + 225  DFF  /latch_I/y2_r_reg[10]
+  (R) + 535  DFF  /latch_I/y2_r_reg[10]/U$1
+221st compared points:
+  (G) + 226  DFF  /latch_I/y2_r_reg[9]
+  (R) + 534  DFF  /latch_I/y2_r_reg[9]/U$1
+222nd compared points:
+  (G) + 227  DFF  /latch_I/y2_r_reg[8]
+  (R) + 533  DFF  /latch_I/y2_r_reg[8]/U$1
+223rd compared points:
+  (G) + 228  DFF  /latch_I/y2_r_reg[7]
+  (R) + 532  DFF  /latch_I/y2_r_reg[7]/U$1
+224th compared points:
+  (G) + 229  DFF  /latch_I/y2_r_reg[6]
+  (R) + 531  DFF  /latch_I/y2_r_reg[6]/U$1
+225th compared points:
+  (G) + 230  DFF  /latch_I/y2_r_reg[5]
+  (R) + 530  DFF  /latch_I/y2_r_reg[5]/U$1
+226th compared points:
+  (G) + 231  DFF  /latch_I/y2_r_reg[4]
+  (R) + 529  DFF  /latch_I/y2_r_reg[4]/U$1
+227th compared points:
+  (G) + 232  DFF  /latch_I/y2_r_reg[3]
+  (R) + 528  DFF  /latch_I/y2_r_reg[3]/U$1
+228th compared points:
+  (G) + 233  DFF  /latch_I/y2_r_reg[2]
+  (R) + 527  DFF  /latch_I/y2_r_reg[2]/U$1
+229th compared points:
+  (G) + 234  DFF  /latch_I/y2_r_reg[1]
+  (R) + 526  DFF  /latch_I/y2_r_reg[1]/U$1
+230th compared points:
+  (G) + 235  DFF  /latch_I/y2_r_reg[0]
+  (R) + 525  DFF  /latch_I/y2_r_reg[0]/U$1
+231st compared points:
+  (G) + 236  DFF  /latch_I/y1_r_reg[15]
+  (R) + 556  DFF  /latch_I/y1_r_reg[15]/U$1
+232nd compared points:
+  (G) + 237  DFF  /latch_I/y1_r_reg[14]
+  (R) + 555  DFF  /latch_I/y1_r_reg[14]/U$1
+233rd compared points:
+  (G) + 238  DFF  /latch_I/y1_r_reg[13]
+  (R) + 554  DFF  /latch_I/y1_r_reg[13]/U$1
+234th compared points:
+  (G) + 239  DFF  /latch_I/y1_r_reg[12]
+  (R) + 553  DFF  /latch_I/y1_r_reg[12]/U$1
+235th compared points:
+  (G) + 240  DFF  /latch_I/y1_r_reg[11]
+  (R) + 552  DFF  /latch_I/y1_r_reg[11]/U$1
+236th compared points:
+  (G) + 241  DFF  /latch_I/y1_r_reg[10]
+  (R) + 551  DFF  /latch_I/y1_r_reg[10]/U$1
+237th compared points:
+  (G) + 242  DFF  /latch_I/y1_r_reg[9]
+  (R) + 550  DFF  /latch_I/y1_r_reg[9]/U$1
+238th compared points:
+  (G) + 243  DFF  /latch_I/y1_r_reg[8]
+  (R) + 549  DFF  /latch_I/y1_r_reg[8]/U$1
+239th compared points:
+  (G) + 244  DFF  /latch_I/y1_r_reg[7]
+  (R) + 548  DFF  /latch_I/y1_r_reg[7]/U$1
+240th compared points:
+  (G) + 245  DFF  /latch_I/y1_r_reg[6]
+  (R) + 547  DFF  /latch_I/y1_r_reg[6]/U$1
+241st compared points:
+  (G) + 246  DFF  /latch_I/y1_r_reg[5]
+  (R) + 546  DFF  /latch_I/y1_r_reg[5]/U$1
+242nd compared points:
+  (G) + 247  DFF  /latch_I/y1_r_reg[4]
+  (R) + 545  DFF  /latch_I/y1_r_reg[4]/U$1
+243rd compared points:
+  (G) + 248  DFF  /latch_I/y1_r_reg[3]
+  (R) + 544  DFF  /latch_I/y1_r_reg[3]/U$1
+244th compared points:
+  (G) + 249  DFF  /latch_I/y1_r_reg[2]
+  (R) + 543  DFF  /latch_I/y1_r_reg[2]/U$1
+245th compared points:
+  (G) + 250  DFF  /latch_I/y1_r_reg[1]
+  (R) + 542  DFF  /latch_I/y1_r_reg[1]/U$1
+246th compared points:
+  (G) + 251  DFF  /latch_I/y1_r_reg[0]
+  (R) + 541  DFF  /latch_I/y1_r_reg[0]/U$1
+247th compared points:
+  (G) + 252  DFF  /latch_I/y0_r_reg[15]
+  (R) + 572  DFF  /latch_I/y0_r_reg[15]/U$1
+248th compared points:
+  (G) + 253  DFF  /latch_I/y0_r_reg[14]
+  (R) + 571  DFF  /latch_I/y0_r_reg[14]/U$1
+249th compared points:
+  (G) + 254  DFF  /latch_I/y0_r_reg[13]
+  (R) + 570  DFF  /latch_I/y0_r_reg[13]/U$1
+250th compared points:
+  (G) + 255  DFF  /latch_I/y0_r_reg[12]
+  (R) + 569  DFF  /latch_I/y0_r_reg[12]/U$1
+251st compared points:
+  (G) + 256  DFF  /latch_I/y0_r_reg[11]
+  (R) + 568  DFF  /latch_I/y0_r_reg[11]/U$1
+252nd compared points:
+  (G) + 257  DFF  /latch_I/y0_r_reg[10]
+  (R) + 567  DFF  /latch_I/y0_r_reg[10]/U$1
+253rd compared points:
+  (G) + 258  DFF  /latch_I/y0_r_reg[9]
+  (R) + 566  DFF  /latch_I/y0_r_reg[9]/U$1
+254th compared points:
+  (G) + 259  DFF  /latch_I/y0_r_reg[8]
+  (R) + 565  DFF  /latch_I/y0_r_reg[8]/U$1
+255th compared points:
+  (G) + 260  DFF  /latch_I/y0_r_reg[7]
+  (R) + 564  DFF  /latch_I/y0_r_reg[7]/U$1
+256th compared points:
+  (G) + 261  DFF  /latch_I/y0_r_reg[6]
+  (R) + 563  DFF  /latch_I/y0_r_reg[6]/U$1
+257th compared points:
+  (G) + 262  DFF  /latch_I/y0_r_reg[5]
+  (R) + 562  DFF  /latch_I/y0_r_reg[5]/U$1
+258th compared points:
+  (G) + 263  DFF  /latch_I/y0_r_reg[4]
+  (R) + 561  DFF  /latch_I/y0_r_reg[4]/U$1
+259th compared points:
+  (G) + 264  DFF  /latch_I/y0_r_reg[3]
+  (R) + 560  DFF  /latch_I/y0_r_reg[3]/U$1
+260th compared points:
+  (G) + 265  DFF  /latch_I/y0_r_reg[2]
+  (R) + 559  DFF  /latch_I/y0_r_reg[2]/U$1
+261st compared points:
+  (G) + 266  DFF  /latch_I/y0_r_reg[1]
+  (R) + 558  DFF  /latch_I/y0_r_reg[1]/U$1
+262nd compared points:
+  (G) + 267  DFF  /latch_I/y0_r_reg[0]
+  (R) + 557  DFF  /latch_I/y0_r_reg[0]/U$1
+263rd compared points:
+  (G) + 268  DFF  /latch_Q/y4_r_reg[15]
+  (R) + 668  DFF  /latch_Q/y4_r_reg[15]/U$1
+264th compared points:
+  (G) + 269  DFF  /latch_Q/y4_r_reg[14]
+  (R) + 667  DFF  /latch_Q/y4_r_reg[14]/U$1
+265th compared points:
+  (G) + 270  DFF  /latch_Q/y4_r_reg[13]
+  (R) + 666  DFF  /latch_Q/y4_r_reg[13]/U$1
+266th compared points:
+  (G) + 271  DFF  /latch_Q/y4_r_reg[12]
+  (R) + 665  DFF  /latch_Q/y4_r_reg[12]/U$1
+267th compared points:
+  (G) + 272  DFF  /latch_Q/y4_r_reg[11]
+  (R) + 664  DFF  /latch_Q/y4_r_reg[11]/U$1
+268th compared points:
+  (G) + 273  DFF  /latch_Q/y4_r_reg[10]
+  (R) + 663  DFF  /latch_Q/y4_r_reg[10]/U$1
+269th compared points:
+  (G) + 274  DFF  /latch_Q/y4_r_reg[9]
+  (R) + 662  DFF  /latch_Q/y4_r_reg[9]/U$1
+270th compared points:
+  (G) + 275  DFF  /latch_Q/y4_r_reg[8]
+  (R) + 661  DFF  /latch_Q/y4_r_reg[8]/U$1
+271st compared points:
+  (G) + 276  DFF  /latch_Q/y4_r_reg[7]
+  (R) + 660  DFF  /latch_Q/y4_r_reg[7]/U$1
+272nd compared points:
+  (G) + 277  DFF  /latch_Q/y4_r_reg[6]
+  (R) + 659  DFF  /latch_Q/y4_r_reg[6]/U$1
+273rd compared points:
+  (G) + 278  DFF  /latch_Q/y4_r_reg[5]
+  (R) + 658  DFF  /latch_Q/y4_r_reg[5]/U$1
+274th compared points:
+  (G) + 279  DFF  /latch_Q/y4_r_reg[4]
+  (R) + 657  DFF  /latch_Q/y4_r_reg[4]/U$1
+275th compared points:
+  (G) + 280  DFF  /latch_Q/y4_r_reg[3]
+  (R) + 656  DFF  /latch_Q/y4_r_reg[3]/U$1
+276th compared points:
+  (G) + 281  DFF  /latch_Q/y4_r_reg[2]
+  (R) + 655  DFF  /latch_Q/y4_r_reg[2]/U$1
+277th compared points:
+  (G) + 282  DFF  /latch_Q/y4_r_reg[1]
+  (R) + 654  DFF  /latch_Q/y4_r_reg[1]/U$1
+278th compared points:
+  (G) + 283  DFF  /latch_Q/y4_r_reg[0]
+  (R) + 653  DFF  /latch_Q/y4_r_reg[0]/U$1
+279th compared points:
+  (G) + 284  DFF  /latch_Q/y3_r_reg[15]
+  (R) + 604  DFF  /latch_Q/y3_r_reg[15]/U$1
+280th compared points:
+  (G) + 285  DFF  /latch_Q/y3_r_reg[14]
+  (R) + 603  DFF  /latch_Q/y3_r_reg[14]/U$1
+281st compared points:
+  (G) + 286  DFF  /latch_Q/y3_r_reg[13]
+  (R) + 602  DFF  /latch_Q/y3_r_reg[13]/U$1
+282nd compared points:
+  (G) + 287  DFF  /latch_Q/y3_r_reg[12]
+  (R) + 601  DFF  /latch_Q/y3_r_reg[12]/U$1
+283rd compared points:
+  (G) + 288  DFF  /latch_Q/y3_r_reg[11]
+  (R) + 600  DFF  /latch_Q/y3_r_reg[11]/U$1
+284th compared points:
+  (G) + 289  DFF  /latch_Q/y3_r_reg[10]
+  (R) + 599  DFF  /latch_Q/y3_r_reg[10]/U$1
+285th compared points:
+  (G) + 290  DFF  /latch_Q/y3_r_reg[9]
+  (R) + 598  DFF  /latch_Q/y3_r_reg[9]/U$1
+286th compared points:
+  (G) + 291  DFF  /latch_Q/y3_r_reg[8]
+  (R) + 597  DFF  /latch_Q/y3_r_reg[8]/U$1
+287th compared points:
+  (G) + 292  DFF  /latch_Q/y3_r_reg[7]
+  (R) + 596  DFF  /latch_Q/y3_r_reg[7]/U$1
+288th compared points:
+  (G) + 293  DFF  /latch_Q/y3_r_reg[6]
+  (R) + 595  DFF  /latch_Q/y3_r_reg[6]/U$1
+289th compared points:
+  (G) + 294  DFF  /latch_Q/y3_r_reg[5]
+  (R) + 594  DFF  /latch_Q/y3_r_reg[5]/U$1
+290th compared points:
+  (G) + 295  DFF  /latch_Q/y3_r_reg[4]
+  (R) + 593  DFF  /latch_Q/y3_r_reg[4]/U$1
+291st compared points:
+  (G) + 296  DFF  /latch_Q/y3_r_reg[3]
+  (R) + 592  DFF  /latch_Q/y3_r_reg[3]/U$1
+292nd compared points:
+  (G) + 297  DFF  /latch_Q/y3_r_reg[2]
+  (R) + 591  DFF  /latch_Q/y3_r_reg[2]/U$1
+293rd compared points:
+  (G) + 298  DFF  /latch_Q/y3_r_reg[1]
+  (R) + 590  DFF  /latch_Q/y3_r_reg[1]/U$1
+294th compared points:
+  (G) + 299  DFF  /latch_Q/y3_r_reg[0]
+  (R) + 589  DFF  /latch_Q/y3_r_reg[0]/U$1
+295th compared points:
+  (G) + 300  DFF  /latch_Q/y2_r_reg[15]
+  (R) + 620  DFF  /latch_Q/y2_r_reg[15]/U$1
+296th compared points:
+  (G) + 301  DFF  /latch_Q/y2_r_reg[14]
+  (R) + 619  DFF  /latch_Q/y2_r_reg[14]/U$1
+297th compared points:
+  (G) + 302  DFF  /latch_Q/y2_r_reg[13]
+  (R) + 618  DFF  /latch_Q/y2_r_reg[13]/U$1
+298th compared points:
+  (G) + 303  DFF  /latch_Q/y2_r_reg[12]
+  (R) + 617  DFF  /latch_Q/y2_r_reg[12]/U$1
+299th compared points:
+  (G) + 304  DFF  /latch_Q/y2_r_reg[11]
+  (R) + 616  DFF  /latch_Q/y2_r_reg[11]/U$1
+300th compared points:
+  (G) + 305  DFF  /latch_Q/y2_r_reg[10]
+  (R) + 615  DFF  /latch_Q/y2_r_reg[10]/U$1
+301st compared points:
+  (G) + 306  DFF  /latch_Q/y2_r_reg[9]
+  (R) + 614  DFF  /latch_Q/y2_r_reg[9]/U$1
+302nd compared points:
+  (G) + 307  DFF  /latch_Q/y2_r_reg[8]
+  (R) + 613  DFF  /latch_Q/y2_r_reg[8]/U$1
+303rd compared points:
+  (G) + 308  DFF  /latch_Q/y2_r_reg[7]
+  (R) + 612  DFF  /latch_Q/y2_r_reg[7]/U$1
+304th compared points:
+  (G) + 309  DFF  /latch_Q/y2_r_reg[6]
+  (R) + 611  DFF  /latch_Q/y2_r_reg[6]/U$1
+305th compared points:
+  (G) + 310  DFF  /latch_Q/y2_r_reg[5]
+  (R) + 610  DFF  /latch_Q/y2_r_reg[5]/U$1
+306th compared points:
+  (G) + 311  DFF  /latch_Q/y2_r_reg[4]
+  (R) + 609  DFF  /latch_Q/y2_r_reg[4]/U$1
+307th compared points:
+  (G) + 312  DFF  /latch_Q/y2_r_reg[3]
+  (R) + 608  DFF  /latch_Q/y2_r_reg[3]/U$1
+308th compared points:
+  (G) + 313  DFF  /latch_Q/y2_r_reg[2]
+  (R) + 607  DFF  /latch_Q/y2_r_reg[2]/U$1
+309th compared points:
+  (G) + 314  DFF  /latch_Q/y2_r_reg[1]
+  (R) + 606  DFF  /latch_Q/y2_r_reg[1]/U$1
+310th compared points:
+  (G) + 315  DFF  /latch_Q/y2_r_reg[0]
+  (R) + 605  DFF  /latch_Q/y2_r_reg[0]/U$1
+311th compared points:
+  (G) + 316  DFF  /latch_Q/y1_r_reg[15]
+  (R) + 636  DFF  /latch_Q/y1_r_reg[15]/U$1
+312th compared points:
+  (G) + 317  DFF  /latch_Q/y1_r_reg[14]
+  (R) + 635  DFF  /latch_Q/y1_r_reg[14]/U$1
+313th compared points:
+  (G) + 318  DFF  /latch_Q/y1_r_reg[13]
+  (R) + 634  DFF  /latch_Q/y1_r_reg[13]/U$1
+314th compared points:
+  (G) + 319  DFF  /latch_Q/y1_r_reg[12]
+  (R) + 633  DFF  /latch_Q/y1_r_reg[12]/U$1
+315th compared points:
+  (G) + 320  DFF  /latch_Q/y1_r_reg[11]
+  (R) + 632  DFF  /latch_Q/y1_r_reg[11]/U$1
+316th compared points:
+  (G) + 321  DFF  /latch_Q/y1_r_reg[10]
+  (R) + 631  DFF  /latch_Q/y1_r_reg[10]/U$1
+317th compared points:
+  (G) + 322  DFF  /latch_Q/y1_r_reg[9]
+  (R) + 630  DFF  /latch_Q/y1_r_reg[9]/U$1
+318th compared points:
+  (G) + 323  DFF  /latch_Q/y1_r_reg[8]
+  (R) + 629  DFF  /latch_Q/y1_r_reg[8]/U$1
+319th compared points:
+  (G) + 324  DFF  /latch_Q/y1_r_reg[7]
+  (R) + 628  DFF  /latch_Q/y1_r_reg[7]/U$1
+320th compared points:
+  (G) + 325  DFF  /latch_Q/y1_r_reg[6]
+  (R) + 627  DFF  /latch_Q/y1_r_reg[6]/U$1
+321st compared points:
+  (G) + 326  DFF  /latch_Q/y1_r_reg[5]
+  (R) + 626  DFF  /latch_Q/y1_r_reg[5]/U$1
+322nd compared points:
+  (G) + 327  DFF  /latch_Q/y1_r_reg[4]
+  (R) + 625  DFF  /latch_Q/y1_r_reg[4]/U$1
+323rd compared points:
+  (G) + 328  DFF  /latch_Q/y1_r_reg[3]
+  (R) + 624  DFF  /latch_Q/y1_r_reg[3]/U$1
+324th compared points:
+  (G) + 329  DFF  /latch_Q/y1_r_reg[2]
+  (R) + 623  DFF  /latch_Q/y1_r_reg[2]/U$1
+325th compared points:
+  (G) + 330  DFF  /latch_Q/y1_r_reg[1]
+  (R) + 622  DFF  /latch_Q/y1_r_reg[1]/U$1
+326th compared points:
+  (G) + 331  DFF  /latch_Q/y1_r_reg[0]
+  (R) + 621  DFF  /latch_Q/y1_r_reg[0]/U$1
+327th compared points:
+  (G) + 332  DFF  /latch_Q/y0_r_reg[15]
+  (R) + 652  DFF  /latch_Q/y0_r_reg[15]/U$1
+328th compared points:
+  (G) + 333  DFF  /latch_Q/y0_r_reg[14]
+  (R) + 651  DFF  /latch_Q/y0_r_reg[14]/U$1
+329th compared points:
+  (G) + 334  DFF  /latch_Q/y0_r_reg[13]
+  (R) + 650  DFF  /latch_Q/y0_r_reg[13]/U$1
+330th compared points:
+  (G) + 335  DFF  /latch_Q/y0_r_reg[12]
+  (R) + 649  DFF  /latch_Q/y0_r_reg[12]/U$1
+331st compared points:
+  (G) + 336  DFF  /latch_Q/y0_r_reg[11]
+  (R) + 648  DFF  /latch_Q/y0_r_reg[11]/U$1
+332nd compared points:
+  (G) + 337  DFF  /latch_Q/y0_r_reg[10]
+  (R) + 647  DFF  /latch_Q/y0_r_reg[10]/U$1
+333rd compared points:
+  (G) + 338  DFF  /latch_Q/y0_r_reg[9]
+  (R) + 646  DFF  /latch_Q/y0_r_reg[9]/U$1
+334th compared points:
+  (G) + 339  DFF  /latch_Q/y0_r_reg[8]
+  (R) + 645  DFF  /latch_Q/y0_r_reg[8]/U$1
+335th compared points:
+  (G) + 340  DFF  /latch_Q/y0_r_reg[7]
+  (R) + 644  DFF  /latch_Q/y0_r_reg[7]/U$1
+336th compared points:
+  (G) + 341  DFF  /latch_Q/y0_r_reg[6]
+  (R) + 643  DFF  /latch_Q/y0_r_reg[6]/U$1
+337th compared points:
+  (G) + 342  DFF  /latch_Q/y0_r_reg[5]
+  (R) + 642  DFF  /latch_Q/y0_r_reg[5]/U$1
+338th compared points:
+  (G) + 343  DFF  /latch_Q/y0_r_reg[4]
+  (R) + 641  DFF  /latch_Q/y0_r_reg[4]/U$1
+339th compared points:
+  (G) + 344  DFF  /latch_Q/y0_r_reg[3]
+  (R) + 640  DFF  /latch_Q/y0_r_reg[3]/U$1
+340th compared points:
+  (G) + 345  DFF  /latch_Q/y0_r_reg[2]
+  (R) + 639  DFF  /latch_Q/y0_r_reg[2]/U$1
+341st compared points:
+  (G) + 346  DFF  /latch_Q/y0_r_reg[1]
+  (R) + 638  DFF  /latch_Q/y0_r_reg[1]/U$1
+342nd compared points:
+  (G) + 347  DFF  /latch_Q/y0_r_reg[0]
+  (R) + 637  DFF  /latch_Q/y0_r_reg[0]/U$1
+343rd compared points:
+  (G) + 348  DFF  /shift_I/phase_reg[2]
+  (R) + 140  DFF  /shift_I/phase_reg[2]/U$1
+344th compared points:
+  (G) + 349  DFF  /shift_I/phase_reg[1]
+  (R) + 139  DFF  /shift_I/phase_reg[1]/U$1
+345th compared points:
+  (G) + 350  DFF  /shift_I/phase_reg[0]
+  (R) + 138  DFF  /shift_I/phase_reg[0]/U$1
+346th compared points:
+  (G) + 351  DFF  /shift_I/x_reg[0][15]
+  (R) + 291  DFF  /shift_I/x_reg[0][15]/U$1
+347th compared points:
+  (G) + 352  DFF  /shift_I/x_reg[0][14]
+  (R) + 281  DFF  /shift_I/x_reg[0][14]/U$1
+348th compared points:
+  (G) + 353  DFF  /shift_I/x_reg[0][13]
+  (R) + 271  DFF  /shift_I/x_reg[0][13]/U$1
+349th compared points:
+  (G) + 354  DFF  /shift_I/x_reg[0][12]
+  (R) + 261  DFF  /shift_I/x_reg[0][12]/U$1
+350th compared points:
+  (G) + 355  DFF  /shift_I/x_reg[0][11]
+  (R) + 251  DFF  /shift_I/x_reg[0][11]/U$1
+351st compared points:
+  (G) + 356  DFF  /shift_I/x_reg[0][10]
+  (R) + 241  DFF  /shift_I/x_reg[0][10]/U$1
+352nd compared points:
+  (G) + 357  DFF  /shift_I/x_reg[0][9]
+  (R) + 231  DFF  /shift_I/x_reg[0][9]/U$1
+353rd compared points:
+  (G) + 358  DFF  /shift_I/x_reg[0][8]
+  (R) + 221  DFF  /shift_I/x_reg[0][8]/U$1
+354th compared points:
+  (G) + 359  DFF  /shift_I/x_reg[0][7]
+  (R) + 211  DFF  /shift_I/x_reg[0][7]/U$1
+355th compared points:
+  (G) + 360  DFF  /shift_I/x_reg[0][6]
+  (R) + 201  DFF  /shift_I/x_reg[0][6]/U$1
+356th compared points:
+  (G) + 361  DFF  /shift_I/x_reg[0][5]
+  (R) + 191  DFF  /shift_I/x_reg[0][5]/U$1
+357th compared points:
+  (G) + 362  DFF  /shift_I/x_reg[0][4]
+  (R) + 181  DFF  /shift_I/x_reg[0][4]/U$1
+358th compared points:
+  (G) + 363  DFF  /shift_I/x_reg[0][3]
+  (R) + 171  DFF  /shift_I/x_reg[0][3]/U$1
+359th compared points:
+  (G) + 364  DFF  /shift_I/x_reg[0][2]
+  (R) + 161  DFF  /shift_I/x_reg[0][2]/U$1
+360th compared points:
+  (G) + 365  DFF  /shift_I/x_reg[0][1]
+  (R) + 151  DFF  /shift_I/x_reg[0][1]/U$1
+361st compared points:
+  (G) + 366  DFF  /shift_I/x_reg[0][0]
+  (R) + 141  DFF  /shift_I/x_reg[0][0]/U$1
+362nd compared points:
+  (G) + 367  DFF  /shift_I/x_reg[1][15]
+  (R) + 292  DFF  /shift_I/x_reg[1][15]/U$1
+363rd compared points:
+  (G) + 368  DFF  /shift_I/x_reg[1][14]
+  (R) + 282  DFF  /shift_I/x_reg[1][14]/U$1
+364th compared points:
+  (G) + 369  DFF  /shift_I/x_reg[1][13]
+  (R) + 272  DFF  /shift_I/x_reg[1][13]/U$1
+365th compared points:
+  (G) + 370  DFF  /shift_I/x_reg[1][12]
+  (R) + 262  DFF  /shift_I/x_reg[1][12]/U$1
+366th compared points:
+  (G) + 371  DFF  /shift_I/x_reg[1][11]
+  (R) + 252  DFF  /shift_I/x_reg[1][11]/U$1
+367th compared points:
+  (G) + 372  DFF  /shift_I/x_reg[1][10]
+  (R) + 242  DFF  /shift_I/x_reg[1][10]/U$1
+368th compared points:
+  (G) + 373  DFF  /shift_I/x_reg[1][9]
+  (R) + 232  DFF  /shift_I/x_reg[1][9]/U$1
+369th compared points:
+  (G) + 374  DFF  /shift_I/x_reg[1][8]
+  (R) + 222  DFF  /shift_I/x_reg[1][8]/U$1
+370th compared points:
+  (G) + 375  DFF  /shift_I/x_reg[1][7]
+  (R) + 212  DFF  /shift_I/x_reg[1][7]/U$1
+371st compared points:
+  (G) + 376  DFF  /shift_I/x_reg[1][6]
+  (R) + 202  DFF  /shift_I/x_reg[1][6]/U$1
+372nd compared points:
+  (G) + 377  DFF  /shift_I/x_reg[1][5]
+  (R) + 192  DFF  /shift_I/x_reg[1][5]/U$1
+373rd compared points:
+  (G) + 378  DFF  /shift_I/x_reg[1][4]
+  (R) + 182  DFF  /shift_I/x_reg[1][4]/U$1
+374th compared points:
+  (G) + 379  DFF  /shift_I/x_reg[1][3]
+  (R) + 172  DFF  /shift_I/x_reg[1][3]/U$1
+375th compared points:
+  (G) + 380  DFF  /shift_I/x_reg[1][2]
+  (R) + 162  DFF  /shift_I/x_reg[1][2]/U$1
+376th compared points:
+  (G) + 381  DFF  /shift_I/x_reg[1][1]
+  (R) + 152  DFF  /shift_I/x_reg[1][1]/U$1
+377th compared points:
+  (G) + 382  DFF  /shift_I/x_reg[1][0]
+  (R) + 142  DFF  /shift_I/x_reg[1][0]/U$1
+378th compared points:
+  (G) + 383  DFF  /shift_I/x_reg[2][15]
+  (R) + 293  DFF  /shift_I/x_reg[2][15]/U$1
+379th compared points:
+  (G) + 384  DFF  /shift_I/x_reg[2][14]
+  (R) + 283  DFF  /shift_I/x_reg[2][14]/U$1
+380th compared points:
+  (G) + 385  DFF  /shift_I/x_reg[2][13]
+  (R) + 273  DFF  /shift_I/x_reg[2][13]/U$1
+381st compared points:
+  (G) + 386  DFF  /shift_I/x_reg[2][12]
+  (R) + 263  DFF  /shift_I/x_reg[2][12]/U$1
+382nd compared points:
+  (G) + 387  DFF  /shift_I/x_reg[2][11]
+  (R) + 253  DFF  /shift_I/x_reg[2][11]/U$1
+383rd compared points:
+  (G) + 388  DFF  /shift_I/x_reg[2][10]
+  (R) + 243  DFF  /shift_I/x_reg[2][10]/U$1
+384th compared points:
+  (G) + 389  DFF  /shift_I/x_reg[2][9]
+  (R) + 233  DFF  /shift_I/x_reg[2][9]/U$1
+385th compared points:
+  (G) + 390  DFF  /shift_I/x_reg[2][8]
+  (R) + 223  DFF  /shift_I/x_reg[2][8]/U$1
+386th compared points:
+  (G) + 391  DFF  /shift_I/x_reg[2][7]
+  (R) + 213  DFF  /shift_I/x_reg[2][7]/U$1
+387th compared points:
+  (G) + 392  DFF  /shift_I/x_reg[2][6]
+  (R) + 203  DFF  /shift_I/x_reg[2][6]/U$1
+388th compared points:
+  (G) + 393  DFF  /shift_I/x_reg[2][5]
+  (R) + 193  DFF  /shift_I/x_reg[2][5]/U$1
+389th compared points:
+  (G) + 394  DFF  /shift_I/x_reg[2][4]
+  (R) + 183  DFF  /shift_I/x_reg[2][4]/U$1
+390th compared points:
+  (G) + 395  DFF  /shift_I/x_reg[2][3]
+  (R) + 173  DFF  /shift_I/x_reg[2][3]/U$1
+391st compared points:
+  (G) + 396  DFF  /shift_I/x_reg[2][2]
+  (R) + 163  DFF  /shift_I/x_reg[2][2]/U$1
+392nd compared points:
+  (G) + 397  DFF  /shift_I/x_reg[2][1]
+  (R) + 153  DFF  /shift_I/x_reg[2][1]/U$1
+393rd compared points:
+  (G) + 398  DFF  /shift_I/x_reg[2][0]
+  (R) + 143  DFF  /shift_I/x_reg[2][0]/U$1
+394th compared points:
+  (G) + 399  DFF  /shift_I/x_reg[3][15]
+  (R) + 294  DFF  /shift_I/x_reg[3][15]/U$1
+395th compared points:
+  (G) + 400  DFF  /shift_I/x_reg[3][14]
+  (R) + 284  DFF  /shift_I/x_reg[3][14]/U$1
+396th compared points:
+  (G) + 401  DFF  /shift_I/x_reg[3][13]
+  (R) + 274  DFF  /shift_I/x_reg[3][13]/U$1
+397th compared points:
+  (G) + 402  DFF  /shift_I/x_reg[3][12]
+  (R) + 264  DFF  /shift_I/x_reg[3][12]/U$1
+398th compared points:
+  (G) + 403  DFF  /shift_I/x_reg[3][11]
+  (R) + 254  DFF  /shift_I/x_reg[3][11]/U$1
+399th compared points:
+  (G) + 404  DFF  /shift_I/x_reg[3][10]
+  (R) + 244  DFF  /shift_I/x_reg[3][10]/U$1
+400th compared points:
+  (G) + 405  DFF  /shift_I/x_reg[3][9]
+  (R) + 234  DFF  /shift_I/x_reg[3][9]/U$1
+401st compared points:
+  (G) + 406  DFF  /shift_I/x_reg[3][8]
+  (R) + 224  DFF  /shift_I/x_reg[3][8]/U$1
+402nd compared points:
+  (G) + 407  DFF  /shift_I/x_reg[3][7]
+  (R) + 214  DFF  /shift_I/x_reg[3][7]/U$1
+403rd compared points:
+  (G) + 408  DFF  /shift_I/x_reg[3][6]
+  (R) + 204  DFF  /shift_I/x_reg[3][6]/U$1
+404th compared points:
+  (G) + 409  DFF  /shift_I/x_reg[3][5]
+  (R) + 194  DFF  /shift_I/x_reg[3][5]/U$1
+405th compared points:
+  (G) + 410  DFF  /shift_I/x_reg[3][4]
+  (R) + 184  DFF  /shift_I/x_reg[3][4]/U$1
+406th compared points:
+  (G) + 411  DFF  /shift_I/x_reg[3][3]
+  (R) + 174  DFF  /shift_I/x_reg[3][3]/U$1
+407th compared points:
+  (G) + 412  DFF  /shift_I/x_reg[3][2]
+  (R) + 164  DFF  /shift_I/x_reg[3][2]/U$1
+408th compared points:
+  (G) + 413  DFF  /shift_I/x_reg[3][1]
+  (R) + 154  DFF  /shift_I/x_reg[3][1]/U$1
+409th compared points:
+  (G) + 414  DFF  /shift_I/x_reg[3][0]
+  (R) + 144  DFF  /shift_I/x_reg[3][0]/U$1
+410th compared points:
+  (G) + 415  DFF  /shift_I/x_reg[4][15]
+  (R) + 295  DFF  /shift_I/x_reg[4][15]/U$1
+411th compared points:
+  (G) + 416  DFF  /shift_I/x_reg[4][14]
+  (R) + 285  DFF  /shift_I/x_reg[4][14]/U$1
+412th compared points:
+  (G) + 417  DFF  /shift_I/x_reg[4][13]
+  (R) + 275  DFF  /shift_I/x_reg[4][13]/U$1
+413th compared points:
+  (G) + 418  DFF  /shift_I/x_reg[4][12]
+  (R) + 265  DFF  /shift_I/x_reg[4][12]/U$1
+414th compared points:
+  (G) + 419  DFF  /shift_I/x_reg[4][11]
+  (R) + 255  DFF  /shift_I/x_reg[4][11]/U$1
+415th compared points:
+  (G) + 420  DFF  /shift_I/x_reg[4][10]
+  (R) + 245  DFF  /shift_I/x_reg[4][10]/U$1
+416th compared points:
+  (G) + 421  DFF  /shift_I/x_reg[4][9]
+  (R) + 235  DFF  /shift_I/x_reg[4][9]/U$1
+417th compared points:
+  (G) + 422  DFF  /shift_I/x_reg[4][8]
+  (R) + 225  DFF  /shift_I/x_reg[4][8]/U$1
+418th compared points:
+  (G) + 423  DFF  /shift_I/x_reg[4][7]
+  (R) + 215  DFF  /shift_I/x_reg[4][7]/U$1
+419th compared points:
+  (G) + 424  DFF  /shift_I/x_reg[4][6]
+  (R) + 205  DFF  /shift_I/x_reg[4][6]/U$1
+420th compared points:
+  (G) + 425  DFF  /shift_I/x_reg[4][5]
+  (R) + 195  DFF  /shift_I/x_reg[4][5]/U$1
+421st compared points:
+  (G) + 426  DFF  /shift_I/x_reg[4][4]
+  (R) + 185  DFF  /shift_I/x_reg[4][4]/U$1
+422nd compared points:
+  (G) + 427  DFF  /shift_I/x_reg[4][3]
+  (R) + 175  DFF  /shift_I/x_reg[4][3]/U$1
+423rd compared points:
+  (G) + 428  DFF  /shift_I/x_reg[4][2]
+  (R) + 165  DFF  /shift_I/x_reg[4][2]/U$1
+424th compared points:
+  (G) + 429  DFF  /shift_I/x_reg[4][1]
+  (R) + 155  DFF  /shift_I/x_reg[4][1]/U$1
+425th compared points:
+  (G) + 430  DFF  /shift_I/x_reg[4][0]
+  (R) + 145  DFF  /shift_I/x_reg[4][0]/U$1
+426th compared points:
+  (G) + 431  DFF  /shift_I/x_reg[5][15]
+  (R) + 296  DFF  /shift_I/x_reg[5][15]/U$1
+427th compared points:
+  (G) + 432  DFF  /shift_I/x_reg[5][14]
+  (R) + 286  DFF  /shift_I/x_reg[5][14]/U$1
+428th compared points:
+  (G) + 433  DFF  /shift_I/x_reg[5][13]
+  (R) + 276  DFF  /shift_I/x_reg[5][13]/U$1
+429th compared points:
+  (G) + 434  DFF  /shift_I/x_reg[5][12]
+  (R) + 266  DFF  /shift_I/x_reg[5][12]/U$1
+430th compared points:
+  (G) + 435  DFF  /shift_I/x_reg[5][11]
+  (R) + 256  DFF  /shift_I/x_reg[5][11]/U$1
+431st compared points:
+  (G) + 436  DFF  /shift_I/x_reg[5][10]
+  (R) + 246  DFF  /shift_I/x_reg[5][10]/U$1
+432nd compared points:
+  (G) + 437  DFF  /shift_I/x_reg[5][9]
+  (R) + 236  DFF  /shift_I/x_reg[5][9]/U$1
+433rd compared points:
+  (G) + 438  DFF  /shift_I/x_reg[5][8]
+  (R) + 226  DFF  /shift_I/x_reg[5][8]/U$1
+434th compared points:
+  (G) + 439  DFF  /shift_I/x_reg[5][7]
+  (R) + 216  DFF  /shift_I/x_reg[5][7]/U$1
+435th compared points:
+  (G) + 440  DFF  /shift_I/x_reg[5][6]
+  (R) + 206  DFF  /shift_I/x_reg[5][6]/U$1
+436th compared points:
+  (G) + 441  DFF  /shift_I/x_reg[5][5]
+  (R) + 196  DFF  /shift_I/x_reg[5][5]/U$1
+437th compared points:
+  (G) + 442  DFF  /shift_I/x_reg[5][4]
+  (R) + 186  DFF  /shift_I/x_reg[5][4]/U$1
+438th compared points:
+  (G) + 443  DFF  /shift_I/x_reg[5][3]
+  (R) + 176  DFF  /shift_I/x_reg[5][3]/U$1
+439th compared points:
+  (G) + 444  DFF  /shift_I/x_reg[5][2]
+  (R) + 166  DFF  /shift_I/x_reg[5][2]/U$1
+440th compared points:
+  (G) + 445  DFF  /shift_I/x_reg[5][1]
+  (R) + 156  DFF  /shift_I/x_reg[5][1]/U$1
+441st compared points:
+  (G) + 446  DFF  /shift_I/x_reg[5][0]
+  (R) + 146  DFF  /shift_I/x_reg[5][0]/U$1
+442nd compared points:
+  (G) + 447  DFF  /shift_I/x_reg[6][15]
+  (R) + 297  DFF  /shift_I/x_reg[6][15]/U$1
+443rd compared points:
+  (G) + 448  DFF  /shift_I/x_reg[6][14]
+  (R) + 287  DFF  /shift_I/x_reg[6][14]/U$1
+444th compared points:
+  (G) + 449  DFF  /shift_I/x_reg[6][13]
+  (R) + 277  DFF  /shift_I/x_reg[6][13]/U$1
+445th compared points:
+  (G) + 450  DFF  /shift_I/x_reg[6][12]
+  (R) + 267  DFF  /shift_I/x_reg[6][12]/U$1
+446th compared points:
+  (G) + 451  DFF  /shift_I/x_reg[6][11]
+  (R) + 257  DFF  /shift_I/x_reg[6][11]/U$1
+447th compared points:
+  (G) + 452  DFF  /shift_I/x_reg[6][10]
+  (R) + 247  DFF  /shift_I/x_reg[6][10]/U$1
+448th compared points:
+  (G) + 453  DFF  /shift_I/x_reg[6][9]
+  (R) + 237  DFF  /shift_I/x_reg[6][9]/U$1
+449th compared points:
+  (G) + 454  DFF  /shift_I/x_reg[6][8]
+  (R) + 227  DFF  /shift_I/x_reg[6][8]/U$1
+450th compared points:
+  (G) + 455  DFF  /shift_I/x_reg[6][7]
+  (R) + 217  DFF  /shift_I/x_reg[6][7]/U$1
+451st compared points:
+  (G) + 456  DFF  /shift_I/x_reg[6][6]
+  (R) + 207  DFF  /shift_I/x_reg[6][6]/U$1
+452nd compared points:
+  (G) + 457  DFF  /shift_I/x_reg[6][5]
+  (R) + 197  DFF  /shift_I/x_reg[6][5]/U$1
+453rd compared points:
+  (G) + 458  DFF  /shift_I/x_reg[6][4]
+  (R) + 187  DFF  /shift_I/x_reg[6][4]/U$1
+454th compared points:
+  (G) + 459  DFF  /shift_I/x_reg[6][3]
+  (R) + 177  DFF  /shift_I/x_reg[6][3]/U$1
+455th compared points:
+  (G) + 460  DFF  /shift_I/x_reg[6][2]
+  (R) + 167  DFF  /shift_I/x_reg[6][2]/U$1
+456th compared points:
+  (G) + 461  DFF  /shift_I/x_reg[6][1]
+  (R) + 157  DFF  /shift_I/x_reg[6][1]/U$1
+457th compared points:
+  (G) + 462  DFF  /shift_I/x_reg[6][0]
+  (R) + 147  DFF  /shift_I/x_reg[6][0]/U$1
+458th compared points:
+  (G) + 463  DFF  /shift_I/x_reg[7][15]
+  (R) + 298  DFF  /shift_I/x_reg[7][15]/U$1
+459th compared points:
+  (G) + 464  DFF  /shift_I/x_reg[7][14]
+  (R) + 288  DFF  /shift_I/x_reg[7][14]/U$1
+460th compared points:
+  (G) + 465  DFF  /shift_I/x_reg[7][13]
+  (R) + 278  DFF  /shift_I/x_reg[7][13]/U$1
+461st compared points:
+  (G) + 466  DFF  /shift_I/x_reg[7][12]
+  (R) + 268  DFF  /shift_I/x_reg[7][12]/U$1
+462nd compared points:
+  (G) + 467  DFF  /shift_I/x_reg[7][11]
+  (R) + 258  DFF  /shift_I/x_reg[7][11]/U$1
+463rd compared points:
+  (G) + 468  DFF  /shift_I/x_reg[7][10]
+  (R) + 248  DFF  /shift_I/x_reg[7][10]/U$1
+464th compared points:
+  (G) + 469  DFF  /shift_I/x_reg[7][9]
+  (R) + 238  DFF  /shift_I/x_reg[7][9]/U$1
+465th compared points:
+  (G) + 470  DFF  /shift_I/x_reg[7][8]
+  (R) + 228  DFF  /shift_I/x_reg[7][8]/U$1
+466th compared points:
+  (G) + 471  DFF  /shift_I/x_reg[7][7]
+  (R) + 218  DFF  /shift_I/x_reg[7][7]/U$1
+467th compared points:
+  (G) + 472  DFF  /shift_I/x_reg[7][6]
+  (R) + 208  DFF  /shift_I/x_reg[7][6]/U$1
+468th compared points:
+  (G) + 473  DFF  /shift_I/x_reg[7][5]
+  (R) + 198  DFF  /shift_I/x_reg[7][5]/U$1
+469th compared points:
+  (G) + 474  DFF  /shift_I/x_reg[7][4]
+  (R) + 188  DFF  /shift_I/x_reg[7][4]/U$1
+470th compared points:
+  (G) + 475  DFF  /shift_I/x_reg[7][3]
+  (R) + 178  DFF  /shift_I/x_reg[7][3]/U$1
+471st compared points:
+  (G) + 476  DFF  /shift_I/x_reg[7][2]
+  (R) + 168  DFF  /shift_I/x_reg[7][2]/U$1
+472nd compared points:
+  (G) + 477  DFF  /shift_I/x_reg[7][1]
+  (R) + 158  DFF  /shift_I/x_reg[7][1]/U$1
+473rd compared points:
+  (G) + 478  DFF  /shift_I/x_reg[7][0]
+  (R) + 148  DFF  /shift_I/x_reg[7][0]/U$1
+474th compared points:
+  (G) + 479  DFF  /shift_I/x_reg[8][15]
+  (R) + 299  DFF  /shift_I/x_reg[8][15]/U$1
+475th compared points:
+  (G) + 480  DFF  /shift_I/x_reg[8][14]
+  (R) + 289  DFF  /shift_I/x_reg[8][14]/U$1
+476th compared points:
+  (G) + 481  DFF  /shift_I/x_reg[8][13]
+  (R) + 279  DFF  /shift_I/x_reg[8][13]/U$1
+477th compared points:
+  (G) + 482  DFF  /shift_I/x_reg[8][12]
+  (R) + 269  DFF  /shift_I/x_reg[8][12]/U$1
+478th compared points:
+  (G) + 483  DFF  /shift_I/x_reg[8][11]
+  (R) + 259  DFF  /shift_I/x_reg[8][11]/U$1
+479th compared points:
+  (G) + 484  DFF  /shift_I/x_reg[8][10]
+  (R) + 249  DFF  /shift_I/x_reg[8][10]/U$1
+480th compared points:
+  (G) + 485  DFF  /shift_I/x_reg[8][9]
+  (R) + 239  DFF  /shift_I/x_reg[8][9]/U$1
+481st compared points:
+  (G) + 486  DFF  /shift_I/x_reg[8][8]
+  (R) + 229  DFF  /shift_I/x_reg[8][8]/U$1
+482nd compared points:
+  (G) + 487  DFF  /shift_I/x_reg[8][7]
+  (R) + 219  DFF  /shift_I/x_reg[8][7]/U$1
+483rd compared points:
+  (G) + 488  DFF  /shift_I/x_reg[8][6]
+  (R) + 209  DFF  /shift_I/x_reg[8][6]/U$1
+484th compared points:
+  (G) + 489  DFF  /shift_I/x_reg[8][5]
+  (R) + 199  DFF  /shift_I/x_reg[8][5]/U$1
+485th compared points:
+  (G) + 490  DFF  /shift_I/x_reg[8][4]
+  (R) + 189  DFF  /shift_I/x_reg[8][4]/U$1
+486th compared points:
+  (G) + 491  DFF  /shift_I/x_reg[8][3]
+  (R) + 179  DFF  /shift_I/x_reg[8][3]/U$1
+487th compared points:
+  (G) + 492  DFF  /shift_I/x_reg[8][2]
+  (R) + 169  DFF  /shift_I/x_reg[8][2]/U$1
+488th compared points:
+  (G) + 493  DFF  /shift_I/x_reg[8][1]
+  (R) + 159  DFF  /shift_I/x_reg[8][1]/U$1
+489th compared points:
+  (G) + 494  DFF  /shift_I/x_reg[8][0]
+  (R) + 149  DFF  /shift_I/x_reg[8][0]/U$1
+490th compared points:
+  (G) + 495  DFF  /shift_I/x_reg[9][15]
+  (R) + 300  DFF  /shift_I/x_reg[9][15]/U$1
+491st compared points:
+  (G) + 496  DFF  /shift_I/x_reg[9][14]
+  (R) + 290  DFF  /shift_I/x_reg[9][14]/U$1
+492nd compared points:
+  (G) + 497  DFF  /shift_I/x_reg[9][13]
+  (R) + 280  DFF  /shift_I/x_reg[9][13]/U$1
+493rd compared points:
+  (G) + 498  DFF  /shift_I/x_reg[9][12]
+  (R) + 270  DFF  /shift_I/x_reg[9][12]/U$1
+494th compared points:
+  (G) + 499  DFF  /shift_I/x_reg[9][11]
+  (R) + 260  DFF  /shift_I/x_reg[9][11]/U$1
+495th compared points:
+  (G) + 500  DFF  /shift_I/x_reg[9][10]
+  (R) + 250  DFF  /shift_I/x_reg[9][10]/U$1
+496th compared points:
+  (G) + 501  DFF  /shift_I/x_reg[9][9]
+  (R) + 240  DFF  /shift_I/x_reg[9][9]/U$1
+497th compared points:
+  (G) + 502  DFF  /shift_I/x_reg[9][8]
+  (R) + 230  DFF  /shift_I/x_reg[9][8]/U$1
+498th compared points:
+  (G) + 503  DFF  /shift_I/x_reg[9][7]
+  (R) + 220  DFF  /shift_I/x_reg[9][7]/U$1
+499th compared points:
+  (G) + 504  DFF  /shift_I/x_reg[9][6]
+  (R) + 210  DFF  /shift_I/x_reg[9][6]/U$1
+500th compared points:
+  (G) + 505  DFF  /shift_I/x_reg[9][5]
+  (R) + 200  DFF  /shift_I/x_reg[9][5]/U$1
+501st compared points:
+  (G) + 506  DFF  /shift_I/x_reg[9][4]
+  (R) + 190  DFF  /shift_I/x_reg[9][4]/U$1
+502nd compared points:
+  (G) + 507  DFF  /shift_I/x_reg[9][3]
+  (R) + 180  DFF  /shift_I/x_reg[9][3]/U$1
+503rd compared points:
+  (G) + 508  DFF  /shift_I/x_reg[9][2]
+  (R) + 170  DFF  /shift_I/x_reg[9][2]/U$1
+504th compared points:
+  (G) + 509  DFF  /shift_I/x_reg[9][1]
+  (R) + 160  DFF  /shift_I/x_reg[9][1]/U$1
+505th compared points:
+  (G) + 510  DFF  /shift_I/x_reg[9][0]
+  (R) + 150  DFF  /shift_I/x_reg[9][0]/U$1
+506th compared points:
+  (G) + 511  DFF  /shift_Q/x_reg[0][15]
+  (R) + 499  DFF  /shift_Q/x_reg[0][15]/U$1
+507th compared points:
+  (G) + 512  DFF  /shift_Q/x_reg[0][14]
+  (R) + 489  DFF  /shift_Q/x_reg[0][14]/U$1
+508th compared points:
+  (G) + 513  DFF  /shift_Q/x_reg[0][13]
+  (R) + 479  DFF  /shift_Q/x_reg[0][13]/U$1
+509th compared points:
+  (G) + 514  DFF  /shift_Q/x_reg[0][12]
+  (R) + 469  DFF  /shift_Q/x_reg[0][12]/U$1
+510th compared points:
+  (G) + 515  DFF  /shift_Q/x_reg[0][11]
+  (R) + 459  DFF  /shift_Q/x_reg[0][11]/U$1
+511th compared points:
+  (G) + 516  DFF  /shift_Q/x_reg[0][10]
+  (R) + 449  DFF  /shift_Q/x_reg[0][10]/U$1
+512th compared points:
+  (G) + 517  DFF  /shift_Q/x_reg[0][9]
+  (R) + 439  DFF  /shift_Q/x_reg[0][9]/U$1
+513th compared points:
+  (G) + 518  DFF  /shift_Q/x_reg[0][8]
+  (R) + 429  DFF  /shift_Q/x_reg[0][8]/U$1
+514th compared points:
+  (G) + 519  DFF  /shift_Q/x_reg[0][7]
+  (R) + 419  DFF  /shift_Q/x_reg[0][7]/U$1
+515th compared points:
+  (G) + 520  DFF  /shift_Q/x_reg[0][6]
+  (R) + 409  DFF  /shift_Q/x_reg[0][6]/U$1
+516th compared points:
+  (G) + 521  DFF  /shift_Q/x_reg[0][5]
+  (R) + 399  DFF  /shift_Q/x_reg[0][5]/U$1
+517th compared points:
+  (G) + 522  DFF  /shift_Q/x_reg[0][4]
+  (R) + 389  DFF  /shift_Q/x_reg[0][4]/U$1
+518th compared points:
+  (G) + 523  DFF  /shift_Q/x_reg[0][3]
+  (R) + 379  DFF  /shift_Q/x_reg[0][3]/U$1
+519th compared points:
+  (G) + 524  DFF  /shift_Q/x_reg[0][2]
+  (R) + 369  DFF  /shift_Q/x_reg[0][2]/U$1
+520th compared points:
+  (G) + 525  DFF  /shift_Q/x_reg[0][1]
+  (R) + 359  DFF  /shift_Q/x_reg[0][1]/U$1
+521st compared points:
+  (G) + 526  DFF  /shift_Q/x_reg[0][0]
+  (R) + 349  DFF  /shift_Q/x_reg[0][0]/U$1
+522nd compared points:
+  (G) + 527  DFF  /shift_Q/x_reg[1][15]
+  (R) + 500  DFF  /shift_Q/x_reg[1][15]/U$1
+523rd compared points:
+  (G) + 528  DFF  /shift_Q/x_reg[1][14]
+  (R) + 490  DFF  /shift_Q/x_reg[1][14]/U$1
+524th compared points:
+  (G) + 529  DFF  /shift_Q/x_reg[1][13]
+  (R) + 480  DFF  /shift_Q/x_reg[1][13]/U$1
+525th compared points:
+  (G) + 530  DFF  /shift_Q/x_reg[1][12]
+  (R) + 470  DFF  /shift_Q/x_reg[1][12]/U$1
+526th compared points:
+  (G) + 531  DFF  /shift_Q/x_reg[1][11]
+  (R) + 460  DFF  /shift_Q/x_reg[1][11]/U$1
+527th compared points:
+  (G) + 532  DFF  /shift_Q/x_reg[1][10]
+  (R) + 450  DFF  /shift_Q/x_reg[1][10]/U$1
+528th compared points:
+  (G) + 533  DFF  /shift_Q/x_reg[1][9]
+  (R) + 440  DFF  /shift_Q/x_reg[1][9]/U$1
+529th compared points:
+  (G) + 534  DFF  /shift_Q/x_reg[1][8]
+  (R) + 430  DFF  /shift_Q/x_reg[1][8]/U$1
+530th compared points:
+  (G) + 535  DFF  /shift_Q/x_reg[1][7]
+  (R) + 420  DFF  /shift_Q/x_reg[1][7]/U$1
+531st compared points:
+  (G) + 536  DFF  /shift_Q/x_reg[1][6]
+  (R) + 410  DFF  /shift_Q/x_reg[1][6]/U$1
+532nd compared points:
+  (G) + 537  DFF  /shift_Q/x_reg[1][5]
+  (R) + 400  DFF  /shift_Q/x_reg[1][5]/U$1
+533rd compared points:
+  (G) + 538  DFF  /shift_Q/x_reg[1][4]
+  (R) + 390  DFF  /shift_Q/x_reg[1][4]/U$1
+534th compared points:
+  (G) + 539  DFF  /shift_Q/x_reg[1][3]
+  (R) + 380  DFF  /shift_Q/x_reg[1][3]/U$1
+535th compared points:
+  (G) + 540  DFF  /shift_Q/x_reg[1][2]
+  (R) + 370  DFF  /shift_Q/x_reg[1][2]/U$1
+536th compared points:
+  (G) + 541  DFF  /shift_Q/x_reg[1][1]
+  (R) + 360  DFF  /shift_Q/x_reg[1][1]/U$1
+537th compared points:
+  (G) + 542  DFF  /shift_Q/x_reg[1][0]
+  (R) + 350  DFF  /shift_Q/x_reg[1][0]/U$1
+538th compared points:
+  (G) + 543  DFF  /shift_Q/x_reg[2][15]
+  (R) + 501  DFF  /shift_Q/x_reg[2][15]/U$1
+539th compared points:
+  (G) + 544  DFF  /shift_Q/x_reg[2][14]
+  (R) + 491  DFF  /shift_Q/x_reg[2][14]/U$1
+540th compared points:
+  (G) + 545  DFF  /shift_Q/x_reg[2][13]
+  (R) + 481  DFF  /shift_Q/x_reg[2][13]/U$1
+541st compared points:
+  (G) + 546  DFF  /shift_Q/x_reg[2][12]
+  (R) + 471  DFF  /shift_Q/x_reg[2][12]/U$1
+542nd compared points:
+  (G) + 547  DFF  /shift_Q/x_reg[2][11]
+  (R) + 461  DFF  /shift_Q/x_reg[2][11]/U$1
+543rd compared points:
+  (G) + 548  DFF  /shift_Q/x_reg[2][10]
+  (R) + 451  DFF  /shift_Q/x_reg[2][10]/U$1
+544th compared points:
+  (G) + 549  DFF  /shift_Q/x_reg[2][9]
+  (R) + 441  DFF  /shift_Q/x_reg[2][9]/U$1
+545th compared points:
+  (G) + 550  DFF  /shift_Q/x_reg[2][8]
+  (R) + 431  DFF  /shift_Q/x_reg[2][8]/U$1
+546th compared points:
+  (G) + 551  DFF  /shift_Q/x_reg[2][7]
+  (R) + 421  DFF  /shift_Q/x_reg[2][7]/U$1
+547th compared points:
+  (G) + 552  DFF  /shift_Q/x_reg[2][6]
+  (R) + 411  DFF  /shift_Q/x_reg[2][6]/U$1
+548th compared points:
+  (G) + 553  DFF  /shift_Q/x_reg[2][5]
+  (R) + 401  DFF  /shift_Q/x_reg[2][5]/U$1
+549th compared points:
+  (G) + 554  DFF  /shift_Q/x_reg[2][4]
+  (R) + 391  DFF  /shift_Q/x_reg[2][4]/U$1
+550th compared points:
+  (G) + 555  DFF  /shift_Q/x_reg[2][3]
+  (R) + 381  DFF  /shift_Q/x_reg[2][3]/U$1
+551st compared points:
+  (G) + 556  DFF  /shift_Q/x_reg[2][2]
+  (R) + 371  DFF  /shift_Q/x_reg[2][2]/U$1
+552nd compared points:
+  (G) + 557  DFF  /shift_Q/x_reg[2][1]
+  (R) + 361  DFF  /shift_Q/x_reg[2][1]/U$1
+553rd compared points:
+  (G) + 558  DFF  /shift_Q/x_reg[2][0]
+  (R) + 351  DFF  /shift_Q/x_reg[2][0]/U$1
+554th compared points:
+  (G) + 559  DFF  /shift_Q/x_reg[3][15]
+  (R) + 502  DFF  /shift_Q/x_reg[3][15]/U$1
+555th compared points:
+  (G) + 560  DFF  /shift_Q/x_reg[3][14]
+  (R) + 492  DFF  /shift_Q/x_reg[3][14]/U$1
+556th compared points:
+  (G) + 561  DFF  /shift_Q/x_reg[3][13]
+  (R) + 482  DFF  /shift_Q/x_reg[3][13]/U$1
+557th compared points:
+  (G) + 562  DFF  /shift_Q/x_reg[3][12]
+  (R) + 472  DFF  /shift_Q/x_reg[3][12]/U$1
+558th compared points:
+  (G) + 563  DFF  /shift_Q/x_reg[3][11]
+  (R) + 462  DFF  /shift_Q/x_reg[3][11]/U$1
+559th compared points:
+  (G) + 564  DFF  /shift_Q/x_reg[3][10]
+  (R) + 452  DFF  /shift_Q/x_reg[3][10]/U$1
+560th compared points:
+  (G) + 565  DFF  /shift_Q/x_reg[3][9]
+  (R) + 442  DFF  /shift_Q/x_reg[3][9]/U$1
+561st compared points:
+  (G) + 566  DFF  /shift_Q/x_reg[3][8]
+  (R) + 432  DFF  /shift_Q/x_reg[3][8]/U$1
+562nd compared points:
+  (G) + 567  DFF  /shift_Q/x_reg[3][7]
+  (R) + 422  DFF  /shift_Q/x_reg[3][7]/U$1
+563rd compared points:
+  (G) + 568  DFF  /shift_Q/x_reg[3][6]
+  (R) + 412  DFF  /shift_Q/x_reg[3][6]/U$1
+564th compared points:
+  (G) + 569  DFF  /shift_Q/x_reg[3][5]
+  (R) + 402  DFF  /shift_Q/x_reg[3][5]/U$1
+565th compared points:
+  (G) + 570  DFF  /shift_Q/x_reg[3][4]
+  (R) + 392  DFF  /shift_Q/x_reg[3][4]/U$1
+566th compared points:
+  (G) + 571  DFF  /shift_Q/x_reg[3][3]
+  (R) + 382  DFF  /shift_Q/x_reg[3][3]/U$1
+567th compared points:
+  (G) + 572  DFF  /shift_Q/x_reg[3][2]
+  (R) + 372  DFF  /shift_Q/x_reg[3][2]/U$1
+568th compared points:
+  (G) + 573  DFF  /shift_Q/x_reg[3][1]
+  (R) + 362  DFF  /shift_Q/x_reg[3][1]/U$1
+569th compared points:
+  (G) + 574  DFF  /shift_Q/x_reg[3][0]
+  (R) + 352  DFF  /shift_Q/x_reg[3][0]/U$1
+570th compared points:
+  (G) + 575  DFF  /shift_Q/x_reg[4][15]
+  (R) + 503  DFF  /shift_Q/x_reg[4][15]/U$1
+571st compared points:
+  (G) + 576  DFF  /shift_Q/x_reg[4][14]
+  (R) + 493  DFF  /shift_Q/x_reg[4][14]/U$1
+572nd compared points:
+  (G) + 577  DFF  /shift_Q/x_reg[4][13]
+  (R) + 483  DFF  /shift_Q/x_reg[4][13]/U$1
+573rd compared points:
+  (G) + 578  DFF  /shift_Q/x_reg[4][12]
+  (R) + 473  DFF  /shift_Q/x_reg[4][12]/U$1
+574th compared points:
+  (G) + 579  DFF  /shift_Q/x_reg[4][11]
+  (R) + 463  DFF  /shift_Q/x_reg[4][11]/U$1
+575th compared points:
+  (G) + 580  DFF  /shift_Q/x_reg[4][10]
+  (R) + 453  DFF  /shift_Q/x_reg[4][10]/U$1
+576th compared points:
+  (G) + 581  DFF  /shift_Q/x_reg[4][9]
+  (R) + 443  DFF  /shift_Q/x_reg[4][9]/U$1
+577th compared points:
+  (G) + 582  DFF  /shift_Q/x_reg[4][8]
+  (R) + 433  DFF  /shift_Q/x_reg[4][8]/U$1
+578th compared points:
+  (G) + 583  DFF  /shift_Q/x_reg[4][7]
+  (R) + 423  DFF  /shift_Q/x_reg[4][7]/U$1
+579th compared points:
+  (G) + 584  DFF  /shift_Q/x_reg[4][6]
+  (R) + 413  DFF  /shift_Q/x_reg[4][6]/U$1
+580th compared points:
+  (G) + 585  DFF  /shift_Q/x_reg[4][5]
+  (R) + 403  DFF  /shift_Q/x_reg[4][5]/U$1
+581st compared points:
+  (G) + 586  DFF  /shift_Q/x_reg[4][4]
+  (R) + 393  DFF  /shift_Q/x_reg[4][4]/U$1
+582nd compared points:
+  (G) + 587  DFF  /shift_Q/x_reg[4][3]
+  (R) + 383  DFF  /shift_Q/x_reg[4][3]/U$1
+583rd compared points:
+  (G) + 588  DFF  /shift_Q/x_reg[4][2]
+  (R) + 373  DFF  /shift_Q/x_reg[4][2]/U$1
+584th compared points:
+  (G) + 589  DFF  /shift_Q/x_reg[4][1]
+  (R) + 363  DFF  /shift_Q/x_reg[4][1]/U$1
+585th compared points:
+  (G) + 590  DFF  /shift_Q/x_reg[4][0]
+  (R) + 353  DFF  /shift_Q/x_reg[4][0]/U$1
+586th compared points:
+  (G) + 591  DFF  /shift_Q/x_reg[5][15]
+  (R) + 504  DFF  /shift_Q/x_reg[5][15]/U$1
+587th compared points:
+  (G) + 592  DFF  /shift_Q/x_reg[5][14]
+  (R) + 494  DFF  /shift_Q/x_reg[5][14]/U$1
+588th compared points:
+  (G) + 593  DFF  /shift_Q/x_reg[5][13]
+  (R) + 484  DFF  /shift_Q/x_reg[5][13]/U$1
+589th compared points:
+  (G) + 594  DFF  /shift_Q/x_reg[5][12]
+  (R) + 474  DFF  /shift_Q/x_reg[5][12]/U$1
+590th compared points:
+  (G) + 595  DFF  /shift_Q/x_reg[5][11]
+  (R) + 464  DFF  /shift_Q/x_reg[5][11]/U$1
+591st compared points:
+  (G) + 596  DFF  /shift_Q/x_reg[5][10]
+  (R) + 454  DFF  /shift_Q/x_reg[5][10]/U$1
+592nd compared points:
+  (G) + 597  DFF  /shift_Q/x_reg[5][9]
+  (R) + 444  DFF  /shift_Q/x_reg[5][9]/U$1
+593rd compared points:
+  (G) + 598  DFF  /shift_Q/x_reg[5][8]
+  (R) + 434  DFF  /shift_Q/x_reg[5][8]/U$1
+594th compared points:
+  (G) + 599  DFF  /shift_Q/x_reg[5][7]
+  (R) + 424  DFF  /shift_Q/x_reg[5][7]/U$1
+595th compared points:
+  (G) + 600  DFF  /shift_Q/x_reg[5][6]
+  (R) + 414  DFF  /shift_Q/x_reg[5][6]/U$1
+596th compared points:
+  (G) + 601  DFF  /shift_Q/x_reg[5][5]
+  (R) + 404  DFF  /shift_Q/x_reg[5][5]/U$1
+597th compared points:
+  (G) + 602  DFF  /shift_Q/x_reg[5][4]
+  (R) + 394  DFF  /shift_Q/x_reg[5][4]/U$1
+598th compared points:
+  (G) + 603  DFF  /shift_Q/x_reg[5][3]
+  (R) + 384  DFF  /shift_Q/x_reg[5][3]/U$1
+599th compared points:
+  (G) + 604  DFF  /shift_Q/x_reg[5][2]
+  (R) + 374  DFF  /shift_Q/x_reg[5][2]/U$1
+600th compared points:
+  (G) + 605  DFF  /shift_Q/x_reg[5][1]
+  (R) + 364  DFF  /shift_Q/x_reg[5][1]/U$1
+601st compared points:
+  (G) + 606  DFF  /shift_Q/x_reg[5][0]
+  (R) + 354  DFF  /shift_Q/x_reg[5][0]/U$1
+602nd compared points:
+  (G) + 607  DFF  /shift_Q/x_reg[6][15]
+  (R) + 505  DFF  /shift_Q/x_reg[6][15]/U$1
+603rd compared points:
+  (G) + 608  DFF  /shift_Q/x_reg[6][14]
+  (R) + 495  DFF  /shift_Q/x_reg[6][14]/U$1
+604th compared points:
+  (G) + 609  DFF  /shift_Q/x_reg[6][13]
+  (R) + 485  DFF  /shift_Q/x_reg[6][13]/U$1
+605th compared points:
+  (G) + 610  DFF  /shift_Q/x_reg[6][12]
+  (R) + 475  DFF  /shift_Q/x_reg[6][12]/U$1
+606th compared points:
+  (G) + 611  DFF  /shift_Q/x_reg[6][11]
+  (R) + 465  DFF  /shift_Q/x_reg[6][11]/U$1
+607th compared points:
+  (G) + 612  DFF  /shift_Q/x_reg[6][10]
+  (R) + 455  DFF  /shift_Q/x_reg[6][10]/U$1
+608th compared points:
+  (G) + 613  DFF  /shift_Q/x_reg[6][9]
+  (R) + 445  DFF  /shift_Q/x_reg[6][9]/U$1
+609th compared points:
+  (G) + 614  DFF  /shift_Q/x_reg[6][8]
+  (R) + 435  DFF  /shift_Q/x_reg[6][8]/U$1
+610th compared points:
+  (G) + 615  DFF  /shift_Q/x_reg[6][7]
+  (R) + 425  DFF  /shift_Q/x_reg[6][7]/U$1
+611th compared points:
+  (G) + 616  DFF  /shift_Q/x_reg[6][6]
+  (R) + 415  DFF  /shift_Q/x_reg[6][6]/U$1
+612th compared points:
+  (G) + 617  DFF  /shift_Q/x_reg[6][5]
+  (R) + 405  DFF  /shift_Q/x_reg[6][5]/U$1
+613th compared points:
+  (G) + 618  DFF  /shift_Q/x_reg[6][4]
+  (R) + 395  DFF  /shift_Q/x_reg[6][4]/U$1
+614th compared points:
+  (G) + 619  DFF  /shift_Q/x_reg[6][3]
+  (R) + 385  DFF  /shift_Q/x_reg[6][3]/U$1
+615th compared points:
+  (G) + 620  DFF  /shift_Q/x_reg[6][2]
+  (R) + 375  DFF  /shift_Q/x_reg[6][2]/U$1
+616th compared points:
+  (G) + 621  DFF  /shift_Q/x_reg[6][1]
+  (R) + 365  DFF  /shift_Q/x_reg[6][1]/U$1
+617th compared points:
+  (G) + 622  DFF  /shift_Q/x_reg[6][0]
+  (R) + 355  DFF  /shift_Q/x_reg[6][0]/U$1
+618th compared points:
+  (G) + 623  DFF  /shift_Q/x_reg[7][15]
+  (R) + 506  DFF  /shift_Q/x_reg[7][15]/U$1
+619th compared points:
+  (G) + 624  DFF  /shift_Q/x_reg[7][14]
+  (R) + 496  DFF  /shift_Q/x_reg[7][14]/U$1
+620th compared points:
+  (G) + 625  DFF  /shift_Q/x_reg[7][13]
+  (R) + 486  DFF  /shift_Q/x_reg[7][13]/U$1
+621st compared points:
+  (G) + 626  DFF  /shift_Q/x_reg[7][12]
+  (R) + 476  DFF  /shift_Q/x_reg[7][12]/U$1
+622nd compared points:
+  (G) + 627  DFF  /shift_Q/x_reg[7][11]
+  (R) + 466  DFF  /shift_Q/x_reg[7][11]/U$1
+623rd compared points:
+  (G) + 628  DFF  /shift_Q/x_reg[7][10]
+  (R) + 456  DFF  /shift_Q/x_reg[7][10]/U$1
+624th compared points:
+  (G) + 629  DFF  /shift_Q/x_reg[7][9]
+  (R) + 446  DFF  /shift_Q/x_reg[7][9]/U$1
+625th compared points:
+  (G) + 630  DFF  /shift_Q/x_reg[7][8]
+  (R) + 436  DFF  /shift_Q/x_reg[7][8]/U$1
+626th compared points:
+  (G) + 631  DFF  /shift_Q/x_reg[7][7]
+  (R) + 426  DFF  /shift_Q/x_reg[7][7]/U$1
+627th compared points:
+  (G) + 632  DFF  /shift_Q/x_reg[7][6]
+  (R) + 416  DFF  /shift_Q/x_reg[7][6]/U$1
+628th compared points:
+  (G) + 633  DFF  /shift_Q/x_reg[7][5]
+  (R) + 406  DFF  /shift_Q/x_reg[7][5]/U$1
+629th compared points:
+  (G) + 634  DFF  /shift_Q/x_reg[7][4]
+  (R) + 396  DFF  /shift_Q/x_reg[7][4]/U$1
+630th compared points:
+  (G) + 635  DFF  /shift_Q/x_reg[7][3]
+  (R) + 386  DFF  /shift_Q/x_reg[7][3]/U$1
+631st compared points:
+  (G) + 636  DFF  /shift_Q/x_reg[7][2]
+  (R) + 376  DFF  /shift_Q/x_reg[7][2]/U$1
+632nd compared points:
+  (G) + 637  DFF  /shift_Q/x_reg[7][1]
+  (R) + 366  DFF  /shift_Q/x_reg[7][1]/U$1
+633rd compared points:
+  (G) + 638  DFF  /shift_Q/x_reg[7][0]
+  (R) + 356  DFF  /shift_Q/x_reg[7][0]/U$1
+634th compared points:
+  (G) + 639  DFF  /shift_Q/x_reg[8][15]
+  (R) + 507  DFF  /shift_Q/x_reg[8][15]/U$1
+635th compared points:
+  (G) + 640  DFF  /shift_Q/x_reg[8][14]
+  (R) + 497  DFF  /shift_Q/x_reg[8][14]/U$1
+636th compared points:
+  (G) + 641  DFF  /shift_Q/x_reg[8][13]
+  (R) + 487  DFF  /shift_Q/x_reg[8][13]/U$1
+637th compared points:
+  (G) + 642  DFF  /shift_Q/x_reg[8][12]
+  (R) + 477  DFF  /shift_Q/x_reg[8][12]/U$1
+638th compared points:
+  (G) + 643  DFF  /shift_Q/x_reg[8][11]
+  (R) + 467  DFF  /shift_Q/x_reg[8][11]/U$1
+639th compared points:
+  (G) + 644  DFF  /shift_Q/x_reg[8][10]
+  (R) + 457  DFF  /shift_Q/x_reg[8][10]/U$1
+640th compared points:
+  (G) + 645  DFF  /shift_Q/x_reg[8][9]
+  (R) + 447  DFF  /shift_Q/x_reg[8][9]/U$1
+641st compared points:
+  (G) + 646  DFF  /shift_Q/x_reg[8][8]
+  (R) + 437  DFF  /shift_Q/x_reg[8][8]/U$1
+642nd compared points:
+  (G) + 647  DFF  /shift_Q/x_reg[8][7]
+  (R) + 427  DFF  /shift_Q/x_reg[8][7]/U$1
+643rd compared points:
+  (G) + 648  DFF  /shift_Q/x_reg[8][6]
+  (R) + 417  DFF  /shift_Q/x_reg[8][6]/U$1
+644th compared points:
+  (G) + 649  DFF  /shift_Q/x_reg[8][5]
+  (R) + 407  DFF  /shift_Q/x_reg[8][5]/U$1
+645th compared points:
+  (G) + 650  DFF  /shift_Q/x_reg[8][4]
+  (R) + 397  DFF  /shift_Q/x_reg[8][4]/U$1
+646th compared points:
+  (G) + 651  DFF  /shift_Q/x_reg[8][3]
+  (R) + 387  DFF  /shift_Q/x_reg[8][3]/U$1
+647th compared points:
+  (G) + 652  DFF  /shift_Q/x_reg[8][2]
+  (R) + 377  DFF  /shift_Q/x_reg[8][2]/U$1
+648th compared points:
+  (G) + 653  DFF  /shift_Q/x_reg[8][1]
+  (R) + 367  DFF  /shift_Q/x_reg[8][1]/U$1
+649th compared points:
+  (G) + 654  DFF  /shift_Q/x_reg[8][0]
+  (R) + 357  DFF  /shift_Q/x_reg[8][0]/U$1
+650th compared points:
+  (G) + 655  DFF  /shift_Q/x_reg[9][15]
+  (R) + 508  DFF  /shift_Q/x_reg[9][15]/U$1
+651st compared points:
+  (G) + 656  DFF  /shift_Q/x_reg[9][14]
+  (R) + 498  DFF  /shift_Q/x_reg[9][14]/U$1
+652nd compared points:
+  (G) + 657  DFF  /shift_Q/x_reg[9][13]
+  (R) + 488  DFF  /shift_Q/x_reg[9][13]/U$1
+653rd compared points:
+  (G) + 658  DFF  /shift_Q/x_reg[9][12]
+  (R) + 478  DFF  /shift_Q/x_reg[9][12]/U$1
+654th compared points:
+  (G) + 659  DFF  /shift_Q/x_reg[9][11]
+  (R) + 468  DFF  /shift_Q/x_reg[9][11]/U$1
+655th compared points:
+  (G) + 660  DFF  /shift_Q/x_reg[9][10]
+  (R) + 458  DFF  /shift_Q/x_reg[9][10]/U$1
+656th compared points:
+  (G) + 661  DFF  /shift_Q/x_reg[9][9]
+  (R) + 448  DFF  /shift_Q/x_reg[9][9]/U$1
+657th compared points:
+  (G) + 662  DFF  /shift_Q/x_reg[9][8]
+  (R) + 438  DFF  /shift_Q/x_reg[9][8]/U$1
+658th compared points:
+  (G) + 663  DFF  /shift_Q/x_reg[9][7]
+  (R) + 428  DFF  /shift_Q/x_reg[9][7]/U$1
+659th compared points:
+  (G) + 664  DFF  /shift_Q/x_reg[9][6]
+  (R) + 418  DFF  /shift_Q/x_reg[9][6]/U$1
+660th compared points:
+  (G) + 665  DFF  /shift_Q/x_reg[9][5]
+  (R) + 408  DFF  /shift_Q/x_reg[9][5]/U$1
+661st compared points:
+  (G) + 666  DFF  /shift_Q/x_reg[9][4]
+  (R) + 398  DFF  /shift_Q/x_reg[9][4]/U$1
+662nd compared points:
+  (G) + 667  DFF  /shift_Q/x_reg[9][3]
+  (R) + 388  DFF  /shift_Q/x_reg[9][3]/U$1
+663rd compared points:
+  (G) + 668  DFF  /shift_Q/x_reg[9][2]
+  (R) + 378  DFF  /shift_Q/x_reg[9][2]/U$1
+664th compared points:
+  (G) + 669  DFF  /shift_Q/x_reg[9][1]
+  (R) + 368  DFF  /shift_Q/x_reg[9][1]/U$1
+665th compared points:
+  (G) + 670  DFF  /shift_Q/x_reg[9][0]
+  (R) + 358  DFF  /shift_Q/x_reg[9][0]/U$1
+666th compared points:
+  (G) + 671  BBOX /minaj2_I
+  (R) + 670  BBOX /minaj2_I
+667th compared points:
+  (G) + 672  BBOX /minaj2_Q
+  (R) + 671  BBOX /minaj2_Q
+668th compared points:
+  (G) + 673  BBOX /fir_I_u
+  (R) + 672  BBOX /fir_I_u
+669th compared points:
+  (G) + 674  BBOX /fir_Q_u
+  (R) + 673  BBOX /fir_Q_u
+
+================================================================================
+Compared points   PO     DFF    BBOX      Total   
+--------------------------------------------------------------------------------
+Golden            32     633    4         669     
+--------------------------------------------------------------------------------
+Revised           32     633    4         669     
+================================================================================
