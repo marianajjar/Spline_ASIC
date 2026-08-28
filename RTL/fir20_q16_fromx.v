@@ -42,9 +42,7 @@ module fir20_q16_fromx #(
   localparam logic signed [ACC_W-1:0] RND =
 	(FL == 0) ? '0 : ({{(ACC_W-FL){1'b0}}, (1'sb1 <<< (FL-1))});
 
-  // CHANGED: written as explicit bit patterns to avoid the signed/unsigned
-  //          mix in (1 <<< (WL-1)) which triggered VER-318. Same values:
-  //          MAXQ = 0x7FFF (+32767), MINQ = 0x8000 (-32768).
+
   localparam logic signed [WL-1:0] MAXQ = {1'b0, {(WL-1){1'b1}}};
   localparam logic signed [WL-1:0] MINQ = {1'b1, {(WL-1){1'b0}}};
 
