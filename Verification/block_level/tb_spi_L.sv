@@ -1,10 +1,10 @@
 `timescale 1ns/1ps
 // ============================================================================
-// tb_spi_cfg4_nomode.sv
+// tb_spi_L.sv
 // Clean posedge-synchronous block-level testbench with SVA
 // ============================================================================
 
-module tb_spi_cfg4_nomode;
+module tb_spi_L;
 
   localparam real CLK_PERIOD = 1.0;
 
@@ -604,7 +604,7 @@ module tb_spi_cfg4_nomode;
 
   initial begin
 	$dumpfile("dump.vcd");
-	$dumpvars(0, tb_spi_cfg4_nomode);
+	  $dumpvars(0, tb_spi_L);
   end
 
 endmodule
