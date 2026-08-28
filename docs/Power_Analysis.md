@@ -148,6 +148,3 @@ Potential improvements include:
 - additional parallel vias at high-current connections,
 - improved distribution of high-current regions.
 
-## 9. Repository Policy
-
-Generated SAIF files, large EDA databases, and proprietary foundry data do not need to be committed to the public repository. The scripts and small mode-specific input files are sufficient to document the activity-generation methodology in a properly configured local environment.
