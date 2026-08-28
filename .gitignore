@@ -1,0 +1,41 @@
+# Editor / temporary files
+*~
+*.swp
+*.swo
+*.tmp
+
+# Simulation
+*.vcd
+*.fsdb
+*.vpd
+simv*
+csrc/
+DVEfiles/
+
+# Synopsys databases
+*.ddc
+*.db
+*.pvl
+*.syn
+*.svf
+
+# Innovus databases / saved designs
+*.enc
+*.enc.dat
+*.dat
+*.dbs
+*.rcdb
+*.spef.gz
+
+# Tool work directories
+work/
+WORK/
+logs/
+log/
+tmp/
+temp/
+
+# Generated GUI/session files
+*.history
+*.cmd
+*.log
