@@ -1,140 +1,154 @@
 # Signoff
 
-## Overview
+## 1. Overview
 
-Final verification was performed after synthesis and physical implementation using a combination of logic-equivalence checking, pad-level gate-level simulation, static timing analysis, DRC, and LVS.
-
-The signoff flow covered:
+Final verification after synthesis and physical implementation uses:
 
 ```text
 RTL-to-Gate LEC
-      ↓
-Pad-Level GLS
-      ↓
+      |
+      v
+Pad-Level Functional GLS
+      |
+      v
 Physical Implementation
-      ↓
-PrimeTime STA
-      ↓
-Calibre DRC / LVS
+      |
+      +------------------+
+      |                  |
+      v                  v
+PrimeTime STA       Calibre DRC/LVS
 ```
 
-## RTL-to-Gate Logic Equivalence Checking
+Power analysis is documented separately because it uses the dedicated `SAIF_Generation/` flow.
 
-Cadence Conformal LEC was used to compare the RTL reference design with the synthesized gate-level netlist.
+## 2. RTL-to-Gate Logic Equivalence
 
-The final comparison result was:
+Cadence Conformal was used to compare the RTL reference with the synthesized gate-level netlist.
 
-**PASS**
+| Metric | Result |
+|---|---:|
+| Equivalent compare points | 669 |
+| Incomplete verification | 0 |
+| Design ambiguity | 0 |
+| Final result | **PASS** |
 
-The verification report showed:
+This is the validated RTL-to-synthesized-gate comparison.
 
-- incomplete verification: 0,
-- user modifications to the design: 0,
-- design ambiguity: 0,
-- compare result: PASS.
+Repository location:
 
-This confirms that synthesis preserved the logical functionality of the RTL implementation.
+```text
+Signoff/LEC/
+```
 
-## Pad-Level Gate-Level Simulation
+## 3. Pad-Level Gate-Level Simulation
 
-Gate-level simulation was performed on the pad-integrated top-level design. The GLS testbench applies the same logical configuration and signal transaction used during RTL verification:
+Functional gate-level simulation was performed after pad integration using the padded top-level design.
 
-1. configuration header and interpolation factor,
+The testbench applies:
+
+1. the configuration marker and interpolation factor,
 2. ten FIR coefficient words,
-3. serial I/Q input samples,
-4. capture and comparison of the generated I/Q outputs.
+3. serial I/Q samples,
+4. output capture and comparison.
 
-All four supported interpolation factors were exercised.
+All four supported interpolation modes were exercised.
 
-**Final GLS result: PASS**
+**Pad-level GLS: PASS**
 
-The pad-level GLS also provides switching-activity data used by the subsequent post-route power-analysis flow.
+The preserved result is a functional/zero-delay GLS result; no SDF timing claim is made.
 
-## Static Timing Analysis
+Repository location:
 
-Final post-layout static timing analysis was performed using Synopsys PrimeTime with extracted parasitics and propagated clocks.
+```text
+Signoff/GLS_Pad_Level/
+```
 
-### Setup Timing
+## 4. Post-Layout Static Timing Analysis
 
-The final worst setup path reported:
+Synopsys PrimeTime was used with propagated clocks and extracted post-route parasitics.
 
-- path type: maximum delay,
-- worst setup slack: **+0.29 ns**,
-- result: **MET**.
+```text
+top_slow.SPEF
+top_fast.SPEF
+```
 
-### Hold Timing
+Final results:
 
-The final worst hold path reported:
+| Check | Worst Slack | Result |
+|---|---:|---|
+| Setup | **+0.29 ns** | **MET** |
+| Hold | **+0.86 ns** | **MET** |
 
-- path type: minimum delay,
-- worst hold slack: **+0.86 ns**,
-- result: **MET**.
+The final routed design therefore meets the reported setup and hold timing requirements.
 
-Therefore, the final post-layout design meets both setup and hold timing in the analyzed signoff views.
+Repository location:
 
-## Design Rule Checking
+```text
+Signoff/PrimeTime/
+```
 
-Two levels of physical-rule checking were used.
+## 5. Design Rule Checking
 
 ### Innovus DRC
 
-The final Innovus implementation check reported:
+The final Innovus implementation-level DRC reports:
 
-**No DRC violations were found.**
-
-This confirms that no remaining implementation-level routing DRC violations were reported by the final Innovus database.
+```text
+No DRC violations were found.
+```
 
 ### Calibre DRC
 
-Calibre DRC was also run on the final layout. The report contains residual rule-check results associated primarily with pad/ESD structures and technology/fill/density-related checks.
+Calibre DRC was also run on the final GDS. The remaining reported results are associated mainly with pad/ESD structures and technology/fill-related checks.
 
-These residual results were reviewed as part of the project and were considered non-design-blocking for the academic implementation, since they correspond to structures or final manufacturing adjustments that are handled at the foundry/tapeout stage rather than by changes to the interpolation core.
+These residual checks were reviewed with the project advisor and treated as non-blocking for the academic project scope. The documentation therefore does **not** describe the Calibre run as zero-DRC.
 
-For this reason, the repository preserves the Calibre DRC summary instead of describing the run as a zero-result Calibre DRC.
-
-## Layout Versus Schematic
-
-Calibre LVS was used to compare the circuit extracted from the final layout against the reference/source SPICE netlist.
-
-The comparison used:
+Repository location:
 
 ```text
-Reference/source:
-top_eco_nocorner.spi
-
-Extracted layout netlist:
-top.sp
+Signoff/DRC/
 ```
 
-The final Calibre report returned:
+## 6. Layout Versus Schematic
 
-**OVERALL COMPARISON: CORRECT**
+Calibre LVS compared the extracted layout circuit with the reference/source SPICE netlist.
 
-with the top-level cell reported as `CORRECT`.
+```text
+Reference/source netlist : top_eco_nocorner.spi
+Extracted layout netlist : top.sp
+```
 
-This verifies that the electrical connectivity extracted from the final layout matches the intended source circuit.
+Final result:
 
-The post-layout Verilog exported from Innovus,
+```text
+OVERALL COMPARISON: CORRECT
+```
+
+The post-layout Verilog representation generated by Innovus is retained separately as:
 
 ```text
 top_final_final_lvs.v
 ```
 
-is retained separately as the digital post-layout representation of the implemented design.
+Repository location:
 
-## Signoff Summary
+```text
+Signoff/LVS/
+```
+
+## 7. Signoff Summary
 
 | Check | Tool | Final Result |
 |---|---|---|
-| RTL-to-Gate LEC | Cadence Conformal | **PASS** |
-| Pad-Level GLS | Synopsys VCS | **PASS** |
-| Post-layout setup STA | Synopsys PrimeTime | **MET, +0.29 ns** |
-| Post-layout hold STA | Synopsys PrimeTime | **MET, +0.86 ns** |
+| RTL-to-gate LEC | Cadence Conformal | **PASS** |
+| Pad-level functional GLS | Synopsys VCS | **PASS** |
+| Post-layout setup STA | Synopsys PrimeTime | **+0.29 ns — MET** |
+| Post-layout hold STA | Synopsys PrimeTime | **+0.86 ns — MET** |
 | Innovus DRC | Cadence Innovus | **0 violations** |
-| Calibre DRC | Siemens Calibre | Residual technology/pad-related checks reviewed for project scope |
-| LVS | Siemens Calibre | **CORRECT** |
+| Calibre DRC | Siemens Calibre | Residual pad/technology checks reviewed for project scope |
+| Calibre LVS | Siemens Calibre | **CORRECT** |
 
-## Repository Organization
+## 8. Signoff Repository Structure
 
 ```text
 Signoff/
@@ -144,5 +158,3 @@ Signoff/
 ├── DRC/
 └── LVS/
 ```
-
-Detailed RTL verification results are documented separately in [Verification.md](Verification.md).

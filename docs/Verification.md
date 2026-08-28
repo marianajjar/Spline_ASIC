@@ -1,143 +1,108 @@
 # Verification
 
-## 1. Verification Overview
+## 1. Verification Strategy
 
-The ASIC was verified using a combination of simulation, coverage, formal verification, logic equivalence checking, and gate-level simulation.
+The ASIC was verified from individual RTL blocks through the complete integrated design using simulation, assertions, functional coverage, formal verification, logic equivalence checking, and pad-level gate-level simulation.
 
-The verification flow includes:
-
-- block-level SystemVerilog testbenches;
-- top-level RTL regression;
-- MATLAB bit-accurate golden-model comparison;
-- SystemVerilog Assertions and functional coverage;
-- Synopsys VC Formal;
-- Logic Equivalence Checking (LEC);
-- Gate-Level Simulation (GLS).
-
-```mermaid
-flowchart LR
-    A[Block-Level Tests] --> B[Top-Level RTL Regression]
-    C[MATLAB Golden Model] --> B
-    B --> D[SVA + Coverage]
-    D --> E[Formal Verification]
-    E --> F[LEC]
-    F --> G[GLS]
+```text
+Block-Level Simulation
+        |
+        v
+Top-Level RTL Regression <---- MATLAB Bit-Accurate Golden Model
+        |
+        v
+SVA + Functional Coverage
+        |
+        v
+VC Formal
+        |
+        v
+RTL-to-Gate LEC
+        |
+        v
+Pad-Level Functional GLS
 ```
-
----
 
 ## 2. Block-Level Verification
 
-Self-checking SystemVerilog testbenches were developed for the main RTL blocks before top-level integration.
+Self-checking SystemVerilog testbenches were developed for the major control and datapath blocks.
 
 | Block | Main Checks |
 |---|---|
-| Configuration | Synchronization marker, `L` capture, reset behavior, and unsupported values |
-| I Serial Master | 15/16-bit words, sign extension, word strobes, shift-strobe dividers, and forced 16-bit coefficient mode |
-| Q Serial Slave | Serial reconstruction, shared word mode, sign extension, and hold/reset behavior |
-| Sample History | Three-sample shift sequence, hold behavior, reset, and random input words |
-| MINAJ2 | Slope update, interpolation values for `L=2..5`, fixed-point rounding, and saturation |
-| Window Latch | Capture of `y0...y4` on strobe and stable hold between updates |
-| Sample Shift I/Q | Phase progression, sample selection, shared I/Q phase, and simultaneous strobe handling |
-| FIR | Coefficient loading, load-index progression, MAC behavior, output scaling, and saturation |
+| Configuration | Synchronization marker, \(L\) capture, reset, legal/illegal values |
+| I Serial Master | 15/16-bit reconstruction, sign extension, word strobes, shift strobes, forced 16-bit coefficient mode |
+| Q Serial Slave | Serial reconstruction and alignment to the I timing master |
+| Sample History | Three-sample update, hold, reset, random samples |
+| MINAJ2 | Slope update, \(L=2..5\), fixed-point arithmetic, saturation |
+| Window Latch | Interpolation-group capture and hold |
+| Sample Shift I/Q | Phase progression, shared phase, simultaneous input/output events |
+| FIR | Coefficient loading, MAC state, scaling, saturation |
 
-The block-level environment combines directed tests, reset and boundary cases, arithmetic corner cases, and constrained-random stimulus where appropriate. Local reference calculations are used in the arithmetic blocks to automatically check the expected results.
+Directed tests, boundary cases, reset cases, and arithmetic corner cases are combined with self-checking reference calculations.
 
----
+## 3. Top-Level RTL Regression
 
-## 3. Top-Level RTL Verification
-
-The complete design is verified using `tb_corner.sv` together with the MATLAB bit-accurate golden model.
-
-The normal transaction contains:
+The integrated regression applies the complete transaction:
 
 ```text
 Synchronization + L
-        ↓
-10 FIR coefficients
-        ↓
-Serial I/Q samples
-        ↓
+        |
+        v
+10 FIR coefficient words
+        |
+        v
+Serial I/Q input samples
+        |
+        v
 MINAJ2 interpolation
-        ↓
+        |
+        v
 10-tap FIR
-        ↓
-DAC I/Q output
+        |
+        v
+Captured DAC I/Q output
 ```
 
-The MATLAB regression covers:
+The regression covers:
 
-- all interpolation factors `L = 2, 3, 4, 5`;
-- all 12 ordered transitions between different `L` values;
-- long 64-QAM sequences;
-- zero, DC, impulse, full-scale, and saturation cases.
+- all four supported modes \(L=2,3,4,5\),
+- all 12 ordered transitions between different \(L\) values,
+- long 64-QAM sequences,
+- zero and DC inputs,
+- impulse behavior,
+- positive and negative full-scale values,
+- saturation cases,
+- reset during configuration and streaming.
 
-Additional testbench modes check reset during coefficient loading, reset during I/Q streaming, repeated reset, and illegal configuration headers.
+Captured RTL outputs are aligned and compared sample-by-sample against the MATLAB integer golden model.
 
-The RTL outputs are aligned and compared sample-by-sample with the MATLAB fixed-point golden output.
-
-### Top-Level Golden Comparison Result
-
-**Bit-exact RTL-to-MATLAB comparison: PASS**
-
-A detailed regression report can be added to the repository alongside the top-level verification results.
-
----
+**Bit-exact MATLAB-to-RTL result: PASS**
 
 ## 4. Assertions and Coverage
 
-### SystemVerilog Assertions
+SystemVerilog Assertions check the main control and datapath invariants, including:
 
-`spline_sva.sv` checks the main control and datapath invariants during RTL simulation.
-
-The assertions verify, among other conditions:
-
-- legal and stable interpolation-factor configuration;
-- correct coefficient-loading progression and completion;
-- no normal I/Q processing before `coeff_done`;
-- correct relationship between input and output strobes;
-- legal interpolation-phase range and phase progression;
-- MINAJ2 slope update/hold behavior;
-- positive and negative arithmetic saturation;
+- legal and stable interpolation-factor configuration,
+- coefficient-loading progression and completion,
+- no normal I/Q processing before `coeff_done`,
+- legal strobe relationships,
+- legal phase range and progression,
+- MINAJ2 state update/hold behavior,
+- arithmetic saturation,
 - FIR coefficient and output behavior.
 
-### Functional Coverage
+Functional coverage tracks the supported modes, all ordered mode transitions, interpolation phases, control states, and important arithmetic corner cases.
 
-`spline_cov.sv` covers the major operating conditions of the design:
-
-- all supported interpolation factors;
-- all 12 ordered transitions between different `L` values;
-- valid interpolation phases for each `L`;
-- important control conditions;
-- FIR output saturation;
-- MINAJ2 slope saturation.
-
-| Coverage | Result |
+| Coverage Metric | Result |
 |---|---:|
 | Functional coverage | **100%** |
 | Assertion coverage | **100%** |
 
----
+These are functional/assertion coverage results; they are not claimed as 100% code coverage.
 
 ## 5. Formal Verification
 
-Synopsys VC Formal was used in FPV mode to formally verify nine major RTL blocks.
-
-The formal properties check the same key behaviors targeted by block simulation, but exhaustively over the legal state space of each block.
-
-Examples include:
-
-- configuration marker detection, `L` capture, and stable configuration;
-- serial word counters, 15/16-bit mode, sign extension, and strobe generation;
-- sample-history update and hold behavior;
-- MINAJ2 slope update, interpolation-mode behavior, and saturation;
-- interpolation-window capture and hold behavior;
-- Sample Shift phase bounds, phase progression, and sample shifting;
-- FIR coefficient loading, state update, output hold, and saturation.
-
-Formal cover properties are also used to prove reachability of important states such as all supported interpolation modes, maximum valid phases, coefficient-loading events, and arithmetic saturation conditions.
-
-### Formal Results
+Synopsys VC Formal was used for block-level formal property verification of nine RTL blocks.
 
 | Metric | Result |
 |---|---:|
@@ -146,68 +111,53 @@ Formal cover properties are also used to prove reachability of important states 
 | Proven assertions | 118 |
 | Vacuous assertions | 5 |
 | Failed assertions | **0** |
-| Formal cover properties | **38 / 38** |
+| Cover properties reached | **38 / 38 (100%)** |
 
-The five vacuous properties are reset-related assertions in formal runs where reset was constrained inactive. They do not represent design failures.
+The five vacuous properties are reset-related assertions in runs where reset was constrained inactive. All formal cover properties were reached.
 
----
+Formal SVA sources and reports are kept under the verification/formal portion of the repository.
 
-## 6. Logic Equivalence Checking
+## 6. RTL-to-Gate Logic Equivalence
 
-LEC was used to verify that synthesis preserved the functionality of the RTL.
-
-The main comparison was performed between the RTL design and the synthesized gate-level netlist.
-
-### RTL-to-Gate Result
+Cadence Conformal was used to compare the RTL reference with the synthesized gate-level implementation.
 
 | Metric | Result |
 |---|---:|
-| LEC result | **PASS** |
+| Equivalent compare points | 669 |
 | Incomplete verification | 0 |
 | Design ambiguity | 0 |
-| Equivalent compare points | 669 |
+| Final result | **PASS** |
 
-The repository also contains the gate-vs-gate equivalence flow used for checking the post-layout netlist against the synthesized design.
+This result is specifically the RTL-to-synthesized-gate comparison.
 
----
+## 7. Pad-Level Gate-Level Simulation
 
-## 7. Gate-Level Simulation
+A separate functional gate-level simulation was performed after pad integration using the padded top-level design.
 
-Gate-level simulation verifies the implemented netlist using the same configuration and I/Q stimulus concept as the RTL flow.
+The testbench applies the same logical configuration sequence and I/Q traffic used by the RTL environment. All four interpolation factors were exercised.
 
-The GLS environment:
+**Pad-level GLS result: PASS**
 
-- runs the supported interpolation modes;
-- loads the ten FIR coefficients;
-- streams I/Q samples through the gate-level design;
-- captures the final DAC outputs;
-- generates VCD activity files for power analysis.
+The preserved GLS result is a functional/zero-delay verification result; no SDF-based timing claim is made here.
 
-The generated activity files are:
+Final pad-level GLS files and reports are organized under:
 
 ```text
-gate_L2.vcd
-gate_L3.vcd
-gate_L4.vcd
-gate_L5.vcd
+Signoff/GLS_Pad_Level/
 ```
-
-Gate-level functional coverage is also collected using signals that remain observable after synthesis.
-
----
 
 ## 8. Verification Summary
 
-| Verification Stage | Result |
+| Stage | Result |
 |---|---|
 | Block-level simulation | Completed |
-| Top-level RTL regression | Completed |
-| MATLAB golden comparison | **Bit-exact PASS** |
+| Top-level RTL regression | **PASS** |
+| MATLAB bit-accurate comparison | **PASS** |
 | Functional coverage | **100%** |
 | Assertion coverage | **100%** |
-| Formal verification | **0 failed assertions** |
-| Formal cover properties | **38 / 38** |
+| VC Formal | **118 proven, 0 failed** |
+| Formal covers | **38/38 reached** |
 | RTL-to-gate LEC | **PASS** |
-| Gate-level simulation | Completed |
+| Pad-level functional GLS | **PASS** |
 
-The combined verification flow checks the design from individual RTL blocks through the complete RTL system and synthesized gate-level implementation.
+Post-route power activity is generated independently using the dedicated `SAIF_Generation/` flow described in [Power Analysis](Power_Analysis.md), not from the pad-level GLS flow.

@@ -1,0 +1,143 @@
+# =============================================================================
+# Spline_ASIC Git ignore rules
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Editor / OS temporary files
+# -----------------------------------------------------------------------------
+*~
+*.swp
+*.swo
+*.tmp
+*.bak
+.DS_Store
+
+# -----------------------------------------------------------------------------
+# General logs and temporary run files
+# -----------------------------------------------------------------------------
+*.log
+*.history
+*.cmd
+*.jou
+*.err
+*.out
+log/
+logs/
+tmp/
+temp/
+
+# -----------------------------------------------------------------------------
+# RTL / gate-level simulation generated files
+# -----------------------------------------------------------------------------
+simv
+simv.*
+simv_*
+csrc/
+csrc_*/
+DVEfiles/
+ucli.key
+*.vcd
+*.vpd
+*.fsdb
+*.shm
+
+# -----------------------------------------------------------------------------
+# SAIF generation outputs
+#
+# Keep:
+#   SAIF_Generation/tb_saif.sv
+#   SAIF_Generation/run_saif_toggle.tcsh
+#   SAIF_Generation/inputs/
+#
+# Regenerate the activity files locally.
+# -----------------------------------------------------------------------------
+SAIF_Generation/saif/
+SAIF_Generation/iq_in_iq_16_12.txt
+SAIF_Generation/iq_out_hex.txt
+SAIF_Generation/simv*
+SAIF_Generation/csrc*/
+SAIF_Generation/*.log
+
+Innovus/datain/saif/*.saif
+
+# -----------------------------------------------------------------------------
+# Synopsys synthesis generated databases / sessions
+# -----------------------------------------------------------------------------
+*.ddc
+*.svf
+*.pvl
+*.syn
+*.mr
+*.sdf.X
+WORK/
+
+# -----------------------------------------------------------------------------
+# Cadence Innovus generated databases / sessions
+#
+# Keep source TCL scripts and curated reports, but not large restart databases.
+# -----------------------------------------------------------------------------
+Innovus/work/
+Innovus/logfile/
+Innovus/dataout/design_saves/
+Innovus/**/*.enc
+Innovus/**/*.enc.dat
+
+# Generated clock-tree specification
+Innovus/scripts/ccopt.spec
+
+# -----------------------------------------------------------------------------
+# Large / implementation-generated layout artifacts
+#
+# Do not publish foundry-containing GDS/OASIS databases in the public repo.
+# -----------------------------------------------------------------------------
+*.gds
+*.gds.gz
+*.oas
+*.oasis
+
+# -----------------------------------------------------------------------------
+# Foundry / PDK / standard-cell library files
+#
+# These should be referenced from the local EDA installation, not committed.
+# -----------------------------------------------------------------------------
+*.lib
+*.db
+*.lef
+*.tf
+*.tluplus
+
+tcbn65*.v
+tpdn65*.v
+
+# -----------------------------------------------------------------------------
+# Calibre / physical-verification generated working data
+# -----------------------------------------------------------------------------
+svdb/
+*.ext
+*.erc
+*.lvsdb
+*.drcdb
+
+# -----------------------------------------------------------------------------
+# Archive / backup copies of tool directories
+# -----------------------------------------------------------------------------
+scripts.tar.gz
+scripts_old.tar.gz
+*.tar
+*.tgz
+
+# -----------------------------------------------------------------------------
+# Python / MATLAB incidental files
+# -----------------------------------------------------------------------------
+__pycache__/
+*.pyc
+*.asv
+slprj/
+
+# -----------------------------------------------------------------------------
+# IMPORTANT
+#
+# Reports (*.rpt), SPEF files, source RTL, TCL/TC-shell scripts,
+# MATLAB models, testbenches, documentation and selected final netlists are
+# intentionally NOT ignored.
+# -----------------------------------------------------------------------------

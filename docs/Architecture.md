@@ -1,121 +1,110 @@
 # System Architecture
 
-## Overview
+## 1. Overview
 
-This project implements a real-time ASIC for interpolation of complex baseband I/Q signals. The design receives serial I and Q samples at 60 MSa/s and supports programmable interpolation factors
+The project implements a real-time ASIC for interpolation of complex baseband I/Q signals sampled at 60 MSa/s. Four programmable interpolation factors are supported:
 
 \[
 L \in \{2,3,4,5\}
 \]
 
-giving output sample rates of 120, 180, 240, and 300 MSa/s. Interpolation is performed using the MINAJ2 cubic interpolation algorithm followed by a programmable 10-tap FIR cleanup filter.
+which produce output rates of 120, 180, 240, and 300 MSa/s.
 
-The architecture uses two parallel datapaths for the I and Q channels with shared control. The I path acts as the timing master and generates the common word and phase control used by the Q path.
+Interpolation is performed using the MINAJ2 local cubic method, followed by a programmable 10-tap FIR cleanup filter. The architecture contains parallel I and Q datapaths with shared control. The I path acts as the timing master and the Q path follows its word and interpolation-phase timing.
 
-## Key Specifications
+## 2. Operating Modes
 
-| Parameter | Value |
-|---|---|
-| Input signal | Complex I/Q, 64-QAM |
-| Input sample rate | 60 MSa/s |
-| Interpolation factors | 2, 3, 4, 5 |
-| Output sample rates | 120, 180, 240, 300 MSa/s |
-| Main datapath width | 16 bits |
-| Internal fractional length | 12 bits |
-| Interpolation algorithm | MINAJ2 cubic interpolation |
-| FIR filter | Programmable 10-tap FIR |
-| External clock | 960 MHz for even L, 900 MHz for odd L |
-| Normal serial input word | 16 bits for even L, 15 bits for odd L |
-| Channels | Parallel I and Q datapaths |
-| Control | Shared control, I path as timing master |
+| L | External Clock | Serial Input Word | Input Rate | Output Rate |
+|---:|---:|---:|---:|---:|
+| 2 | 960 MHz | 16 bits | 60 MSa/s | 120 MSa/s |
+| 3 | 900 MHz | 15 bits | 60 MSa/s | 180 MSa/s |
+| 4 | 960 MHz | 16 bits | 60 MSa/s | 240 MSa/s |
+| 5 | 900 MHz | 15 bits | 60 MSa/s | 300 MSa/s |
 
-## Operating Modes
+For \(L=3\) and \(L=5\), the received 15-bit sample is sign-extended internally to the common 16-bit datapath representation.
 
-| L | External Clock | Serial Input Word | Output Rate |
-|---:|---:|---:|---:|
-| 2 | 960 MHz | 16 bits | 120 MSa/s |
-| 3 | 900 MHz | 15 bits | 180 MSa/s |
-| 4 | 960 MHz | 16 bits | 240 MSa/s |
-| 5 | 900 MHz | 15 bits | 300 MSa/s |
+## 3. Configuration and Streaming
 
-For the odd interpolation modes, the received 15-bit sample is sign-extended internally to the 16-bit datapath width.
-
-## Configuration and Streaming Sequence
-
-The chip starts in configuration mode after reset. A synchronization marker is detected first, followed by the 3-bit interpolation-factor field. After the interpolation factor is configured, ten signed 16-bit FIR coefficient words are loaded serially through the I input. The same coefficient set is used by both the I and Q FIR filters.
-
-After all coefficients are loaded, the design enters streaming mode. The shared controller then coordinates sample-word capture, interpolation phase generation, output shifting, and FIR processing.
-
-The high-level sequence is:
+Configuration is completed before normal I/Q data processing:
 
 ```text
 Reset
-  ↓
+  |
+  v
 Synchronization marker
-  ↓
-Capture L
-  ↓
-Load 10 FIR coefficients
-  ↓
-Enable I/Q streaming
-  ↓
-MINAJ2 interpolation
-  ↓
-Programmable FIR filtering
-  ↓
-I/Q output samples
+  |
+  v
+Capture L[2:0]
+  |
+  v
+Load 10 signed 16-bit FIR coefficients
+  |
+  v
+Coefficient loading complete
+  |
+  v
+Enable normal I/Q streaming
 ```
 
-## Clocking Strategy
+The configuration and coefficient stream is received through the I serial input. The same coefficient set is loaded into both FIR filters.
 
-The implementation uses a single high-frequency external clock domain. Lower-rate operations are controlled using clock enables and strobes rather than generated internal clocks. This keeps the clocking structure simple while supporting all four interpolation modes.
-
-The main internal control events are:
-
-- **Input-word strobe** – marks completion of an aligned I/Q input word.
-- **Interpolation/output shift strobe** – schedules interpolated output samples according to the selected value of \(L\).
-- **Coefficient-load mode** – enables serial loading of the ten FIR coefficients before normal streaming.
-- **Streaming enable** – activates the I/Q datapaths after configuration is complete.
-
-## Datapath
-
-Each channel contains the following processing stages:
+## 4. Datapath Organization
 
 ```text
-Serial Input
-    ↓
-Serial-to-Parallel Capture
-    ↓
-Sample History
-    ↓
-MINAJ2 Cubic Interpolator
-    ↓
-Interpolation Window / Sample Shift
-    ↓
-10-Tap FIR Filter
-    ↓
-Output
+                    Shared Configuration / Timing
+                              |
+                 +------------+------------+
+                 |                         |
+             I Datapath                 Q Datapath
+                 |                         |
+        Serial-to-Parallel        Serial-to-Parallel
+                 |                         |
+        Three-Sample History      Three-Sample History
+                 |                         |
+          MINAJ2 Interpolator       MINAJ2 Interpolator
+                 |                         |
+        Interpolation Window      Interpolation Window
+                 |                         |
+         Sample Scheduler          Sample Scheduler
+                 |                         |
+            10-Tap FIR                10-Tap FIR
+                 |                         |
+              dac_I                     dac_Q
 ```
 
-The I and Q datapaths perform the same numerical processing. Shared control keeps both channels synchronized and reduces duplicated control logic.
+The numerical processing is identical in the two channels. Shared timing prevents independent I/Q phase or word-boundary drift.
 
-## MINAJ2 Interpolator
+## 5. Clocking and Multi-Rate Control
 
-MINAJ2 was selected after algorithm-level evaluation in MATLAB. It implements local cubic Hermite interpolation using three neighboring samples and an internally updated slope estimate. The RTL uses fixed-point arithmetic and evaluates the cubic polynomial using a Horner-form implementation.
+All sequential RTL remains in one external high-frequency clock domain. Lower processing rates are created using strobes and enables rather than internally generated clocks.
 
-The interpolation phase \(u\) is represented in Q1.15 format, while the main signal datapath uses a 16-bit fixed-point representation with 12 fractional bits.
+The main events are:
 
-## Programmable FIR Filter
+- `strobe_common` — raw completed serial-word event from the I timing master.
+- `strobe_iq` — aligned normal I/Q input-sample event, enabled only after coefficient loading.
+- `shift_strobe_common` — raw interpolation/output-rate scheduling event.
+- `shift_strobe_iq` — normal output scheduling event after configuration is complete.
 
-A 10-tap FIR cleanup filter follows the interpolator. The filter coefficients are loaded during configuration, allowing the same hardware architecture to support coefficient sets optimized for the different interpolation modes.
+This approach supports several data rates while keeping the clock structure simple for synthesis and physical implementation.
 
-The FIR uses a wider internal accumulator, scales the accumulated result back to the datapath format, and applies output saturation.
+## 6. MINAJ2 Interpolation
 
-## Further Documentation
+MINAJ2 was selected after MATLAB algorithm evaluation as a hardware-suitable local cubic interpolation method. It uses three neighboring samples and a recursively updated slope estimate, avoiding the global linear-system solution required by classical cubic spline interpolation.
 
-- [MATLAB Model](Matlab_model.md)
-- [RTL Architecture](RTL_architecture.md)
+The main signal datapath is 16 bits with 12 fractional bits. The normalized interpolation phase \(u\) is represented in Q1.15.
+
+## 7. Programmable FIR
+
+A 10-tap FIR cleanup filter follows each interpolator. Ten signed 16-bit coefficients are loaded at startup through the I configuration stream and copied into both channel filters.
+
+The FIR uses a wider internal accumulator, rescales by the configured fractional length, and saturates the final result back to the signed 16-bit output format.
+
+## 8. Related Documentation
+
+- [MATLAB Model](MATLAB_Model.md)
+- [RTL Architecture](RTL_Architecture.md)
 - [Verification](Verification.md)
 - [Synthesis](Synthesis.md)
-- [Physical Design](Physical_design.md)
+- [Physical Design](Physical_Design.md)
+- [Power Analysis](Power_Analysis.md)
 - [Signoff](Signoff.md)

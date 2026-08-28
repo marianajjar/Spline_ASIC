@@ -1,0 +1,1 @@
+/project/verif/users/marianajjar/ws/spline_3_1_rerun/innovus/datain/top_interpolator_dac.sdc
