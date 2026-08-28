@@ -6,7 +6,7 @@ The synthesized ASIC was implemented using Cadence Innovus in a 65 nm low-power 
 
 The final design is a routed pad-level implementation containing the synthesized interpolation core and the I/O pad ring.
 
-![Final routed ASIC layout](../Figures/final_layout.png)
+![Final routed ASIC layout](../Figures/ff_layout.png)
 
 ## Design Initialization
 
