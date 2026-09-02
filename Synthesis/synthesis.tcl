@@ -52,15 +52,15 @@ set TopModule top_interpolator_dac
 # Top Module file should be just after defines and constants
 
 analyze -library WORK -format sverilog { \
-../datain/rtl/filter4tweny.v \
-../datain/rtl/spi_i.v \
-../datain/rtl/spi_register.v \
-../datain/rtl/shift_30_I.v \
-../datain/rtl/spi_L.v \
+../datain/rtl/FIR.v \
+../datain/rtl/spi_i_master.v \
+../datain/rtl/word_history3.v \
+../datain/rtl/sample_shift_I.v \
+../datain/rtl/spi_cfg4_nomode.v \
 ../datain/rtl/spline_reg_out.v \
 ../datain/rtl/top_spline.v \
-../datain/rtl/shift_30_Q.v \
-../datain/rtl/spi_q.v \
+../datain/rtl/sample_shift_Q.v \
+../datain/rtl/spi_q_slave.v \
 ../datain/rtl/spline.v \
 }
 
