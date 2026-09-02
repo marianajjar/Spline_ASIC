@@ -9,7 +9,7 @@
 module fir20_q16_fromx #(
   parameter int WL    = 16,
   parameter int FL    = 12,
-  parameter int NTAPS = 20
+  parameter int NTAPS = 10
 )(
   input  logic                        clk,
   input  logic                        reset,
