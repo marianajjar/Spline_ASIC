@@ -1,11 +1,4 @@
 `timescale 1ns/1ps
-// ============================================================================
-// SPI split #2: 3-word history
-// CHANGED: was word_history4 (w0..w3). The spline interpolator only uses
-//          3 samples (w0=x_n, w1=x_c, w2=x_prev), so w3 was always dead and
-//          DC deleted it (OPT-1207). Removed w3 entirely for a clean LEC.
-// ============================================================================
-
 module word_history3 #(
   parameter int WL = 16
 )(
