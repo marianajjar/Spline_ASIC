@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-The synthesizable top-level module is `top_interpolator_dac`. It implements two parallel I/Q processing paths and shared configuration/timing control.
+The synthesizable top-level module is `top_spline (top_interpolator_dac)`. It implements two parallel I/Q processing paths and shared configuration/timing control.
 
 The final architecture is shown below.
 
