@@ -1,6 +1,5 @@
 `timescale 1ns/1ps
 // ============================================================================
-// minaj2_interp_3samp_internalSlope  (COMBINED: core + wrapper)
 // - Uses 3 samples: x_prev, x_c, x_n
 // - Stores previous slope m_p internally
 // - Updates m_p at each strobe (new word)
