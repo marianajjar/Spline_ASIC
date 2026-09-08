@@ -1,14 +1,5 @@
 // ============================================================================
-// spline_cov.sv  -  Functional coverage for the QAM-64 spline interpolator
-//
-// Bound into the RTL (same idea as spline_sva.sv). Run with VCS/Questa/Xcelium
-// and coverage enabled; iverilog cannot compile covergroups, so only include
-// this file in the coverage run, not the iverilog functional run.
-//
-//   VCS:    vcs -sverilog -cm line+cond+fsm+tgl+branch -assert svaext \
-//                tb_multi.sv <rtl...> spline_cov.sv ; simv -cm ... +MANIFEST=manifest.txt
-//   Questa: vlog +cover=bcefsx tb_multi.sv <rtl...> spline_cov.sv ; vsim -coverage ...
-//
+// spline_cov.sv  
 // Coverage goals:
 //   - every interpolation factor L = 2,3,4,5 reached
 //   - every ordered mode transition  L_prev -> L_curr  (the 12 off-diagonal)
